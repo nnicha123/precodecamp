@@ -1,5 +1,5 @@
 .name:hover{
-    color: tomato;
+    color: blueviolet;
 }
 
 .Table,th{
@@ -8,7 +8,7 @@
         border: 10px double green;
         /* border-collapse: collapse; */
         border-top-style: solid;
-        caption-side: bottom;
+        caption-side: top; 
 }
 td{
     width: 100vw;
@@ -16,7 +16,17 @@ td{
         /* border-collapse: collapse; */
         border-top-style: solid;   
 }
+caption{
+    text-align: left;
+}
+caption:hover{
+    text-transform: uppercase;
+}
 
 .name,.surname{
     background-color: hotpink;
+}
+
+#email {
+    background-color: tomato;
 }
