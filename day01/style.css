@@ -2,3 +2,9 @@
     color:#ff0000;
     background-color: #FA8072;
 }
+
+.table{
+    width: 100vw;
+    border: 10px double rebeccapurple;
+    border-top-style: solid;
+}
