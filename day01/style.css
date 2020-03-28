@@ -8,6 +8,7 @@
     border: 10px double yellowgreen;
     /* border-collapse: collapse; */
     border-top-style: solid;
+    caption-side: bottom;
 }
 .table,td{
     border: 1px double yellowgreen;
