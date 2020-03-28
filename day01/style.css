@@ -3,8 +3,12 @@
     background-color: #FA8072;
 }
 
-.table{
+.table,th{
     width: 100vw;
-    border: 10px double rebeccapurple;
+    border: 10px double yellowgreen;
+    /* border-collapse: collapse; */
     border-top-style: solid;
+}
+.table,td{
+    border: 1px double yellowgreen;
 }
