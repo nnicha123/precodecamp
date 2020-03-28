@@ -1,0 +1,22 @@
+.name:hover{
+    color: tomato;
+}
+
+.Table,th{
+   
+        width: 100vw;
+        border: 10px double green;
+        /* border-collapse: collapse; */
+        border-top-style: solid;
+        caption-side: bottom;
+}
+td{
+    width: 100vw;
+        border: 5px double yellowgreen;
+        /* border-collapse: collapse; */
+        border-top-style: solid;   
+}
+
+.name,.surname{
+    background-color: hotpink;
+}
