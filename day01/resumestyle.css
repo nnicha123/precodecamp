@@ -1,14 +1,18 @@
-.name:hover{
+.name:hover,.surname:hover{
     color: blueviolet;
 }
 
 .Table,th{
-   
+        margin: 5mm;
         width: 100vw;
         border: 10px double green;
         /* border-collapse: collapse; */
         border-top-style: solid;
         caption-side: top; 
+        border-width: thick;
+}
+.Table:hover{
+    text-transform: uppercase;
 }
 td{
     width: 100vw;
@@ -29,4 +33,5 @@ caption:hover{
 
 #email {
     background-color: tomato;
+    margin: 5mm;
 }
