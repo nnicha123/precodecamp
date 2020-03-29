@@ -1,0 +1,35 @@
+.drop{
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.contents {
+    display: none;
+    position: absolute;
+    background-color: thistle;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.contents a {
+    color: blueviolet;
+    padding: 10px 20px;
+    display: block;
+    border: 1px solid black;
+}
+
+.dropdown:hover .contents{
+    display: block;
+}
+
+.contents a:hover{
+    background-color: chartreuse;
+}
+
+.drop:hover{
+    background-color: cornflowerblue;
+    color: darkblue;
+}
