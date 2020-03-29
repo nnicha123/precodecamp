@@ -1,0 +1,38 @@
+.container{
+    background-color: wheat;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* flex-wrap:wrap; */
+    /* flex-flow: column wrap; */
+    justify-content: flex-start;
+}
+
+.container > div{
+    order: 4;
+    background-color: yellowgreen;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    margin: 10px;
+    align-content: flex-end;
+}
+
+div.item2{
+    order: 1;
+    background-color: salmon;
+    width: 100px;
+    height: 300px;
+}
+div.item3{
+    order: 2;
+    background-color: salmon;
+    width: 100px;
+    height: 300px;
+}
+div.item4{
+    order: 3;
+    background-color: salmon;
+    /* flex-grow: 50; */
+    /* flex-shrink: 50; */
+    flex: 30 50 800px;
+}
