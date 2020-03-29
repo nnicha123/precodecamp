@@ -1,0 +1,49 @@
+.container{
+    background-color: orange;
+    display: inline-block;
+    width: 1800px;
+    height: 100px;
+    align-content: center;
+    position: fixed;
+
+}
+
+.pagination a{
+    float: left;
+    border-right: 1px solid white;
+    padding-right: 5px;
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+
+.second a{
+    float: right;
+    border-right: 1px solid white;
+    color: white;
+    text-decoration: none;
+    padding-right: 5px;
+   
+}
+
+.contents{
+    display: inline-block;
+    margin-top: 100px;
+    z-index: -1;
+}
+
+.search{
+    width:357px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.examples a{
+    width:357px;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    text-decoration: none;
+    border-right: 1px solid white;
+    padding-right: 5px;
+}
