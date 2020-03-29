@@ -1,0 +1,44 @@
+.sticky {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    
+}
+
+.stick1{
+    background-color: lawngreen;
+    width: 400px;
+    height: 200px;
+    position: sticky;
+    top: 0;
+    
+}
+
+.stick2{
+    background-color: yellow;
+    width: 400px;
+    height: 1000px;
+    position: sticky;
+    top: 0;
+}
+
+.stick3{
+    background-color: lightcoral;
+    width: 400px;
+    height: 2500px;
+    position: sticky;
+}
+
+.stickhere{
+    border: double lightgreen;
+    background-color: lime;
+    position: sticky;
+    top: 0px;
+}
+.stickh2{
+    z-index: 1;
+    border: double red;
+    background-color: magenta;
+    position: sticky;
+    top: 0px;
+}
