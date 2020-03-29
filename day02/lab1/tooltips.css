@@ -1,0 +1,24 @@
+/* Tooltip container */
+.tooltip {
+    position: fixed;
+    top: 100px;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color:maroon;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    /* Fade in tooltip */
+    opacity: 0;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
