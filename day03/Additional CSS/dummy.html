@@ -10,22 +10,36 @@
         .red-text {
             color: red;
         }
-        .smaller-image{
+
+        .smaller-image {
             width: 100px;
         }
-        .thick-green-border{
+
+        .thick-green-border {
             border-color: green;
             border-width: 10px;
             border-style: solid;
-            border-radius: 10px;
+            border-radius: 50%;
+        }
+
+        .silver-background {
+            background-color: silver;
         }
 
         p {
             font-size: 16px;
             font-family: monospace;
         }
+
         h2 {
-            font-family: lobster,monospace ;
+            font-family: lobster, monospace;
+        }
+        #cat-photo-form{
+            background-color: greenyellow;
+            border-radius: 10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: greenyellow;
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" type="text/css">
@@ -46,7 +60,7 @@
             nisi inventore. Dignissimos illo perferendis debitis.
 
         </p>
-        <div>
+        <div class="silver-background">
             <h3>Things cats like</h3>
             <ul>
                 <li>Toys</li>
@@ -78,6 +92,16 @@
             </ul>
         </div>
     </main>
+    <form id="cat-photo-form" action="/submit-cat-photo" id="cat-photo-form">
+        <input type="text" placeholder="cat photo URL" required>
+        <label for="indoor">
+            <input type="radio" name="indoor-outdoor" checked>indoor
+        </label>
+        <label for="outdoor">
+            <input type="radio" name="indoor-outdoor" checked>outdoor
+        </label>
+        <button type="submit" value="Submit">Submit</button>
+    </form>
 </body>
 
 </html>
