@@ -1,0 +1,42 @@
+
+        .form-group {
+            margin-left: 100px;
+            margin-top: 20px;
+            width: 230px;
+        }
+
+        h1 {
+            margin-left: 100px;
+            color: tomato;
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .badge {
+            margin-left: 100px;
+        }
+
+        ul{
+            list-style-type: none;
+            color: teal;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: thistle;
+            margin: 10px 10px 10px 10px;
+            border-radius: 10px;
+        }
+
+        li a{
+            display: block;
+            width: 60px;
+            text-align: center;
+            border-bottom: none;
+        }
+
+        li a:hover{
+            background-color: tomato;
+        }
+
+        li a.active{
+            background-color: maroon;
+        }
