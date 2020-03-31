@@ -1,0 +1,26 @@
+h1 {
+    color: blue;
+    background-color: lightblue;
+}
+
+div {
+    /* display: inline; */
+    /* if you select display to be in-line, width setting no effect (in-line with text) */
+    margin: 10px 10px 10px 10px;
+    background-color: chocolate;
+    width: 1000px
+}
+div > p{
+    background-color: grey;
+}
+.p1 {
+    border: 5px solid greenyellow;
+}
+.p2{
+    border-top: 5px solid gold;
+    border-bottom: 5px solid gold;
+    border-left: 5px solid maroon;
+    border-right: 5px solid maroon;
+    border-radius: 53px;
+    padding: 10px 10px 10px 10px;
+}
