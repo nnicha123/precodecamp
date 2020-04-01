@@ -1,0 +1,17 @@
+p{
+    font-size:30px;
+    line-height: 2em;
+}
+.fixed{
+    background-color: blue;
+    position: fixed;
+    bottom: 0;
+    right:0;
+}
+
+.absolute{
+    background-color: tomato;
+    position:absolute;
+    bottom:0;
+    left:0
+}
