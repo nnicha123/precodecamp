@@ -51,22 +51,44 @@
         #clickme {
             color: blueviolet;
             background-color: yellow;
-            border: 2px double cornflowerblue;
+            border-radius: 10px;
+        }
+
+        #clickappend {
+            color: blueviolet;
+            background-color: chartreuse;
+            border-radius: 10px;
+        }
+
+        #clickremove {
+            color: blueviolet;
+            background-color: coral;
             border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
+    <h1>HELLOOO</h1>
     <p>These boxes will slide upwards when you click the button</p>
     <div id="box1">B1</div>
     <div id="box2">B2</div>
     <div id="box3">B3</div>
     <div id="box4">B4</div>
     <div id="box5">B5</div>
-    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <span>I am span</span>
+    <p id="p1">Paragraph1</p>
+    <p id="p2">Paragraph2</p>
+    <hr><br><br><br>
     <button id="clickme">Click Me</button>
-
+    <br>
+    <button id="clickappend">Click Me to append span</button>
+    <br>
+    <button id="clickremove">Click Me to remove Hello</button>
     <script>
         $("#clickme").click(function () {
             $("#box1").slideUp("slow");
@@ -78,6 +100,16 @@
                 $("div").show("slow");
             }
         })
+        $("#clickappend").click(function () {
+            $("span").appendTo("#p2");
+        })
+        $("#clickremove").click(function () {
+            $("h1").remove();
+            if ($("h1").is(":hidden")) {
+                $("h1").show("slow");
+            }
+
+        });
     </script>
 </body>
 
