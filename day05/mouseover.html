@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Refresh for text to be black, mouse over will turn to blue & mouse out will turn to red -->
+    <style>
+        p{
+            color:black
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <p>Mouse roll over paragraph changes its color Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laboriosam.</p>
+    <p>Mouse roll over paragraph changes its color Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laboriosam.</p>
+<script>
+    $("p").on("mouseover",function(){
+        $(this).css("color","blue");
+    });
+    $("p").on("mouseout",function(){
+        $(this).css("color","red");
+    })
+</script>
+</body>
+</html>
