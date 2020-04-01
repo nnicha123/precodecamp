@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide up</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        p {
+            color: violet;
+        }
+
+        div {
+            height: 40px;
+            float: left;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        #box1 {
+            width: 40px;
+            color: blueviolet;
+            background-color: crimson;
+        }
+
+        #box2 {
+            width: 40px;
+            color: blueviolet;
+            background-color: coral;
+        }
+
+        #box3 {
+            width: 40px;
+            color: blueviolet;
+            background-color: yellow;
+        }
+
+        #box4 {
+            width: 40px;
+            color: blueviolet;
+            background-color: chartreuse;
+        }
+
+        #box5 {
+            width: 40px;
+            color: blueviolet;
+            background-color: cyan;
+        }
+
+        #clickme {
+            color: blueviolet;
+            background-color: yellow;
+            border: 2px double cornflowerblue;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>These boxes will slide upwards when you click the button</p>
+    <div id="box1">B1</div>
+    <div id="box2">B2</div>
+    <div id="box3">B3</div>
+    <div id="box4">B4</div>
+    <div id="box5">B5</div>
+    <hr>
+    <button id="clickme">Click Me</button>
+
+    <script>
+        $("#clickme").click(function () {
+            $("#box1").slideUp("slow");
+            $("#box2").slideUp("slow");
+            $("#box3").slideUp("slow");
+            $("#box4").slideUp("slow");
+            $("#box5").slideUp("slow");
+            if ($("#box1").is(":hidden")) {
+                $("div").show("slow");
+            }
+        })
+    </script>
+</body>
+
+</html>
