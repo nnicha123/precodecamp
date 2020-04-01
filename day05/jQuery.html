@@ -5,20 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script scr="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
-
-<script>
-    $(document).ready(function () {
-        $("#btnOK").click(function () {
-            $("p").hide();
-        });
-    });
-</script>
-
 <body>
     <button id="btnOK">Button</button>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, suscipit?</p>
+
+    <script>
+      
+            $("p").click(function () {
+                $("p").hide();
+            });
+            
+            $("#btnOK").click(function(){
+                $("p").show();
+            });
+                
+        
+    </script>
+
 </body>
 
 </html>
