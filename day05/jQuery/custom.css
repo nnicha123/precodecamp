@@ -1,0 +1,11 @@
+input[type=text].form-control{
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: darkgrey;
+    background-color: thistle;;
+}
+
+button.btn.btn-primary{
+    background-color: lightcoral;
+    border-color: hotpink;
+}
