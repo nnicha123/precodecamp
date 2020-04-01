@@ -1,0 +1,20 @@
+section{
+    border: 1px solid blue;
+    width: 100%;
+    /* Just make sure float so atleast as tall as div elements */
+    float: left; 
+}
+div{
+    margin: 5px;
+    width: 50px;
+    height: 150px;
+}
+.left{
+    float: left;
+    background-color: pink;
+}
+.right{
+    float: right;
+    background-color: cyan;
+}
+
