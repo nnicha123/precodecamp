@@ -5,10 +5,12 @@ button{
     color:white;
     border:none;
     background-color: blue;
-    transition-property: background-color;
+    transition-property: background-color color width;
     transition-duration: 1s;
 }
 
 button:hover{
     background-color: green;
+    color:black;
+    width:600px;
 }
