@@ -5,12 +5,15 @@ button{
     color:white;
     border:none;
     background-color: blue;
-    transition-property: background-color color width;
-    transition-duration: 1s;
+    /* transition-property: background-color color width;
+    transition-duration: 1s; */
+    transition: background-color 3s ease-in-out 1s,
+    color 2s ease 4s, border-radius 4s ease-out 3s;
 }
 
 button:hover{
     background-color: green;
     color:black;
     width:600px;
+    border-radius: 50px;
 }
