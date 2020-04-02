@@ -1,0 +1,27 @@
+div{
+    border: 1px solid black;
+    width: 100%;
+    float:right;
+    margin: 10px;
+}
+
+.black{
+    background-color: black;
+    color: white;
+    margin: 0;
+    width: 20%;
+    float:right;
+}
+
+.pink{
+    background-color: pink;
+    margin: 0;
+    width:20%;
+    float:right;
+}
+
+.right{
+    border:1px solid black;
+    clear:right;
+    text-align: right;
+}
