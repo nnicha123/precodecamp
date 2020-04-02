@@ -22,9 +22,9 @@ let getAccountSummary = function(account){
 }
 
 addIncome(myAccount,2000);
-console.log(getAccountSummary(myAccount));
+// console.log(getAccountSummary(myAccount));
 addExpense(myAccount,2.5);
-console.log(getAccountSummary(myAccount));
+// console.log(getAccountSummary(myAccount));
 addExpense(myAccount, 160);
 console.log(getAccountSummary(myAccount));
 resetAccount(myAccount);
