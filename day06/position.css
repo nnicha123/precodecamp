@@ -12,3 +12,5 @@
     left: 20px;
     background-color: blue;
 }
+
+/* In relative, offset does not effect other elements */
