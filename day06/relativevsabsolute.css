@@ -1,0 +1,17 @@
+#relative {
+    width: 100px;
+    height: 100px;
+    background-color: #FFC7E4;
+    position: relative;
+    top: 20px;
+    left: 20px;
+  }
+  
+  #absolute {
+    width: 100px;
+    height: 100px;
+    background-color: #FFD7C2;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+  }
