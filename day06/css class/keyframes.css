@@ -10,7 +10,7 @@ div{
 p:hover{
     height:20px;
     background-color: pink;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 
