@@ -5,3 +5,6 @@ function myFunction(item,index,arr){
 }
 
 console.log(nums);
+
+var arr = ['a','b','c'];
+arr.forEach(element =>console.log(element));
