@@ -1,0 +1,49 @@
+h1{
+    color: green;
+    font-family: Tahoma;
+}
+.one{
+    color: red;
+}
+.two{
+    color: orange;
+}
+.three{
+    color: yellow;
+}
+.four{
+    color: yellowgreen;
+}
+.five{
+    color: green;
+}
+.six{
+    color:cyan;
+}
+.seven{
+    color: blue;
+}
+.eight{
+    color: crimson;
+}
+.nine{
+    color: darkmagenta;
+}
+.ten{
+    color: darkturquoise;
+}
+.sentence1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sentence2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.sentence3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sentence4{
+    font-family: sans-serif;
+}
+.sentence5{
+    font-family: monospace;
+}
