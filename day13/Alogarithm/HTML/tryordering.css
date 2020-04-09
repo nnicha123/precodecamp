@@ -1,0 +1,32 @@
+section{
+    width:45%;
+    margin-left: 10px;
+    margin-right:10px;
+}
+h3{
+    border: 1px solid black;
+}
+.sec1{
+    float: left;
+}
+.sec2{
+    float: right;
+}
+.sec3{
+    float:left;
+}
+.sec4{
+    float: right;
+}
+.sec1 p,.sec3 p{
+    background-color: lightgreen;
+}
+ .sec2 p, .sec4 p{
+    background-color: lightblue;
+}
+.sec1 h3,.sec3 h3{
+    background-color: greenyellow;
+}
+ .sec2 h3, .sec4 h3{
+    background-color: lightskyblue;
+}
