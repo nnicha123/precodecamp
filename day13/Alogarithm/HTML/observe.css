@@ -1,0 +1,61 @@
+header{
+    text-align: center;
+    color: white;
+}
+
+nav{
+    /* display: inline-block; */
+    background-color: violet;
+    height: 50px;
+    padding: 10px 10px 10px 10px;
+}
+
+.headlink a{
+    width: 10%;
+    top: 0px;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-align: center; 
+    text-decoration: none; 
+    
+  }
+ 
+ article{
+     float: left;
+     width: 67%;
+     background-color: white;
+     margin-top: 10px;
+     height:630px;
+     padding: 10px 10px 10px 10px;
+ }
+ article h2{
+     text-align: center;
+ }
+
+ aside{
+     margin-top: 10px;
+     float:right;
+     width: 25%;
+     background-color: violet;
+     height:630px;
+     padding: 10px 10px 10px 10px;
+ }
+ 
+ aside h2{
+     text-align: center;
+ }
+
+ footer{
+     display: inline-block;
+     margin-top: 10px;
+     width: 100%;
+     background-color: white;
+ }
+ 
+ .button{
+     background-color: black;
+     color: white;
+     width: 50px;
+     border: 1px solid black;
+ }
