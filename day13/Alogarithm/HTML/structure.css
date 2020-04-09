@@ -14,9 +14,11 @@
     background-color: #e3e3e3;
 }
 .footer{
+    
+    position: relative;
+    height:100px;
+    margin-top: -100px;
     clear:both;
-    float: right;
-    top: 200px;
 }
 
 #main, #header, #footer{
