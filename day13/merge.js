@@ -2,7 +2,7 @@ function merge(arr1,arr2){
     let arr_new = [];
     let point1 = 0;
     let point2 = 0;
-    let chosen = [];
+    // let chosen = [];
     console.log(arr1.length)
     while(point2< arr2.length && point1<arr1.length){
         console.log(point1,point2);
