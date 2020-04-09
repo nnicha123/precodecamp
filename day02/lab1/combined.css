@@ -111,21 +111,17 @@ li a.active{
 
 .pagination {
     display: inline-block;
-    padding-right: 0;
-    margin: 20px 0;
     border-radius: 4px;
 }
 .pagination a{
-    position: relative;
+    /* position: relative; */
     top: 0px;
     border: 3px double maroon;
     border-radius: 6px;
     color: black;
     float: left;
     padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-    
+    text-decoration: none;    
   }
 .pagination a.active{
     background-color: lime;

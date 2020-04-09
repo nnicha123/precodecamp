@@ -1,13 +1,17 @@
+div{
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid black;
+}
 .links-list a {
+
     background-color: rgb(179,57,81);
     color: #fff;
     text-decoration: none;
     padding: 1em 2em;
     display: inline-block;
   }
-  ul{
-     flex-wrap: wrap;
-  }
+ 
   
   .links-list a:hover {
     background-color: rgb(66, 28, 40);
