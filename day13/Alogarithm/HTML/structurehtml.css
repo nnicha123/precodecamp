@@ -1,0 +1,38 @@
+header{
+    background-color: pink;
+    padding: 10px 10px 10px 10px;
+}
+.wrap{
+    background-color: plum;
+    padding: 10px 10px 10px 10px;
+    height: 90px
+}
+.content{
+
+    width: 80%;
+    float: right;
+    background-color: palegreen;
+    padding: 10px 10px 10px 10px;
+}
+.wrap{
+    margin: 10px;
+    display: inline-block;
+    width: 96%;
+
+}
+.sidebar{
+    height:30px;
+    width: 14%;
+    float:left;
+    background-color: purple;
+}
+.main{
+    background-color: palevioletred;
+    padding: 10px 10px 10px 10px;
+}
+footer{
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+    width: 98%;
+    background-color: grey;
+}
