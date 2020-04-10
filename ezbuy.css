@@ -4,6 +4,10 @@ header{
     height: 30px;
     width: 100%;
 }
+.intro:hover{
+    color: white;
+    cursor: pointer;
+}
 
 .ad{
     margin-top: 15px;
@@ -13,6 +17,10 @@ header{
 .logo{
     width: 100%;
 }
+.ad:hover,.logo:hover,.item:hover{
+    cursor: pointer;
+}
+
 .intro{
     float:right;
     list-style: none;
@@ -29,6 +37,10 @@ header{
     list-style: none;
     text-align: center;
 }
+.item:hover{
+    color: blue;
+    background-color: white;
+}
 .form{
     display:flex;
     justify-content: center;
@@ -38,4 +50,7 @@ header{
     border:1px solid orange;
     height:30px;
     width: 500px;
+}
+.form .button{
+    background-color: orange;
 }
