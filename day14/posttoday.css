@@ -3,8 +3,9 @@
     height: 50px;
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     text-align: center;
+    width:100%;
 }
 
 .headlink a{
@@ -17,10 +18,19 @@
     background-color: grey;
 }
 
+p{
+    text-align: center;
+    color: magenta;
+    transition: 3s;
+}
+p:hover{
+    transform: translateX(500px);
+}
+
 .container{
     width: 100%;
     display: flex;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .advert{
@@ -29,12 +39,6 @@
 .advert:hover{
     cursor: pointer;
 }
-
-/* .wrap{
-    display: flex;
-    justify-content: center;
-    margin-top:30px
-} */
 
 .flex-container{
     text-align: center;
@@ -67,17 +71,22 @@
 
 img{
     margin-left:30px;
+    width: 700px;
+
 }
 
 .wrapper{
     /* margin: 0 auto; */
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
 }
 
 article{
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 30px;
     grid-column: 1;
+    background-color: lawngreen;
+    align-content: center;
 }
 aside{
     margin-top:10px;
