@@ -1,0 +1,31 @@
+header{
+    background-color: lightgray;
+    color: gray;
+    height: 30px;
+    width: 100%;
+}
+
+.ad{
+    margin-top: 15px;
+    width: 100%;
+    height:535px;
+}
+.logo{
+    width: 100%;
+}
+.intro{
+    float:right;
+    list-style: none;
+    margin-right: 20px;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.item{
+    background-color: lightblue;
+    margin:10px;
+    height:50px;
+    list-style: none;
+    text-align: center;
+}
