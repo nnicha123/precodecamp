@@ -29,3 +29,13 @@ header{
     list-style: none;
     text-align: center;
 }
+.form{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+.form input{
+    border:1px solid orange;
+    height:30px;
+    width: 500px;
+}
