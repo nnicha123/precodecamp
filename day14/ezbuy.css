@@ -1,8 +1,12 @@
 header{
     background-color: lightgray;
     color: gray;
-    height: 30px;
+    height: 40px;
     width: 100%;
+}
+header li{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .intro:hover{
     color: white;
@@ -45,12 +49,20 @@ header{
     display:flex;
     justify-content: center;
     width: 100%;
+    padding-top: 10px;
 }
 .form input{
     border:1px solid orange;
     height:30px;
     width: 500px;
 }
-.form .button{
+button{
     background-color: orange;
+    height:30px;
+    border: 1px solid orange;
+}
+button:hover{
+    background-color: gainsboro;
+    border: 1px solid gainsboro;
+    cursor: pointer;
 }
