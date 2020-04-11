@@ -41,6 +41,11 @@ header li{
     list-style: none;
     text-align: center;
 }
+
+.all{
+    background-color: rgb(112, 112, 224);
+}
+
 .item:hover{
     color: blue;
     background-color: white;
@@ -65,4 +70,75 @@ button:hover{
     background-color: gainsboro;
     border: 1px solid gainsboro;
     cursor: pointer;
+}
+
+.container-in .container-info{
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 140px;
+    margin-top: 0px;
+}
+.container-in .container-info .list{
+    float: center;
+    list-style: none;
+    padding: 5px;
+    font-size: 0.8em;
+    color: lightgray;
+}
+.container-in .container-info li:hover{
+    color: orange;
+    cursor: pointer;
+    text-decoration: underline orange;
+}
+
+.wrapper-options .container-options{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 0px;
+    margin-right: 140px;
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+.wrapper-options .container-options .list{
+    float: center;
+    list-style: none;
+    padding: 5px;
+    color: black;
+    border-right: 1px solid gray;
+}
+
+.wrapper-options .container-options li:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.flex-container{
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 100%;
+    display: flex;
+    list-style:none;
+    background-color: lightblue;
+    align-content: center;
+}
+
+.showlink{
+    justify-content: center;
+    padding:10px 10px 10px 10px
+}
+
+.aditem{
+    padding: 10px;
+    margin:10px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background-color: lightcoral;
+}
+.aditem:hover{
+    cursor: pointer;
+    background-color: mediumaquamarine;
 }
