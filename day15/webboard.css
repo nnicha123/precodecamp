@@ -13,25 +13,58 @@ header ul{
     display: flex;
     justify-content: center;
     background-color: rgb(107, 72, 107);
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-header li{
-    margin: 10px;
-    margin-top: 0;
-    color: white;
 
 }
+header li{
+    margin-top: 0;
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+}
+header li:hover{
+    background-color: rgb(209, 165, 209);
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+.dropdown:hover .dropdown-content{
+    display: block;
+    background-color:rgb(145, 118, 145);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content p:hover{
+    background-color:  rgb(209, 165, 209);
+    cursor: pointer;
+}
+
 
 input{
     width:400px;
     background-color: rgb(209, 165, 209);
     border: none;
 }
+
+input:hover{
+    border: 1px solid blue;
+}
 button{
     background-color: rgb(209, 165, 209);
     border: 1px solid white;
     color: white;
+}
+
+button:hover{
+    background-color: blanchedalmond;
 }
 
 main{
