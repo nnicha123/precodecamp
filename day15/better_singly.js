@@ -23,6 +23,13 @@ class SinglyLinkedList{
         return this;
         
     }
+    transverse(){
+        var current = this.head;
+        while(current){
+            console.log(current.val);
+            current = current.next;
+        }
+    }
 }
 
 var list = new SinglyLinkedList()
@@ -30,3 +37,4 @@ list.push("Hello");
 console.log(list.head,list.tail);
 list.push("GoodBye");
 console.log(list.head,list.tail);
+console.log(list.transverse());
