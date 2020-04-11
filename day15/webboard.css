@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(145, 118, 145);
+}
+header{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(20, 7, 20);
+    margin:0;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(107, 72, 107);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+header li{
+    margin: 10px;
+    margin-top: 0;
+    color: white;
+
+}
+
+input{
+    width:400px;
+    background-color: rgb(209, 165, 209);
+    border: none;
+}
+button{
+    background-color: rgb(209, 165, 209);
+    border: 1px solid white;
+    color: white;
+}
+
+main{
+}
+
+.item{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
