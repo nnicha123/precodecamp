@@ -26,6 +26,9 @@ class Student{
         })
         return sum/this.scores.length
     }
+    static EnrollStudents(){
+        return "Enrolling Students!";
+    }
 }
 
 let firstStudent = new Student("Emil",'Katz',3);
@@ -37,3 +40,4 @@ console.log(firstStudent.markLate());
 console.log(secondStudent.addScore(87));
 console.log(secondStudent.addScore(92));
 console.log(secondStudent.calculateAverage());
+console.log(Student.EnrollStudents());
