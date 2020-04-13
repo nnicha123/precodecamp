@@ -13,3 +13,7 @@
 .table,td{
     border: 1px double yellowgreen;
 }
+.head{
+    text-align: left;
+    padding-left: 10px;
+}
