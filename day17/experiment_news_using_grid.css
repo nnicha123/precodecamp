@@ -66,24 +66,29 @@ img:hover{
     cursor: pointer;
 }
 
-.container{
-    display: flex;
-    justify-items: center;
-    background-color: maroon;
-    
+.wrap-outside{
+    display:grid;
+    width: 500px;
+    align-self: center;
+    grid-template-columns: 125px 980px 125px;
 }
 
-article{
-    margin-top: 10px;
-    width:80%;
-    height:630px;
+.container{
+    grid-column: 2/3;
+    display:grid;
+    grid-template-columns: 700px 280px;
+    background-color: maroon;
+    position: relative;
+}
+
+ article{
+    grid-column: 1/2;
+    background-color: mediumorchid;
 }
 
 aside{
-    /* grid-column: 2; */
-    margin-top: 10px;
-    padding:20px;
-    width: 200px;
+    grid-column: 2/3;
+    padding: 10px;
     height:530px;
     background-color: peachpuff;
 }
@@ -105,8 +110,8 @@ aside h2{
 }
 
 .advertisement{
-    width: 95%;
-    height:570px;
+    width: 40%;
+    height:400px;
     margin: 10px 10px 10px 10px;
 }
 
