@@ -15,7 +15,8 @@
 .dropdown-content li{
     list-style-type: none;
     text-decoration: none;
-    padding: 10px;    background-image: linear-gradient(to bottom,red, yellow);
+    padding: 10px;    
+    background-image: linear-gradient(to bottom,red, yellow);
 }
 .dropdown-content li:hover{
     background-image: linear-gradient(to bottom,rgba(255,0,0,0.4), rgba(255,255,0,0.4));
