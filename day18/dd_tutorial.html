@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: indianred;
+        }
+
+        #container ul {
+            list-style: none;
+        }
+
+        #container ul li {
+            background-color: greenyellow;
+            width: 150px;
+            border: 1px solid white;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+            color: white;
+            font-size: 19px;
+            position: relative;
+        }
+
+        #container ul li:hover {
+            background-color: royalblue;
+            cursor: pointer;
+        }
+
+        #container ul ul {
+            display: none;
+        }
+
+        #container ul li:hover>ul {
+            display: block;
+        }
+
+        #container ul ul ul {
+            margin-left: 150px;
+            top: 0px;
+            position: absolute;
+        }
+    </style>
+    <title>Dropdown Menu Design</title>
+</head>
+
+<body>
+    <div id="container">
+        <ul>
+            <li>Home</li>
+            <li>Services
+                <ul>
+                    <li>Web Design
+                        <ul>
+                            <li>JS
+                                <ul>
+                                    <li>OOP</li>
+                                    <li>Syntax</li>
+                                    <li>Games</li>
+                                </ul>
+                            </li>
+                            <li>CSS</li>
+                            <li>HTML</li>
+                        </ul>
+                    </li>
+                    <li>Mobile App
+                        <ul>
+                            <li>iOS App</li>
+                            <li>Android</li>
+                            <li>Windows</li>
+                        </ul>
+                    </li>
+                    <li>Advertising
+                        <ul>
+                            <li>Skin Care</li>
+                            <li>New shirts</li>
+                            <li>Dog food</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Blog</li>
+            <li>About</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>
