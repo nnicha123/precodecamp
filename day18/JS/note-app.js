@@ -1,4 +1,9 @@
 const p = document.querySelector('p');
 const h2 = document.querySelector('h2');
-p.remove();
-h2.remove();
+
+
+//Query and remove
+const ps = document.querySelectorAll('p');
+ps.forEach(function(p){
+    p.remove();
+})
