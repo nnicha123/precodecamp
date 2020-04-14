@@ -1,0 +1,13 @@
+// console.log("a".charCodeAt(0));
+let total = 0;
+total += "hello".charCodeAt(0) - 96;
+console.log(total);
+total += "hello".charCodeAt(1) - 96;
+console.log(total);
+total += "hello".charCodeAt(2) - 96;
+console.log(total);
+total += "hello".charCodeAt(3) - 96;
+console.log(total);
+total += "hello".charCodeAt(4) - 96;
+console.log(total);
+console.log(total%11);
