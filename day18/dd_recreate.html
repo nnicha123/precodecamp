@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown recreation</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        body{
+            background-color: lightcyan;
+        }
+        .container ul li{
+            list-style: none;
+            float: left;
+            background-image:linear-gradient(to right,salmon, lightblue);
+            position: relative;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 19px;
+
+        }
+        .container ul ul {
+            display:none;
+            /* position: absolute; */
+            margin-left: 0px; 
+        }
+
+        .container ul ul li{
+            background-image:radial-gradient(circle,rgba(255,0,0,0.4),rgba(255,255,0,0.4));
+        }
+        .container ul li:hover > ul{
+            display: block;
+        }
+        .container ul ul li:hover{
+            background-color: springgreen;
+            cursor: pointer;
+        }
+        .container ul ul ul{
+            margin-left: 150px;
+            top: 0px;
+            position: absolute;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>Home</li>
+            <li>Profile
+                <ul>
+                    <li>Add Friend</li>
+                    <li>New Suggestions</li>
+                    <li>Connect email</li>
+                </ul>
+            </li>
+            <li>News
+                <ul>
+                    <li>Political</li>
+                    <li>Celebrity</li>
+                    <li>Environmental</li>
+                    <li>Crimes
+                        <ul>
+                            <li>Crime 1</li>
+                            <li>Crime 2</li>
+                            <li>Crime 3</li>
+                        </ul>
+                    </li>
+                    <li>Offers</li>
+                </ul>
+            </li>
+            <li>Contact Us</li>
+            <li>Security</li>
+        </ul>
+    </div>
+</body>
+</html>
