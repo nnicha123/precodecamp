@@ -1,0 +1,39 @@
+.dropbtn{
+    background-color: palevioletred;
+    column-rule: black;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+.dropdown{
+    position:relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: coral;
+    z-index:1;
+}
+.dropdown-content a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border:1px solid black;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown .dropdown-content a:hover{
+    background-image: linear-gradient(to bottom,red,yellow);
+}
+.link2{
+    display:none;
+}
+.link2 a{
+    display: block;
+}
+
+.dropdown-content .link2-wrap:hover > .link2{
+    display: block;
+}
