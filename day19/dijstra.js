@@ -55,7 +55,7 @@ class WeightedGraph{
                     console.log(nextNode);
                     let candidate = distances[smallest] + nextNode.weight;
                     let nextNeighbor = nextNode.nodes;
-                    if(candidate < distances[nextNode.node]){
+                    if(candidate < distances[nextNeighbor]){
                         distances[nextNeighbor] = candidate;
                         previous[nextNeighbor] = smallest;
                         nodes.enqueue(nextNeighbor,candidate);
