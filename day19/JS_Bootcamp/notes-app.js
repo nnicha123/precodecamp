@@ -29,3 +29,12 @@ document.querySelector('#remove-all').addEventListener('click',function(e){
         note.remove();
     });
 })
+//Using input
+document.querySelector('#search-text').addEventListener('input',function(e){
+    console.log(e.target.value);
+})
+
+//Using change
+document.querySelector('#todo-list').addEventListener('change',function (e){
+    console.log(e.target.value)
+}) 
