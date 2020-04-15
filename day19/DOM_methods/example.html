@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h2 id="demo">YOYO</h2>
+        <p id="second"></p>
+        <div id="main">
+            <p>The DOM is very useful</p>
+            <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+        </div>
+        <script>
+            // console.log(document.getElementById("demo").innerHTML);
+            // document.getElementById("demo").innerHTML = "Hello World";
+            // console.log(document.getElementById("demo").innerHTML)
+
+            var x= document.getElementById("main");
+            var y= document.getElementsByTagName('p');
+            document.getElementById("demo").innerHTML = 'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML
+            console.log(x);
+        </script>
+    </body>
+</html>
