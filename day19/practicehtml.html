@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container ul li {
+            width: 150px;
+            list-style-type: none;
+            text-align: center;
+            float: left;
+            position: relative;
+            background-image: linear-gradient(to bottom, yellowgreen, lightblue);
+            border: 1px solid black;
+        }
+
+        .container ul ul {
+            display: none;
+            /* position: absolute; */
+            margin-left: 0px;
+        }
+
+        .container ul ul ul {
+            margin-left: 150px;
+            top: 0px;
+            position: absolute;
+            display: none;
+        }
+
+        .container ul li:hover {
+            cursor: pointer;
+            background-image: linear-gradient(to bottom, rgba(154, 205, 50, 0.4), rgba(173, 216, 230, 0.4));
+        }
+
+        .container ul li:hover>ul {
+            display: block;
+        }
+
+        .container ul ul li:hover>ul li {
+            display: block;
+        }
+
+        .container ul ul li {
+            background-image: linear-gradient(to bottom, red, yellow);
+        }
+
+        .container ul ul li:hover {
+            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.4), rgba(255, 255, 0, 0.4));
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>One</li>
+            <li>Two
+                <ul>
+                    <li>Two1</li>
+                    <li>Two2
+                        <ul>
+                            <li>List1</li>
+                            <li>List2
+                                <ul>
+                                    <li>Next level</li>
+                                    <li>Next level</li>
+                                    <li>Next level</li>
+                                    <li>Next level</li>
+                                </ul>
+                            </li>
+                            <li>List3</li>
+                        </ul>
+                    </li>
+                    <li>Two3</li>
+                </ul>
+            </li>
+            <li>Three</li>
+            <li>Four
+                <ul>
+                    <li>Four items</li>
+                    <li>Four items</li>
+                    <li>Four items</li>
+                    <li>Four items
+                        <ul>
+                            <li>One</li>
+                            <li>Two</li>
+                        </ul>
+                    </li>
+                    <li>Four items</li>
+                </ul>
+            </li>
+            <li>Five</li>
+        </ul>
+    </div>
+</body>
+
+</html>
