@@ -17,3 +17,9 @@ const h3s = document.querySelectorAll('h3');
 h3s.forEach(function(h3){
     h3.textContent = "YOYOYOYO"
 })
+
+document.querySelector('button').addEventListener('click',function(e){
+    console.log('Did this work');
+    console.log(e);
+    e.target.textContent = 'The button was clicked'
+})

@@ -30,3 +30,6 @@ todos.forEach(function(todo){
     }
 
 })
+document.querySelector('button').addEventListener('click',function(e){
+    e.target.textContent = "Text change on button"
+})
