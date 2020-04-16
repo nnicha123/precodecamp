@@ -42,3 +42,7 @@ document.querySelector('#submit-form').addEventListener('submit',function(e){
     document.querySelector('#notes').appendChild(p);
     e.target.elements.createInput.value = ''
 })
+
+document.querySelector('#for-fun').addEventListener('change',function(e){
+    console.log(e.target.checked)
+})
