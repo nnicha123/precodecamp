@@ -1,0 +1,184 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+$color-primary:#55c57a;
+$color-primary-light:#7ed56f;
+$color-primary-dark:#28b485;
+
+
+/* Need to set before & after element to this default as well to avoid problems */
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+html{
+    /* root font size is now 10px everything else using rem dependent on font-size, change font size to % so user can set*/
+    font-size:62.5%;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: #777;
+    /* 30px/10px = 3rem */
+    padding: 3rem; 
+    /* border-box makes sure width,height is the actual width/height specified, including padding, border (more padding/border reduce space for content) */
+    box-sizing: border-box;
+}
+
+.header {
+    height:95vh;
+    background-image: linear-gradient(to right,
+    rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)),url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75%,0 100%);   
+    position: relative;
+}
+
+/* parent is .header, position of parent set to relative */
+.header__logo-box{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.header__logo{
+    height: 3.5rem;
+}
+
+.header__text-box{
+    position: absolute;
+    /* position absolute & top, left is relative to the relative element which is the header */
+    top: 50%;
+    left: 50%;
+    /* translate is relative to the element itself  */
+    transform: translate(-50%, -50%);
+    /* To ensure stuff like button (inline-block) is at the center */
+    text-align: center;
+}
+
+.heading-primary{
+    color: white;
+    text-transform: uppercase;
+    /* To get rid of the shaking quality */
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
+/* Span is inline by default so make 'block' to be in different lines */
+.heading-primary--main{
+    display: block;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 3.5rem;
+    animation-name: moveInleft;
+    animation-duration: 1.5s;
+}
+/* Span is inline by default so make 'block' to be in different lines */
+.heading-primary--sub{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name: moveInright;
+    animation-duration: 1.5s;
+}
+
+@keyframes moveInleft {
+    /* 0% at the beginning and 100% at the end */
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80%{
+        transform: translateX(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform:translate(0)
+    }
+}
+
+@keyframes moveInright {
+    /* 0% at the beginning and 100% at the end */
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80%{
+        transform: translateX(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform:translate(0)
+    }
+}
+
+/* link is the normal state, visited is the state after clicked */
+/* Initial state is an inline element, need to change to inline block */
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    /* transition property in the initial state */
+    transition: all .2s;
+    /*reference to button (initial state) so set position as relative there */
+    position: relative;
+    font-size: 1.6rem;
+}
+
+
+.btn:hover{
+    transform: translateY(-.3rem);
+    /* x direction, y-direction and blur */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+/* When click */
+.btn:active{
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+}
+
+.btn--white{
+    background-color: white;
+    color: #777;
+}
+
+.btn::after{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    /* need to have a reference, reference to button (initial state) so set position as relative there */
+    /* set to be same position relative to button to hide behind button*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* and set behind button */
+    z-index: -1;
+    transition: all 0.4s;
+}
+/* Initial state of button white::after pseudo element */
+.btn--white::after{
+    background-color: white;
+}
+/* Pseudo element changes scale after hover but initially cannot see since put behind original button */
+.btn:hover::after{
+    transform: scale(1.5);
+    /* fadeout */
+    opacity: 0;
+}
