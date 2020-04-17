@@ -27,7 +27,45 @@ body{
     background-image: linear-gradient(to right,rgb(126, 213, 111,0.8),rgb(40, 180, 133,0.8)),url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75%,0 100%);   
+    position: relative;
+}
 
-    clip-path: polygon(0 0, 100% 0, 100% 75%,0 100%);
+/* parent is .header, position of parent set to relative */
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
 
+.logo{
+    height: 35px;
+}
+
+.text-box{
+    position: absolute;
+    /* position absolute & top, left is relative to the relative element which is the header */
+    top: 50%;
+    left: 50%;
+    /* translate is relative to the element itself  */
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary{
+    color: white;
+    text-transform: uppercase;
+}
+/* Span is inline by default so make 'block' to be in different lines */
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 35px;
+}
+/* Span is inline by default so make 'block' to be in different lines */
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 15px;
 }
