@@ -49,11 +49,16 @@ body{
     left: 50%;
     /* translate is relative to the element itself  */
     transform: translate(-50%, -50%);
+    /* To ensure stuff like button (inline-block) is at the center */
+    text-align: center;
 }
 
 .heading-primary{
     color: white;
     text-transform: uppercase;
+    /* To get rid of the shaking quality */
+    backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 /* Span is inline by default so make 'block' to be in different lines */
 .heading-primary-main{
@@ -61,6 +66,8 @@ body{
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 35px;
+    animation-name: moveInleft;
+    animation-duration: 1.5s;
 }
 /* Span is inline by default so make 'block' to be in different lines */
 .heading-primary-sub{
@@ -68,4 +75,65 @@ body{
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 15px;
+    animation-name: moveInright;
+    animation-duration: 1.5s;
+}
+
+@keyframes moveInleft {
+    /* 0% at the beginning and 100% at the end */
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform:translate(0)
+    }
+}
+
+@keyframes moveInright {
+    /* 0% at the beginning and 100% at the end */
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform:translate(0)
+    }
+}
+
+/* link is the normal state, visited is the state after clicked */
+/* Initial state is an inline element, need to change to inline block */
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    /* transition property in the initial state */
+    transition: all .2s;
+}
+
+.btn-white{
+    background-color: white;
+    color: #777;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    /* x direction, y-direction and blur */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+/* When click */
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
