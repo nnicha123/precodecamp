@@ -1,18 +1,23 @@
 <template>
-  <div id="app">
-    <!-- Use router component instead -->
-    <!-- <app-user></app-user> -->
-    <p>This will not be italic because it is not a child component</p>
-  </div>
+    <div id="app">
+        <div>
+            <router-link to="/">Home</router-link>
+            <router-link to="/blog">Blog</router-link>
+            <router-link to="/account">Account</router-link>
+        </div>
+        <router-view></router-view>
+        <!--<app-user></app-user>-->
+        <p>This is a test!</p>
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    export default {
+        name: 'app',
+        data () {
+            return {
+                msg: 'Welcome to Your Vue.js App'
+            }
+        }
     }
-  }
-}
 </script>
