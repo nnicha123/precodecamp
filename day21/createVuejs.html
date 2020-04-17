@@ -9,6 +9,7 @@
 <body>
     <div id="app">
         <p>{{ name }}</p>
+        <p v-if="name == 'Max' ? false:true">Name updated!</p>
         <button v-on:click="changeName">Change Name</button>
 
     </div>
