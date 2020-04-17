@@ -9,6 +9,8 @@ Dark green: #28b485
 $color-primary:#55c57a;
 $color-primary-light:#7ed56f;
 $color-primary-dark:#28b485;
+$color-grey-dark:#777;
+$color-white:#ffffff;
 
 
 /* Need to set before & after element to this default as well to avoid problems */
@@ -29,7 +31,7 @@ body{
     font-weight: 400;
     /* font-size: 16px; */
     line-height: 1.7;
-    color: #777;
+    color:$color-grey-dark;
     /* 30px/10px = 3rem */
     padding: 3rem; 
     /* border-box makes sure width,height is the actual width/height specified, including padding, border (more padding/border reduce space for content) */
@@ -56,7 +58,6 @@ body{
 .header__logo{
     height: 3.5rem;
 }
-
 .header__text-box{
     position: absolute;
     /* position absolute & top, left is relative to the relative element which is the header */
@@ -69,7 +70,7 @@ body{
 }
 
 .heading-primary{
-    color: white;
+    color: $color-white;
     text-transform: uppercase;
     /* To get rid of the shaking quality */
     backface-visibility: hidden;
@@ -153,8 +154,8 @@ body{
 }
 
 .btn--white{
-    background-color: white;
-    color: #777;
+    background-color:$color-white;
+    color: $color-grey-dark;
 }
 
 .btn::after{
@@ -174,11 +175,12 @@ body{
 }
 /* Initial state of button white::after pseudo element */
 .btn--white::after{
-    background-color: white;
+    background-color: $color-white;
 }
 /* Pseudo element changes scale after hover but initially cannot see since put behind original button */
 .btn:hover::after{
     transform: scale(1.5);
     /* fadeout */
     opacity: 0;
+
 }
