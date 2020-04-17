@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs practice</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .multiple-hobbies{
+            border:1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="userHobby">
+        <button v-on:click="addHobby">New Hobby</button>
+        <p v-if="hobbyWasDeleted">Hobby as deleted</p>
+        <p v-bind:style="{color: hobbies.length> 3? 'red':'black'}"
+            v-bind:class="{'multiple-hobbies':hobbies.length >3}">Hobbies: {{hobbies.length}}</p>
+        
+        <ul>
+            <!-- <li v-for="hobby in hobbies"
+            v-on:click="removeHobby(hobby)">{{hobby}}</li> -->
+            <!-- Replace code above using component -->
+            <app-hobby
+            v-for="hby in hobbies"
+            v-bind:hobby="hby"
+            v-on:hobbyremoved="removeHobby($event)"></app-hobby>
+        </ul>
+    </div>
+
+    <script>
+        Vue.component('app-hobby',{
+            props:[ 'hobby'],
+            template:'<li v-on:click="removeHobby">{{hobby}}</li>',
+            methods:{
+                removeHobby: function(){
+                    this.$emit('hobbyremoved',this.hobby)
+                }
+            }
+        })
+        new Vue({
+            el:"#app",
+            data:{
+                hobbies:["Sports", "Cooking"],
+                userHobby:'',
+                hobbyWasDeleted:false
+            },
+            methods:{
+                addHobby: function(){
+                    this.hobbies.push(this.userHobby)
+                },
+                removeHobby: function(hobby){
+                    var position = this.hobbies.indexOf(hobby);
+                    this.hobbies.splice(position,1);
+                    this.hobbyWasDeleted = true;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
