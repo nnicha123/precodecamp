@@ -7,14 +7,17 @@ Dark green: #28b485
 
 */
 
-*{
+/* Need to set before & after element to this default as well to avoid problems */
+*,
+*::after,
+*::before{
     margin:0;
     padding:0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 html{
-    /* root font size is now 10px */
-    font-size:10px;
+    /* root font size is now 10px everything else using rem dependent on font-size, change font size to % so user can set*/
+    font-size:62.5%;
 }
 
 body{
@@ -25,6 +28,8 @@ body{
     color: #777;
     /* 30px/10px = 3rem */
     padding: 3rem; 
+    /* border-box makes sure width,height is the actual width/height specified, including padding, border (more padding/border reduce space for content) */
+    box-sizing: border-box;
 }
 
 .header {
@@ -37,17 +42,17 @@ body{
 }
 
 /* parent is .header, position of parent set to relative */
-.logo-box{
+.header__logo-box{
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo{
+.header__logo{
     height: 3.5rem;
 }
 
-.text-box{
+.header__text-box{
     position: absolute;
     /* position absolute & top, left is relative to the relative element which is the header */
     top: 50%;
@@ -66,7 +71,7 @@ body{
     margin-bottom: 6rem;
 }
 /* Span is inline by default so make 'block' to be in different lines */
-.heading-primary-main{
+.heading-primary--main{
     display: block;
     font-size: 6rem;
     font-weight: 700;
@@ -75,7 +80,7 @@ body{
     animation-duration: 1.5s;
 }
 /* Span is inline by default so make 'block' to be in different lines */
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -142,7 +147,7 @@ body{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
 }
 
-.btn-white{
+.btn--white{
     background-color: white;
     color: #777;
 }
@@ -163,7 +168,7 @@ body{
     transition: all 0.4s;
 }
 /* Initial state of button white::after pseudo element */
-.btn-white::after{
+.btn--white::after{
     background-color: white;
 }
 /* Pseudo element changes scale after hover but initially cannot see since put behind original button */
