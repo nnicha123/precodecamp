@@ -29,7 +29,10 @@
             <!-- will give id= el1, el2 ... to list elements -->
             <!-- Second v-bind will set styles using get color function below (green for even, red for odd) -->
         </ul>
-
+    </div>
+    <div id="app2">
+        <p>Second Vue Instance</p>
+        <p>{{message}}</p>
     </div>
 
     <script>
@@ -51,7 +54,14 @@
                     return number %2 == 0 ? 'green' :'red'
                 }
             }
-        })
+        });
+
+        new Vue({
+            el:'#app2',
+            data:{
+                message:'Hello from second Vue'
+            }
+        });
     </script>
 </body>
 
