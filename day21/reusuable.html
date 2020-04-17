@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- CSS style -->
+    <style>
+        .updated{
+            color:white;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <app-username></app-username>
+        <app-username></app-username>
+        <p v-bind:class="{updated: name == 'Max' ? false:true}">{{ name }}</p>
+        <p v-if="name == 'Max' ? false:true">Name updated!</p>
+        <button v-on:click="changeName">Change Name</button>
+        <button v-on:click="addElement">New Element</button>
+        <ul>
+            <li v-for="element in elements"
+            v-bind:id="'el' + element"
+            v-bind:style="{backgroundColor: getColor(element)}">A Element {{element}}</li>
+            <!-- Add dynamic element id using v-bind -->
+            <!-- will give id= el1, el2 ... to list elements -->
+            <!-- Second v-bind will set styles using get color function below (green for even, red for odd) -->
+        </ul>
+    </div>
+    <div id="app2">
+        <p>Second Vue Instance</p>
+        <p>{{message}}</p>
+    </div>
+
+    <script>
+        Vue.component('app-username',{
+            data:function(){
+                return {
+                    username:'Chris'
+                }
+            },
+            template:'<p>{{ username }}</p>'
+        })
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'Max',
+                age: '24',
+                elements: []
+            },
+            methods: {
+                changeName: function () {
+                    this.name = "Anna"
+                },
+                addElement: function () {
+                    this.elements.push(this.elements.length + 1)
+                },
+                getColor:function(number){
+                    return number %2 == 0 ? 'green' :'red'
+                }
+            }
+        });
+
+        new Vue({
+            el:'#app2',
+            data:{
+                message:'Hello from second Vue'
+            }
+        });
+    </script>
+</body>
+
+</html>
