@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <app-user></app-user>
+    <!-- Use router component instead -->
+    <!-- <app-user></app-user> -->
     <p>This will not be italic because it is not a child component</p>
   </div>
 </template>
