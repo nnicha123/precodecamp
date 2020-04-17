@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuejs</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
+
 <body>
     <div id="app">
         <p>{{ name }}</p>
@@ -13,28 +15,37 @@
         <button v-on:click="changeName">Change Name</button>
         <button v-on:click="addElement">New Element</button>
         <ul>
-            <li v-for="element in elements">A Element</li>
+            <li v-for="element in elements"
+            v-bind:id="'el' + element"
+            v-bind:style="{backgroundColor: getColor(element)}">A Element {{element}}</li>
+            <!-- Add dynamic element id using v-bind -->
+            <!-- will give id= el1, el2 ... to list elements -->
+            <!-- Second v-bind will set styles using get color function below (green for even, red for odd) -->
         </ul>
 
     </div>
 
     <script>
         new Vue({
-            el:'#app',
-            data:{
-                name:'Max',
-                age:'24',
+            el: '#app',
+            data: {
+                name: 'Max',
+                age: '24',
                 elements: []
             },
-            methods:{
-                changeName: function(){
+            methods: {
+                changeName: function () {
                     this.name = "Anna"
                 },
-                addElement: function(){
+                addElement: function () {
                     this.elements.push(this.elements.length + 1)
+                },
+                getColor:function(number){
+                    return number %2 == 0 ? 'green' :'red'
                 }
             }
         })
     </script>
 </body>
+
 </html>
