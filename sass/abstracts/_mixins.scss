@@ -1,0 +1,11 @@
+// Float collapses block so need to clear by adding pseudo element :: after block
+@mixin clearfix{
+    &::after{
+        // Adding a content (otherwise wont show)
+        content:"";
+        display: table;
+        // Clears both float left and float right
+        clear: both;
+
+    }
+}
