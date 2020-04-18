@@ -1,0 +1,47 @@
+.card{
+    perspective: 150rem;
+    // To work in firefox as well
+    -moz-perspective: 150rem;
+    position: relative;
+    // Need to specify height because when set child as absolute the height of parent collapses
+    // When using float, this can be fixed with clear fix but in this case cannot so need to go back to parent and set height
+    height: 50rem;
+
+    &__side{
+        color: white;
+        font-size: 2rem;
+        height: 50rem;
+        transition: all .8s ease;
+        // We gave elements absolute positioning so they will start fitting to their width
+        position: absolute;
+        top:0;
+        left: 0;
+        // So need to give width 100%
+        width: 100%;
+        // And use this to hide the backside of the element
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15) ;
+
+        &--front{
+            background-color: $color-white;
+        }
+
+        &--back{
+
+            transform: rotateY(180deg);
+            &--1{
+                background-image:linear-gradient(to right bottom, $color-secondary-light,$color-secondary-dark);
+            }
+        }
+    }
+
+    &:hover &__side--front{
+        transform: rotateY(180deg);
+    }
+    
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+
+    }
+}
