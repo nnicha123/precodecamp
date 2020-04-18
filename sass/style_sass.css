@@ -57,7 +57,7 @@ body {
   text-align: center; }
 
 .heading-primary {
-  color: #fff;
+  color: pink;
   text-transform: uppercase;
   /* To get rid of the shaking quality */
   backface-visibility: hidden;
@@ -129,7 +129,7 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
-  background-color: #fff;
+  background-color: pink;
   color: #777; }
 
 .btn::after {
@@ -149,7 +149,7 @@ body {
 
 /* Initial state of button white::after pseudo element */
 .btn--white::after {
-  background-color: #fff; }
+  background-color: pink; }
 
 /* Pseudo element changes scale after hover but initially cannot see since put behind original button */
 .btn:hover::after {
