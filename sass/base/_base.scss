@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+html{
+    /* root font size is now 10px everything else using rem dependent on font-size, change font size to % so user can set*/
+    font-size:62.5%;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color:$color-grey-dark;
+    /* 30px/10px = 3rem */
+    padding: 3rem; 
+    /* border-box makes sure width,height is the actual width/height specified, including padding, border (more padding/border reduce space for content) */
+    box-sizing: border-box;
+}

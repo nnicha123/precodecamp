@@ -1,0 +1,26 @@
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    /* To get rid of the shaking quality */
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    /* Span is inline by default so make 'block' to be in different lines */
+    &--main{
+        display: block;
+        font-size: 6rem;
+        font-weight: 700;
+        letter-spacing: 3.5rem;
+        animation-name: moveInleft;
+        animation-duration: 1.5s;
+    }
+/* Span is inline by default so make 'block' to be in different lines */
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation-name: moveInright;
+        animation-duration: 1.5s;
+    }
+}
