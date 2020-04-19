@@ -1,0 +1,18 @@
+// Go set section-stories as relative (can be found in _home.scss)
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .15;
+
+    &__content{
+        // Doing this alone wouldn't work because when width 100% (shorter) height will be even lower because of proportion
+        width: 100%;
+        height: 100%;
+        //So need this element to Cover entire element with video content
+        object-fit: cover;
+    }
+}
