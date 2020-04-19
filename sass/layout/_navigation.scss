@@ -13,6 +13,8 @@
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 2rem rgba($color-black,.1);
+        text-align: center;
+        cursor: pointer;
     }
 
     &__background{
@@ -83,6 +85,7 @@
         }
 
     }
+    //FUNCTIONALITY
     // Use checkbox hack (previously done for navigation, on the navigation
     // Note for in label connects the name on the input with it, so when click input label, it selects the checkbox as well'
     &__checkbox:checked ~ &__background {
@@ -93,5 +96,57 @@
         opacity: 1;
         width: 100%;
     }
-   
+
+    //ICON
+   &__icon{
+       position: relative;
+       margin-top: 3.5rem;
+
+       &,
+       &::before,
+       &::after{
+        //    To get the lines (3 lines, itself, before and after -> use width 3rem & really small height
+           width: 3rem;
+           height: 2px;
+           background-color: $color-grey-dark-3;
+           display: inline-block;
+       }
+// To show pseudo element need to have content = " " defined
+// position of span element at 0 and before at -1 after at 1 now span aligned to the top of the container (contained in label navigation__button 
+// since it is a span (i.e. in-line) element, can use text-align center -> see in &__button) and then move down by margin in icon (&__icon)
+       &::before,
+       &::after{
+        content:"";
+        position: absolute;
+        left:0;
+        transition: all .2s;
+       }
+
+       &::before{top:-.8rem};
+       &::after{top:.8rem};
+   }
+
+   &__button:hover &__icon::before{
+       top: -1rem;
+   }
+
+   &__button:hover &__icon::after{
+    top: 1rem;
+    }
+// Adjacent sibling "+"
+    &__checkbox:checked + &__button &__icon{
+        // can't change size because before and after pseudo elements depend on the size so just change color to transparent
+        background-color: transparent;
+    }
+    //Now perform for when click the button (using checkbox element) pseudo elements should form a cross
+    &__checkbox:checked + &__button &__icon::before{
+        top:0;
+        transform: rotate(45deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after{
+        top:0;
+        transform: rotate(-45deg);
+    }
+
 }
