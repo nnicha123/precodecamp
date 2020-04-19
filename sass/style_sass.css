@@ -133,6 +133,11 @@ body {
     color: #777; }
     .btn--white::after {
       background-color: white; }
+  .btn--green {
+    background-color: #55c57a;
+    color: white; }
+    .btn--green::after {
+      background-color: white; }
   .btn::after {
     content: '';
     display: inline-block;
