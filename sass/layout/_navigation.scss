@@ -12,6 +12,7 @@
         right: 6rem;
         border-radius: 50%;
         z-index: 2000;
+        box-shadow: 0 1rem 2rem rgba($color-black,.1);
     }
 
     &__background{
@@ -24,8 +25,7 @@
         right: 6.5rem;
         background-image:radial-gradient($color-primary-light,$color-primary-dark);
         z-index:20;
-
-        transform: scale(80);
+        transition: transform .8s cubic-bezier(0.86,0,0.007,1);
     }   
 
 
@@ -37,6 +37,10 @@
        top: 0;
        right: 0;
        z-index: 150;
+
+       opacity: 0;
+       width: 0;
+       transition: all .8s cubic-bezier(0.86,0,0.007,1);
     }
     &__list{
         position: absolute;
@@ -63,7 +67,7 @@
     
             background-image: linear-gradient(120deg,transparent 0%, transparent 50%, $color-white 50%);
             background-size: 220%;
-            transition: all .4s;
+            transition: all .8s cubic-bezier(0.86,0,0.007,1);
         }
         span{
             display : inline-block;
@@ -75,8 +79,19 @@
             background-position: 100%;
             color:$color-primary;
             transform:translateX(1rem);
+
         }
 
     }
+    // Use checkbox hack (previously done for navigation, on the navigation
+    // Note for in label connects the name on the input with it, so when click input label, it selects the checkbox as well'
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
 
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+   
 }
