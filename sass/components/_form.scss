@@ -33,6 +33,22 @@
 
 
     &__label{
+        
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        // Display as block to use block model properties above
+        display: block;
+    }
 
+    // Input adjacent sibling of label so use adjacent sibling selector "+" (sibling we select always have to be after)
+    // Place holder shown means we wrote nothing in form
+    &__input:placeholder-shown + &__label{
+        // Opacity makes sure you can animate as well, using visibility:hidden only can't animate
+        opacity: 0;
+        visibility: hidden;
+        // Set initial state so the final state will move down
+        transform: translateY(-4rem);
     }
 }
