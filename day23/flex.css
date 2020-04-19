@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: #ccc;
+    padding: 10px;
+    /* automatically side by side when set container to flex */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.item{
+    background-color: pink;
+    padding: 40px;
+    margin: 30px;
+    color: #fff;
+    font-size: 40px;
+}
