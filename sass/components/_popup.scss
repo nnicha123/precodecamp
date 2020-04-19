@@ -1,20 +1,51 @@
 .popup{
-    display: block;
-    background-color: $color-black;
-    height: 95vh;
-    background-size: cover;
+    // 100vh is 100% viewport height
+    height: 100vh;
+    width:100%;
+    background-color: rgba($color-black,.8);
     // Declared child as in-line block so can align center but maybe better to set position relative
     // text-align: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    // really high Z-index to make sure always on top
+    z-index: 99999;
 
     &__content{
-        height: 30rem;
-        width: 60rem;
-        display: inline-block;
-        background-color: white;
-        position: absolute;
-        top: 12rem;
-        left:30rem;
+        @include absCenter;
+        width: 75%;
+        height: 50rem;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem rgba($color-black,.1);
+        border-radius: 3px;
+        // Use table instead of float so can control height of cells (left and right then becomes cell in table
+        display: table;
+    }
+
+    &__left{
+        width: 33.333333333333%;
+        // want left and right to be side by side so use float
+        // float: left;but want them to be the same height so use table
+        // By using table-cell (as an element of table) browser gives them same height automatically
+        display: table-cell;
+    }
+
+    &__right{
+        width: 66.666666666666%;
+        // Could be right as well but doesn't matter
+        // float: left; but want them to be the same height so use table
+        // By using table-cell (as an element of table) browser gives them same height automatically
+        display: table-cell;
+        // Feature that can use in table
+        vertical-align: middle;
+    }
+    &__img{
+        display: block;
+        // of parent width
+        width: 100%;
+    }
+
+    &_text{
 
     }
 }
