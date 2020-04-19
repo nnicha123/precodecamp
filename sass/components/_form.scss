@@ -1,6 +1,8 @@
 .form{
+
     &__group:not(:last-child){
         margin-bottom: 2rem;
+
     }
 
     &__input{
@@ -14,6 +16,7 @@
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
+        transition: all .3s;
 
         &:focus{
             outline: none;
@@ -50,5 +53,64 @@
         visibility: hidden;
         // Set initial state so the final state will move down
         transform: translateY(-4rem);
+    }
+
+    
+    &__radio-group{
+        // Side by side
+        width: 49%;
+        display: inline-block;
+        font-size: $default-font-size;
+        cursor: pointer;
+    }
+    // Hide original radio input button
+    &__radio-input{
+        display: none;
+    }
+
+    &__radio-label{
+        font-size: $default-font-size;
+        cursor: pointer;
+        // PARENT (absolute relative to this)
+        position: relative;
+        padding-left: 4.5rem;
+    }
+// Custom own button
+    &__radio-button{
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        // If don't make it a block will not occupy entire width, will act as a text because it is inside span
+        // inline-block makes it a block but in the same line (don't make a new line)
+        display: inline-block;
+        // To position
+        position: absolute;
+        // padding-left: .5px;
+        left: 0rem;
+        top:-.4rem;
+        // top:.2rem;
+        // make pseudo element for inside button
+        &::after{
+            // pseudo element need to set content
+            content:"";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            // To be a circle
+            border-radius: 50%;
+            background-color: $color-primary;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            // Make invisible first
+            opacity: 0;
+            transition: all .3s;
+        }
+    }
+    // Radio button have pseudo class checked
+    &__radio-input:checked ~ &__radio-label &__radio-button::after{
+        opacity: 1;
     }
 }
