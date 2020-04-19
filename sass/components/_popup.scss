@@ -20,6 +20,7 @@
         border-radius: 3px;
         // Use table instead of float so can control height of cells (left and right then becomes cell in table
         display: table;
+        overflow: hidden;
     }
 
     &__left{
@@ -38,14 +39,23 @@
         display: table-cell;
         // Feature that can use in table
         vertical-align: middle;
+        padding: 3rem 5rem;
     }
     &__img{
         display: block;
         // of parent width
         width: 100%;
+
     }
 
-    &_text{
+    &__text{
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+        column-count: 2;
+        column-gap: 4rem;
+        // put exactly in the muddle
+        column-rule: 1px solid $color-grey-light-2;
+        hyphens: auto;
 
     }
 }
