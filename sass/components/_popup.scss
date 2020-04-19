@@ -1,0 +1,22 @@
+.popup{
+    display: block;
+    background-color: $color-black;
+    height: 95vh;
+    background-size: cover;
+    // Declared child as in-line block so can align center but maybe better to set position relative
+    // text-align: center;
+    position: relative;
+
+    &__content{
+        height: 30rem;
+        width: 60rem;
+        display: inline-block;
+        background-color: white;
+        position: absolute;
+        top: 12rem;
+        left:30rem;
+
+    }
+}
+
+
