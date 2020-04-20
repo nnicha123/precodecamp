@@ -53,12 +53,13 @@
 }
 
 .description{
+    font-size: 1.4rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
     background-color: #fff;
     box-shadow: var(--shadow-light);
     padding:3rem;
-    font-size: 1.4rem;
+    
 }
 .user-reviews{
     // occupy remaining space (use flex-grow
