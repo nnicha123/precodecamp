@@ -12,7 +12,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
     // header is the parent of the flexbox items we want to set (e.g. the svg icons)
     display: flex;
     // use justify content on the parent element to set its child & align items
@@ -37,11 +37,31 @@
     justify-content: space-between;
 }
 .hotel-view{
-
     // we want this element to grow as much as it can
     // set grow to 1
     flex:1;
-    // Test
-    height: 80rem;
+  
+}
 
+.detail{
+    // want description and user-reviews to be side-by-side
+    display: flex;
+    justify-content: center;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+}
+
+.description{
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding:3rem;
+    font-size: 1.4rem;
+}
+.user-reviews{
+    background-color: yellowgreen;
+    // occupy remaining space (use flex-grow
+    flex: 1;
 }
