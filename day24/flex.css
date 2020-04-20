@@ -9,7 +9,7 @@
     padding: 10px;
     /* automatically side by side when set container to flex */
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
     /* default is stretch, all elements stretched with largest element */
     align-items: center;
@@ -21,9 +21,32 @@
     margin: 30px;
     color: #fff;
     font-size: 40px;
+    /* flex grow enables the element to grow in relative to other elements,will see results more clearly if remove margin */
+    flex-grow: 1;
 
 }
 
 .i2{
     height: 200px;
+    /* order -> move to the end (default position is 0) */
+    order: 1;
+    /* flex-grow:2; */
+    /* default value of flex shrink is 1 (allow shrinking with screen), if do not allow shrinking set flex-shrink to 0 */
+    /* flex-basis set the width of the element */
+    /* setting flex-grow, flex-shrink, flex-basis => flex: 0 0 300px; means fixing the width at 300px, don't change with screen */
+    flex-basis: 300px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.i4{
+    /* Use align-self to override */
+    align-self: flex-end;
+    /* default order is 0 so set to negative to bring it to the beginning */
+    order: -1;
+    /* first element of shorthand is flex-grow (=1 means occupy as much space as possible */
+    /* like this means can be >300px but cannot shrink lower than 300px */
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 300px;
 }
