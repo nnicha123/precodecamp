@@ -372,6 +372,8 @@
     box-shadow: var(--shadow-light);
     padding: 3rem;
     margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
 
     &__rating{
         color: var(--color-primary);
@@ -380,12 +382,13 @@
     }
 
     &__text{
-
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
     }
     &__user{
         display: flex;
         align-items: center;
-        padding-top: 2rem;
     }
     &__photo{
         height: 4.5rem;
@@ -404,5 +407,21 @@
     &__user-date{
         font-size: 1rem;
         color: var(--color-grey-dark-3);
+    }
+    // For quotation marks use pseudo-elements
+    // HTML entities css-tricks (need pseudo element to do)
+    &::before{
+      content: "\201C";
+
+      position: absolute;
+      top:-2.75rem;
+      left: -1rem;
+    //Element has line height because it is text so need to set line height to a lower value
+      line-height: 1;
+      font-size: 20rem;
+      font-family: sans-serif;
+      color: var(--color-grey-light-2);
+    //   don't want to be over text (z-index only works when we set position (can be anything))
+      z-index :1;
     }
 }

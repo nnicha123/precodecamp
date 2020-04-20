@@ -335,15 +335,20 @@ body {
   background-color: #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem;
-  margin-bottom: 3.5rem; }
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
   .review__rating {
     color: var(--color-primary);
     font-weight: 800;
     font-size: 2.2rem; }
+  .review__text {
+    margin-bottom: 2rem;
+    z-index: 10;
+    position: relative; }
   .review__user {
     display: flex;
-    align-items: center;
-    padding-top: 2rem; }
+    align-items: center; }
   .review__photo {
     height: 4.5rem;
     width: 4.5rem;
@@ -357,3 +362,13 @@ body {
   .review__user-date {
     font-size: 1rem;
     color: var(--color-grey-dark-3); }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    font-family: sans-serif;
+    color: var(--color-grey-light-2);
+    z-index: 1; }
