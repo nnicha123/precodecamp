@@ -1,28 +1,70 @@
 // LOGO
 .logo{
     height: 3.25rem;
+    margin: 3rem;
 }
-
 
 // SEARCH
 .search{
+    flex:0 0 40%;
+
+    // Nested flex box, this item is the container of its child, with the default setting stretch
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &__input{
+        font-family: inherit;
+        font-size: inherit;
+        background-color: var(--color-grey-light-2);
+        border:none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        transition: all .2s;
+        // give negative margin so button will move on top of input
+        margin-right: -3.5rem;
+
+        &:focus{
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::-webkit-input-placeholder{
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
 
     }
-    &__button{
+    
+    &__input:focus + &__button{
+        background-color: var(--color-grey-light-2);
+    }
 
+    &__button{
+        border: none;
+        background-color: var(--color-grey-light-2);
+
+        &:focus{
+            outline:none;
+        }
+        &:active{
+            transform: translateY(2px);
+        }
     }
 
     &__icon{
         height: 2rem;
         width: 2rem;
+        fill: var(--color-grey-dark-3);
     }
 }
 
-
-
 // USER NAV
 .user-nav{
+    background-color: greenyellow;
+    // want to be all the way to the right side
+
     &__icon-box{
 
     }

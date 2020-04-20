@@ -9,10 +9,16 @@
 }
 
 .header{
+    font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
-    // border-bottom: black;
+    // header is the parent of the flexbox items we want to set (e.g. the svg icons)
+    display: flex;
+    // use justify content on the parent element to set its child & align items
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 // Use flex-box so set container to flex (display)
