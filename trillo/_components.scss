@@ -335,3 +335,34 @@
     }
 
 }
+
+// RECOMMEND
+.recommend{
+    font-size: 1.3rem;
+    color:var(--color-grey-dark-3);
+    display: flex;
+    align-items: center;
+
+    &__photo{
+        // Initially set all to border-box but in this case we don't want image to shrink
+        // So set back to default which is content-box
+        box-sizing: content-box;
+        height: 4rem;
+        width:4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        // give images negative right margin except the last one so they overlap
+        &:not(:last-child){
+            margin-right: -1.5rem;
+        }
+    }
+
+    &__count{
+        // with the flex properties it will automatically calculate the margin
+        margin-right: auto;
+    }
+
+    &__friends{
+
+    }
+}
