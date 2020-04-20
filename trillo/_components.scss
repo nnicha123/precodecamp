@@ -308,9 +308,30 @@
     border-bottom: var(--line);
     display: flex;
     flex-wrap: wrap;
+
     &__item{
         // Want 2 elements side by side (set width to 100%/2)
         flex: 0 0 50%;
         margin-bottom: .7rem;
     }
+    //before item element, put a pseudo element
+    &__item::before{
+        // need to always specify content property for pseudo elements
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: .7rem;
+        // if use as background image cannot change color -> for old browsers
+        // background-image: url(../img/chevron-thin-right.svg);
+        // background-size: cover;
+
+        // for new browsers can use mask -> set entire background of icon to pink
+        background-color: var(--color-primary);
+        // and put mask on top of it (only the position where icon is there can see color)
+        // only work in webkit browser
+        -webkit-mask-image:  url(../img/chevron-thin-right.svg);
+        -webkit-mask-size:cover;
+    }
+
 }
