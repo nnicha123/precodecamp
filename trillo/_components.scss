@@ -211,6 +211,9 @@
         // trick -> in flex box (want to occupy only its space so cannot use flex grow =1
         // margin-right:auto calculates the margin needed on the right of the stars and let its next element be on the rightmost
         margin-right: auto;
+        // to remove in-line element properties of svg stars, element has white space at the bottom, so not vertically aligned
+        // so set its parent to flex so it becomes flex item
+        display: flex;
     }
     &__icon-star,
     &__icon-location{
@@ -229,5 +232,20 @@
     }
     &__rating-count{
 
+    }
+}
+// BUTTON INLINE
+.btn-inline{
+    // border:none;
+    color: var(--color-primary);
+    font-size: inherit;
+    // same color as text
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    display: inline-block;
+    background-color: transparent;
+
+    &:hover{
+        color: var(--color-grey-dark-1);
     }
 }
