@@ -64,4 +64,8 @@
 .user-reviews{
     // occupy remaining space (use flex-grow
     flex: 1;
+    // To set button at the center (cannot use text-align because will align all texts)
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
