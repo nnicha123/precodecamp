@@ -11,14 +11,21 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 1000px;
     /* default is stretch, all elements stretched with largest element */
     align-items: center;
+
+    /* Set flex-wrap to wrap items and prevent overflow; */
+    flex-wrap: wrap;
+    /* align items aligns the item in the center but align content aligns the rows across the cross axis */
+    /* align at the cross-axis start and the ending has free space */
+    align-content: flex-start;
 }
 
 .item{
     background-color: pink;
     padding: 40px;
-    margin: 30px;
+    margin: 5px;
     color: #fff;
     font-size: 40px;
     /* flex grow enables the element to grow in relative to other elements,will see results more clearly if remove margin */
@@ -41,12 +48,12 @@
 
 .i4{
     /* Use align-self to override */
-    align-self: flex-end;
+    /* align-self: flex-end; */
     /* default order is 0 so set to negative to bring it to the beginning */
     order: -1;
     /* first element of shorthand is flex-grow (=1 means occupy as much space as possible */
     /* like this means can be >300px but cannot shrink lower than 300px */
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 300px;
+    /* flex-grow: 1; */
+    /* flex-shrink: 0;
+    flex-basis: 300px; */
 }
