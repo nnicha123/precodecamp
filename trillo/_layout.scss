@@ -30,7 +30,11 @@
     background-color: var(--color-grey-dark-1);
     // use flex-basis to define width (shorthand flex:0 0 18%) set grow, shrink to 0
     flex: 0 0 18%;
-    
+    // Want the footer to be at the bottom so set the sidebar as the parent & set items
+    // flex direction as column switches the axis and now justify content does it vertically
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .hotel-view{
     background-color: white;   
@@ -38,5 +42,7 @@
     // we want this element to grow as much as it can
     // set grow to 1
     flex:1;
+    // Test
+    height: 80rem;
 
 }
