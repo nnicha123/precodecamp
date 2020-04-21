@@ -1,0 +1,39 @@
+/* METHOD 2 LINE NAMES  */
+.container{
+    width: 1000px;
+    background-color: white;
+    /* center block */
+    margin: 30px auto;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 150px [grid-end];
+    grid-template-rows: [header-start] 1fr [header-end box-start] 2fr [box-end main-start] 4fr [main-end footer-start] 1fr [footer-end];
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.item{
+    padding: 20px;
+    background-color: tomato;
+}
+
+.header{
+    grid-column: col-start 1/grid-end;
+}
+
+.sidebar{
+    grid-column: col-end 3/ grid-end;
+    grid-row: box-start/main-end;
+}
+
+.footer{
+    grid-column: col-start 1/grid-end;
+    grid-row: footer-start/footer-end;
+}
+.main-content{
+    grid-column: col-start 1/col-end 3;
+    grid-row: main-start/main-end;
+}
