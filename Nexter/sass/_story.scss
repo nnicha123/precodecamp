@@ -5,6 +5,23 @@
     }
     &__content{
         background-color: $color-grey-light-1;
-        grid-column: col-start 5/col-end 8;
+        grid-column: col-start 5/full-end;
+        padding: 6rem 8vw;
+        // To center button, make this flex container
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // button expands because align-items default is stretch
+        // align-items: flex-start;
+
+        // 2) can use grid as well
+        display: grid;
+        align-content: center;
+        justify-items: start;
+    }
+    &__text{
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-bottom: 4rem;
     }
 }
