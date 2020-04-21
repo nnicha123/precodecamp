@@ -4,6 +4,31 @@
     margin: 15rem 0;
     // want grid item to also be a container
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    // grid-template-columns: repeat(3,1fr);
+    // To make it responsive, use auto-fit with min width 25rem and fitting the screen
+    // autofit will create new grids to support
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
     grid-gap: 6rem;
+    // automatically set to stretch so if less text will have huge gap between row1-2 so we fix by align items to the top
+    align-items: start;
+}
+
+.feature{
+    display: grid;
+    // Don't define rows because we want content to define rows
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    &__icon{
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        // -1 only work with explicit grid, won't work here because we did not define rows
+        grid-row: 1/span 2;
+        transform: translateY(-1rem);
+    }
+    &__text{
+        font-size: 1.7rem;
+    }
 }
