@@ -34,3 +34,17 @@ body{
     font-weight: 300;
     line-height: 1.6;
 }
+// define grid
+.container{
+    display: grid;
+    // viewport defines first and third content
+    grid-template-rows: 80vh min-content 40vw repeat(3,min-content);
+        // want to have fixed width
+        // want 8 columns to be centered relative to sidebar and end of viewport so add 1fr
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8,[col-start] minmax(min-content,14rem) [col-end]) [center-end] 1fr [full-end];
+
+    &>*{
+        padding: 40px;
+        font-size: 3rem;
+    }
+}
