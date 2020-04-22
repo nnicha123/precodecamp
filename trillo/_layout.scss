@@ -25,6 +25,13 @@
     justify-content: space-between;
     align-items: center;
 
+    @media only screen and (max-width:$bp--smallest){
+        // So search bar can come underneath need to wrap and let height be abit larger
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around;
+    }
+
 }
 
 // Use flex-box so set container to flex (display)
@@ -66,7 +73,6 @@
 
     @media only screen and (max-width:$bp--small){
         flex-direction: column;
-        margin-bottom: 3rem;
      }
 }
 
@@ -84,6 +90,7 @@
 
      @media only screen and (max-width:$bp--small){
         margin-right: 0;
+        margin-bottom: 3rem;
      }
     
 }
