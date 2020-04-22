@@ -34,4 +34,8 @@ body{
     padding: 3rem; 
     /* border-box makes sure width,height is the actual width/height specified, including padding, border (more padding/border reduce space for content) */
     box-sizing: border-box;
+    // get rid of padding at 900px screen
+    @include respond(tab-port){
+        padding: 0; //want1 rem = 8px, 8/16 = 50%
+    }
 }
