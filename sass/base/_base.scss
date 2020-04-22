@@ -7,20 +7,21 @@
 }
 html{
     /* root font size is now 10px everything else using rem dependent on font-size, change font size to % so user can set*/
-    font-size:62.5%;
+    font-size:62.5%; //1rem = 10px; 10/16 - 62.5%
     // use mixin
-    @include respond(phone){
-        font-size: 50%;
-    }
-    @include respond(tab-port){
-        font-size: 60%;
+    @include respond(big-desktop){
+        font-size: 75%;
     }
     @include respond(tab-land){
-        font-size: 70%;
+        font-size: 56.25%; //want 1rem = 9px, 9/16 = 56.25%
     }
-    @include respond(big-desktop){
-        font-size: 80%;
+    @include respond(tab-port){
+        font-size: 50%; //want1 rem = 8px, 8/16 = 50%
     }
+    @include respond(phone){
+        font-size: 30%; //want1 rem = 8px, 8/16 = 50%
+    }
+
 }
 
 body{
