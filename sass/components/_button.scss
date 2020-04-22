@@ -49,6 +49,7 @@
     &--green{
         background-color:$color-primary;
         color: $color-white;
+
         &::after{
             background-color: $color-white;
         }
