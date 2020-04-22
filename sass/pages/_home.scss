@@ -15,15 +15,16 @@
     rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)),url(./img/nat-4.jpg);
     background-size: cover;
 
-    @include respond(tab-port){
-        padding: 15rem 0;
-    }
     // Make skewed design - skew entire section
     transform: skewY(-7deg);
     margin-top: -10rem;
     //Select everything that is the direct child
     & > *{
         transform: skewY(7deg);
+    }
+
+    @include respond(tab-port){
+        padding: 10rem 0;
     }
 }
 
