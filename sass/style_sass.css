@@ -782,6 +782,9 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 20rem 0; } }
 
 .section-features {
   padding: 20rem 0;
@@ -789,6 +792,9 @@ body {
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem; }
+  @media (max-width: 56.25em) {
+    .section-features {
+      padding: 15rem 0; } }
   .section-features > * {
     transform: skewY(7deg); }
 
@@ -796,10 +802,16 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 50rem 0;
   margin-top: -10rem; }
+  @media (max-width: 56.25em) {
+    .section-tours {
+      padding: 20rem 0 10rem 0; } }
 
 .section-stories {
   padding: 15rem 0;
   position: relative; }
+  @media (max-width: 56.25em) {
+    .section-stories {
+      padding: 10rem 0; } }
 
 .section-book {
   padding: 15rem 0;
