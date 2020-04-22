@@ -123,6 +123,11 @@
     font-size: 1.4rem;
     list-style: none;
     margin-top: 3.5rem;
+    
+    @media only screen and (max-width:$bp--medium){
+        display: flex;
+        margin: 0;
+    }
 
     &__item{
         // want the pseudo element to be positioned in relative to the item
@@ -130,6 +135,10 @@
 
         &:not(:last-child){
             margin-bottom: .5rem;
+        }
+
+        @media only screen and (max-width:$bp--medium){
+            flex: 1;
         }
     }
     // add pseudo element before
@@ -169,6 +178,12 @@
         align-items: center;
         position: relative;
         z-index: 10;
+
+        @media only screen and (max-width:$bp--medium){
+            justify-content: center;
+            padding: 2rem;
+        }
+
     }
     &__icon{
         width: 1.75rem;
@@ -184,6 +199,10 @@
     text-align: center;
     padding: 2.5rem;
     color: var(--color-grey-light-4);
+
+    @media only screen and (max-width:$bp--medium){
+        display: none;
+    }
 }
 
 // GALLERY
@@ -266,6 +285,10 @@
     background-color: transparent;
     cursor: pointer;
     transition: all .2s;
+
+    @media only screen and (max-width:$bp--small){
+        justify-content: center;
+     }
 
     & span{
         margin-left: 3px;
@@ -362,7 +385,7 @@
         border: 3px solid #fff;
         // give images negative right margin except the last one so they overlap
         &:not(:last-child){
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 
@@ -372,7 +395,8 @@
     }
 
     &__friends{
-
+        // To make sure items stay side-by-side again
+        display: flex;
     }
 }
 // REVIEWS
@@ -383,6 +407,11 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width:$bp--medium){
+        padding: 2rem;
+        margin-bottom: 3rem;
+     }
 
     &__rating{
         color: var(--color-primary);
@@ -439,6 +468,10 @@
     padding: 3.5rem 0;
     text-align: center;
     background-color: var(--color-grey-light-2);
+
+    @media only screen and (max-width:$bp--medium){
+        padding: 2.5rem 0;
+     }
 
     &__book-now{
         font-size: 2rem;
