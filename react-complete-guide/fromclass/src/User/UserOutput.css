@@ -1,0 +1,7 @@
+.userOutput{
+    display: block;
+    width: 300px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+}
