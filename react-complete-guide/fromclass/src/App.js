@@ -9,13 +9,27 @@ import ValidationComponent from './Valid/ValidationComponent';
 class App extends Component {
 
   state = {
-    userInput: ''
+    userInput: '',
+    validOK: "to short"
   }
 
   inputChangedHandler = (event) => {
-    this.setState({userInput: event.target.value})
+   this.setState({userInput: event.target.value});
+    let str = this.state.userInput;
+    if(str.length >= 5){
+      this.setState({validOK:"too long"})
+    }else{
+      this.setState({validOK:"too short"})
+    }
     
+  
   }
+
+  // checkValid = (str) => {
+  //   if(str.length >= 5){
+  //     this.setState({validOK:"too long"})
+  //   }
+  // }
 
   render() {
     return (
@@ -23,6 +37,7 @@ class App extends Component {
         <hr/>
         <ValidationComponent
         userInput={this.state.userInput}
+        validOK={this.state.validOK}
         changed={this.inputChangedHandler}/>
       </div>
     );
