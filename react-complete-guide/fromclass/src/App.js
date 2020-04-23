@@ -7,35 +7,46 @@ import UserInput from './User/UserInput';
 
 
 class App extends Component {
+  // state = {
+  //   persons: [
+  //     { name: 'Max', age: 28 },
+  //     { name: 'Manu', age: 29 },
+  //     { name: 'Stephanie', age: 26 }
+  //   ],
+  //   otherState: 'some other value'
+  // }
+
   state = {
-    persons: [
-      { name: 'Max', age: 28 },
-      { name: 'Manu', age: 29 },
-      { name: 'Stephanie', age: 26 }
-    ],
-    otherState: 'some other value'
+    useroutputs:  {username : 'username'}
   }
 
-  switchNameHandler = (newName) => {
-    // console.log('Was clicked!');
-    // DON'T DO THIS: this.state.persons[0].name = 'Maximilian';
-    this.setState( {
-      persons: [
-        { name: newName, age: 28 },
-        { name: 'Manu', age: 29 },
-        { name: 'Stephanie', age: 27 }
-      ]
-    } )
-  }
+  // switchNameHandler = (newName) => {
+  //   // console.log('Was clicked!');
+  //   // DON'T DO THIS: this.state.persons[0].name = 'Maximilian';
+  //   this.setState( {
+  //     persons: [
+  //       { name: newName, age: 28 },
+  //       { name: 'Manu', age: 29 },
+  //       { name: 'Stephanie', age: 27 }
+  //     ]
+  //   } )
+  // }
 
-  nameChangedHandler = (event) => {
-    this.setState( {
-      persons: [
-        { name: 'Max', age: 28 },
-        { name: event.target.value, age: 29 },
-        { name: event.target.value, age: 26 }
-      ]
-    } )
+  // nameChangedHandler = (event) => {
+  //   this.setState( {
+  //     persons: [
+  //       { name: 'Max', age: 28 },
+  //       { name: event.target.value, age: 29 },
+  //       { name: event.target.value, age: 26 }
+  //     ]
+  //   } )
+  // }
+
+  // Add event handler method to manipulate output
+  userNameHandler = (event) => {
+    this.setState({
+      useroutputs:{username : event.target.value}
+    })
   }
 
   render () {
@@ -53,7 +64,7 @@ class App extends Component {
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p>This is really working!</p>
-        <button 
+        {/* <button 
         style={style}
         onClick={() => this.switchNameHandler('Maximilian!!')}>Switch Name</button>
         <Person 
@@ -67,9 +78,16 @@ class App extends Component {
         <Person 
           name={this.state.persons[2].name} 
           age={this.state.persons[2].age} 
-          changed={this.nameChangedHandler}/>
-        <UserOutput/>
-        <UserInput/>
+          changed={this.nameChangedHandler}/> */}
+          {/* Pass using props */}
+        <UserOutput username="nnicha123"/>
+        {/* Pass using state */}
+        <UserOutput 
+        username={this.state.useroutputs.username}
+        />
+        <UserInput
+        username={this.state.useroutputs.username}
+        changer={this.userNameHandler}/>
       </div>
   
     );
