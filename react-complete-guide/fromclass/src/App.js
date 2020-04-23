@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
+// Assignment part
+import UserOutput from './User/UserOutput';
+import UserInput from './User/UserInput';
+
 
 class App extends Component {
   state = {
@@ -64,7 +68,10 @@ class App extends Component {
           name={this.state.persons[2].name} 
           age={this.state.persons[2].age} 
           changed={this.nameChangedHandler}/>
+        <UserOutput/>
+        <UserInput/>
       </div>
+  
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
