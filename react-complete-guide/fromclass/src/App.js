@@ -29,7 +29,7 @@ class App extends Component {
       persons: [
         { name: 'Max', age: 28 },
         { name: event.target.value, age: 29 },
-        { name: 'Stephanie', age: 26 }
+        { name: event.target.value, age: 26 }
       ]
     } )
   }
@@ -50,7 +50,8 @@ class App extends Component {
           changed={this.nameChangedHandler} >My Hobbies: Racing</Person>
         <Person 
           name={this.state.persons[2].name} 
-          age={this.state.persons[2].age} />
+          age={this.state.persons[2].age} 
+          changed={this.nameChangedHandler}/>
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
