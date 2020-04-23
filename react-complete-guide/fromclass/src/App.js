@@ -1,53 +1,53 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
-// Assignment part
-import UserOutput from './User/UserOutput';
-import UserInput from './User/UserInput';
+// Assignment part now in day27 folder
+// import UserOutput from './User/UserOutput';
+// import UserInput from './User/UserInput';
 
 
 class App extends Component {
-  // state = {
-  //   persons: [
-  //     { name: 'Max', age: 28 },
-  //     { name: 'Manu', age: 29 },
-  //     { name: 'Stephanie', age: 26 }
-  //   ],
-  //   otherState: 'some other value'
-  // }
-
   state = {
-    useroutputs:  {username : 'username'}
+    persons: [
+      { name: 'Max', age: 28 },
+      { name: 'Manu', age: 29 },
+      { name: 'Stephanie', age: 26 }
+    ],
+    otherState: 'some other value'
   }
 
-  // switchNameHandler = (newName) => {
-  //   // console.log('Was clicked!');
-  //   // DON'T DO THIS: this.state.persons[0].name = 'Maximilian';
-  //   this.setState( {
-  //     persons: [
-  //       { name: newName, age: 28 },
-  //       { name: 'Manu', age: 29 },
-  //       { name: 'Stephanie', age: 27 }
-  //     ]
-  //   } )
+  // state = {
+  //   useroutputs:  {username : 'username'}
   // }
 
-  // nameChangedHandler = (event) => {
-  //   this.setState( {
-  //     persons: [
-  //       { name: 'Max', age: 28 },
-  //       { name: event.target.value, age: 29 },
-  //       { name: event.target.value, age: 26 }
-  //     ]
-  //   } )
-  // }
+  switchNameHandler = (newName) => {
+    // console.log('Was clicked!');
+    // DON'T DO THIS: this.state.persons[0].name = 'Maximilian';
+    this.setState( {
+      persons: [
+        { name: newName, age: 28 },
+        { name: 'Manu', age: 29 },
+        { name: 'Stephanie', age: 27 }
+      ]
+    } )
+  }
+
+  nameChangedHandler = (event) => {
+    this.setState( {
+      persons: [
+        { name: 'Max', age: 28 },
+        { name: event.target.value, age: 29 },
+        { name: 'Stephanie', age: 26 }
+      ]
+    } )
+  }
 
   // Add event handler method to manipulate output
-  userNameHandler = (event) => {
-    this.setState({
-      useroutputs:{username : event.target.value}
-    })
-  }
+  // userNameHandler = (event) => {
+  //   this.setState({
+  //     useroutputs:{username : event.target.value}
+  //   })
+  // }
 
   render () {
 
@@ -64,7 +64,7 @@ class App extends Component {
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p>This is really working!</p>
-        {/* <button 
+        <button 
         style={style}
         onClick={() => this.switchNameHandler('Maximilian!!')}>Switch Name</button>
         <Person 
@@ -77,17 +77,16 @@ class App extends Component {
           changed={this.nameChangedHandler} >My Hobbies: Racing</Person>
         <Person 
           name={this.state.persons[2].name} 
-          age={this.state.persons[2].age} 
-          changed={this.nameChangedHandler}/> */}
-          {/* Pass using props */}
+          age={this.state.persons[2].age}/>
+          {/* Pass using props
         <UserOutput username="nnicha123"/>
         {/* Pass using state */}
-        <UserOutput 
+        {/* <UserOutput 
         username={this.state.useroutputs.username}
         />
         <UserInput
         username={this.state.useroutputs.username}
-        changer={this.userNameHandler}/>
+        changer={this.userNameHandler}/> */} 
       </div>
   
     );
