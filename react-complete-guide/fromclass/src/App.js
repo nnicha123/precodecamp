@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
+import Radium from 'radium';
 // import ValidationComponent from './Valid/ValidationComponent';
 // Assignment part now in day27 folder  
 // import UserOutput from './User/UserOutput';
@@ -84,7 +85,12 @@ class App extends Component {
       border: '1px solid white',
       boxShadow: '0 2rem 6rem rgba(0,0,0,0.3)',
       padding: '8px',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      // Radium makes sure you can do this
+      ':hover':{
+        backgroundColor:'lightgreen',
+        color:'black'
+      }
     }
 
     let persons = null;
@@ -106,6 +112,10 @@ class App extends Component {
       );
 
       style.backgroundColor = 'red';
+      style[':hover'] = {
+        backgroundColor:'salmon',
+        color:'black'
+      }
     }
 
     // Create new variable to style
@@ -137,5 +147,5 @@ class App extends Component {
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
 }
-
-export default App;
+// Component wrapping component to add functionality
+export default Radium(App);
