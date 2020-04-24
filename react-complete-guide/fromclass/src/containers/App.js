@@ -1,118 +1,137 @@
 import React, { Component } from 'react';
+
 import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 import withClass from '../hoc/withClass';
-import Aux from '../hoc/Auxillary'
+import Aux from '../hoc/Auxillary';
+import AuthContext from '../context/auth-context';
+
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     console.log('[App.js] constructor');
   }
+
   state = {
     persons: [
-      {id:'123', name: 'Max', age: 28 },
-      {id:'456', name: 'Manu', age: 29 },
-      {id:'789', name: 'Stephanie', age: 26 }
+      { id: 'asfa1', name: 'Max', age: 28 },
+      { id: 'vasdf1', name: 'Manu', age: 29 },
+      { id: 'asdf11', name: 'Stephanie', age: 26 }
     ],
     otherState: 'some other value',
     showPersons: false,
-    toolow: false,
-    showCockpit:true
-  }
+    showCockpit: true,
+    changeCounter: 0,
+    authenticated: false
+  };
 
-  static getDerivedStateFromProps(props,state){
-    console.log('[App.js] getDerivedStateFromProps',props);
+  static getDerivedStateFromProps(props, state) {
+    console.log('[App.js] getDerivedStateFromProps', props);
     return state;
   }
 
-  componentDidMount(){
+  // componentWillMount() {
+  //   console.log('[App.js] componentWillMount');
+  // }
+
+  componentDidMount() {
     console.log('[App.js] componentDidMount');
   }
 
-  shouldComponentUpdate(nextProps,nextState){
+  shouldComponentUpdate(nextProps, nextState) {
     console.log('[App.js] shouldComponentUpdate');
-    // If return false update will not be possible (cannot use button) we are blocking it
     return true;
   }
 
-  componentDidUpdate(){
+  componentDidUpdate() {
     console.log('[App.js] componentDidUpdate');
   }
 
-  deletePersonHandler = (personIndex) => {
-    // Should update state without changing the original state
-        // const persons = this.state.persons.slice();
-    const persons = [...this.state.persons];
-    persons.splice(personIndex,1);
-    this.setState({persons:persons});
-    // React need to know which element has been changed and change only that element
-  }
-
-  nameChangedHandler = (event,id) => {
+  nameChangedHandler = (event, id) => {
     const personIndex = this.state.persons.findIndex(p => {
       return p.id === id;
     });
 
     const person = {
       ...this.state.persons[personIndex]
-    }
+    };
+
+    // const person = Object.assign({}, this.state.persons[personIndex]);
 
     person.name = event.target.value;
+
     const persons = [...this.state.persons];
     persons[personIndex] = person;
 
-    this.setState((prevState,props) => {
+    this.setState((prevState, props) => {
       return {
-        persons:persons,
-        changeCounter: prevState.changeCounter+1
+        persons: persons,
+        changeCounter: prevState.changeCounter + 1
       };
-      });
-    
+    });
+  };
 
-    this.setState({
-      persons: [
-        { name: 'Max', age: 28 },
-        { name: event.target.value, age: 29 },
-        { name: 'Stephanie', age: 26 }
-      ]
-    })
-  }
+  deletePersonHandler = personIndex => {
+    // const persons = this.state.persons.slice();
+    const persons = [...this.state.persons];
+    persons.splice(personIndex, 1);
+    this.setState({ persons: persons });
+  };
 
   togglePersonsHandler = () => {
     const doesShow = this.state.showPersons;
     this.setState({ showPersons: !doesShow });
-  }
+  };
+
+  loginHandler = () => {
+    this.setState({ authenticated: true });
+  };
 
   render() {
     console.log('[App.js] render');
     let persons = null;
 
-    if(this.state.showPersons){
+    if (this.state.showPersons) {
       persons = (
-          <Persons persons={this.state.persons}
+        <Persons
+          persons={this.state.persons}
           clicked={this.deletePersonHandler}
-          changed={this.nameChangedHandler}/>   
+          changed={this.nameChangedHandler}
+          isAuthenticated={this.state.authenticated}
+        />
       );
     }
 
     return (
       <Aux>
-        <button onClick={() => {
-          this.setState({showCockpit:false})
-        }}>
+        <button
+          onClick={() => {
+            this.setState({ showCockpit: false });
+          }}
+        >
           Remove Cockpit
         </button>
-        {this.state.showCockpit ? (
-        <Cockpit
-        title={this.props.appTitle}
-        showPersons={this.state.showPersons}
-        personsLength={this.state.persons.length}
-        clicked={this.togglePersonsHandler}/>):null}
-        {persons}
+        <AuthContext.Provider
+          value={{
+            authenticated: this.state.authenticated,
+            login: this.loginHandler
+          }}
+        >
+          {this.state.showCockpit ? (
+            <Cockpit
+              title={this.props.appTitle}
+              showPersons={this.state.showPersons}
+              personsLength={this.state.persons.length}
+              clicked={this.togglePersonsHandler}
+            />
+          ) : null}
+          {persons}
+        </AuthContext.Provider>
       </Aux>
-    )
+    );
+    // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
 }
-// Component wrapping component to add functionality
-export default withClass(App,classes.App);
+
+export default withClass(App, classes.App);

@@ -1,55 +1,58 @@
-import React, {useEffect} from 'react';
-import classes from './Cockpit.css'
+import React, { useEffect, useRef, useContext } from 'react';
 
-const cockpit = (props) => {
-    // Used all the time combines did mount and shouldupdate
-    useEffect(() =>{
-        console.log('[Cockpit.js] useEffect');
-        // can send http request here
-        // fake http request 
-        // only run when props person change (add second argument)
-        setTimeout(() => {
-            alert('Save data to cloud!');
-        },1000);
-        return () => {
-            console.log('[Cockpit.js] cleanup work in useEffect');
-        }
-     },[]);
+import classes from './Cockpit.css';
+import AuthContext from '../../context/auth-context';
 
-     useEffect(() => {
-         console.log('[Cockpit.js] 2nd useEffect');
-         return () => {
-            console.log('[Cockpit.js] cleanup work in 2nd useEffect');
-         }
-     })
-    const assignedClasses = [];
-    let btnClass = '';
+const Cockpit = props => {
+  const toggleBtnRef = useRef(null);
+  const authContext = useContext(AuthContext);
 
-    if (props.showPersons) {
-        btnClass = classes.Red;
-    }
+  console.log(authContext.authenticated);
 
-    if (props.personsLength <= 2) {
-        assignedClasses.push(classes.red);
-    }
-    if (props.personsLength <= 1) {
-        assignedClasses.push(classes.bold);
-    }
-    if (props.personsLength > 2) {
-        assignedClasses.push(classes.green);
-    }
+  useEffect(() => {
+    console.log('[Cockpit.js] useEffect');
+    // Http request...
+    // setTimeout(() => {
+    //   alert('Saved data to cloud!');
+    // }, 1000);
+    toggleBtnRef.current.click();
+    return () => {
+      console.log('[Cockpit.js] cleanup work in useEffect');
+    };
+  }, []);
 
-    return (
-        <div className={classes.Cockpit}>
-            <h1>Hi, I'm a React App</h1>
-            <h2>{props.title}</h2>
-            <p className={assignedClasses.join(' ')}>This is really working!</p>
-            <button className={btnClass}
-                onClick={props.clicked}>Switch Name</button>
-        </div>
+  useEffect(() => {
+    console.log('[Cockpit.js] 2nd useEffect');
+    return () => {
+      console.log('[Cockpit.js] cleanup work in 2nd useEffect');
+    };
+  });
 
-    );
+  // useEffect();
+
+  const assignedClasses = [];
+  let btnClass = '';
+  if (props.showPersons) {
+    btnClass = classes.Red;
+  }
+
+  if (props.personsLength <= 2) {
+    assignedClasses.push(classes.red); // classes = ['red']
+  }
+  if (props.personsLength <= 1) {
+    assignedClasses.push(classes.bold); // classes = ['red', 'bold']
+  }
+
+  return (
+    <div className={classes.Cockpit}>
+      <h1>{props.title}</h1>
+      <p className={assignedClasses.join(' ')}>This is really working!</p>
+      <button ref={toggleBtnRef} className={btnClass} onClick={props.clicked}>
+        Toggle Persons
+      </button>
+      <button onClick={authContext.login}>Log in</button>
+    </div>
+  );
 };
 
-// Wrap functional components like cockpit to optimise (it does not need to update with every change)
-export default React.memo(cockpit);
+export default React.memo(Cockpit);
