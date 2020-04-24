@@ -1,25 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import styled from 'styled-components';
 import Person from './Person/Person';
-
-// import ValidationComponent from './Valid/ValidationComponent';
-// Assignment part now in day27 folder  
-// import UserOutput from './User/UserOutput';
-// import UserInput from './User/UserInput';
-const StyledButton = styled.button`
-  background-color: ${props => props.alt ? 'red' : 'green'};
-  color:white;
-  font:inherit;
-  border:1px solid blue;
-  padding: 8px;
-  cursor:pointer;
-  &:hover {
-    background-color: ${props => props.alt ? 'salmon' : 'lightgreen'};
-    color:black;
-  }
-`;
-
 class App extends Component {
   state = {
     persons: [
@@ -109,9 +90,9 @@ class App extends Component {
         <h1>Hi, I'm a React App</h1>
         {/* Assign class string to p className */}
         <p className={classes.join(' ')}>This is really working!</p>
-        <StyledButton alt={this.state.showPersons}
+        <button className='button'
           // style={style}
-          onClick={this.togglePersonsHandler}>Switch Name</StyledButton>
+          onClick={this.togglePersonsHandler}>Switch Name</button>
         {persons}
         {/* Ternary expression */}
       </div>
