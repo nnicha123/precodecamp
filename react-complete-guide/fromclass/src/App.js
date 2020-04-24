@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
-import Radium from 'radium';
+import Radium, {StyleRoot} from 'radium';
 // import ValidationComponent from './Valid/ValidationComponent';
 // Assignment part now in day27 folder  
 // import UserOutput from './User/UserOutput';
@@ -132,6 +132,7 @@ class App extends Component {
     }
 
     return (
+      <StyleRoot>
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         {/* Assign class string to p className */}
@@ -142,6 +143,7 @@ class App extends Component {
         {persons}
         {/* Ternary expression */}
       </div>
+      </StyleRoot>
 
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
