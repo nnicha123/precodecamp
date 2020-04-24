@@ -27,6 +27,16 @@ class App extends Component {
     console.log('[App.js] componentDidMount');
   }
 
+  shouldComponentUpdate(nextProps,nextState){
+    console.log('[App.js] shouldComponentUpdate');
+    // If return false update will not be possible (cannot use button) we are blocking it
+    return true;
+  }
+
+  componentDidUpdate(){
+    console.log('[App.js] componentDidUpdate');
+  }
+
   deletePersonHandler = (personIndex) => {
     // Should update state without changing the original state
         // const persons = this.state.persons.slice();
