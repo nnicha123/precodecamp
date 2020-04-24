@@ -6,7 +6,8 @@ const char = (props) => {
         padding: '16px',
         margin: '16px',
         border: '1px solid black',
-        textAlign: 'center'
+        textAlign: 'center',
+        boxShadow:'0 2rem 6rem rgba(0,0,0,0.6)'
     };
 
     return (
