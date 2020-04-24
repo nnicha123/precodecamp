@@ -78,7 +78,8 @@ class App extends Component {
     let len = str.length;
 
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
+      color:'white',
       font: 'inherit',
       border: '1px solid white',
       boxShadow: '0 2rem 6rem rgba(0,0,0,0.3)',
@@ -103,12 +104,17 @@ class App extends Component {
           })}
         </div>
       );
+
+      style.backgroundColor = 'red';
     }
+
+    // Create new variable to style
+    let classes = ['red','bold'].join(' '); //get "red bold" (valid class declaration);
 
     return (
       <div className="App">
         <h1>Hi, I'm a React App</h1>
-        <p>This is really working!</p>
+        <p className={classes}>This is really working!</p>
         <button
           style={style}
           onClick={this.togglePersonsHandler}>Switch Name</button>
