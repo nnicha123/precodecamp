@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
+import styled from 'styled-components';
 import Person from './Person/Person';
 
 // import ValidationComponent from './Valid/ValidationComponent';
 // Assignment part now in day27 folder  
 // import UserOutput from './User/UserOutput';
 // import UserInput from './User/UserInput';
+const StyledButton = styled.button`
+  background-color: ${props => props.alt ? 'red' : 'green'};
+  color:white;
+  font:inherit;
+  border:1px solid blue;
+  padding: 8px;
+  cursor:pointer;
+  &:hover {
+    background-color: ${props => props.alt ? 'salmon' : 'lightgreen'};
+    color:black;
+  }
+`;
 
 class App extends Component {
   state = {
@@ -18,22 +31,6 @@ class App extends Component {
     showPersons: false,
     toolow: false
   }
-
-  // state = {
-  //   useroutputs:  {username : 'username'}
-  // }
-
-  // switchNameHandler = (newName) => {
-  //   // console.log('Was clicked!');
-  //   // DON'T DO THIS: this.state.persons[0].name = 'Maximilian';
-  //   this.setState({
-  //     persons: [
-  //       { name: newName, age: 28 },
-  //       { name: 'Manu', age: 29 },
-  //       { name: 'Stephanie', age: 27 }
-  //     ]
-  //   })
-  // }
 
   deletePersonHandler = (personIndex) => {
     // Should update state without changing the original state
@@ -77,22 +74,6 @@ class App extends Component {
 
     let str = 'one'
     let len = str.length;
-
-    const style = {
-      backgroundColor: 'green',
-      color:'white',
-      font: 'inherit',
-      border: '1px solid white',
-      boxShadow: '0 2rem 6rem rgba(0,0,0,0.3)',
-      padding: '8px',
-      cursor: 'pointer',
-      // Radium makes sure you can do this
-      ':hover':{
-        backgroundColor:'lightgreen',
-        color:'black'
-      }
-    }
-
     let persons = null;
 
     if(this.state.showPersons){
@@ -110,16 +91,8 @@ class App extends Component {
           })}
         </div>
       );
-
-      style.backgroundColor = 'red';
-      style[':hover'] = {
-        backgroundColor:'salmon',
-        color:'black'
-      }
     }
 
-    // Create new variable to style
-    // let classes = ['red','bold'].join(' '); //get "red bold" (valid class declaration);
     let classes = [];
     if(this.state.persons.length <= 2){
       classes.push('red');
@@ -136,15 +109,13 @@ class App extends Component {
         <h1>Hi, I'm a React App</h1>
         {/* Assign class string to p className */}
         <p className={classes.join(' ')}>This is really working!</p>
-        <button
-          style={style}
-          onClick={this.togglePersonsHandler}>Switch Name</button>
+        <StyledButton alt={this.state.showPersons}
+          // style={style}
+          onClick={this.togglePersonsHandler}>Switch Name</StyledButton>
         {persons}
         {/* Ternary expression */}
       </div>
-
     );
-    // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
 }
 // Component wrapping component to add functionality
