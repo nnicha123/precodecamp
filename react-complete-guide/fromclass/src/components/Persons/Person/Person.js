@@ -7,6 +7,7 @@ class Person extends Component {
         console.log('[Person.js] rendering..');
     return (
         // <div className='Person' style={style}>
+        // Note now since use Aux, styling will be ignored because we used to include styling in div className
         <Aux>
             <p onClick={this.props.click}>I'm {this.props.name} and I am {this.props.age} years old!</p>
             <p>{this.props.children}</p>
