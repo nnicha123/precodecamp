@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+</head>
+
+<body>
+    <h1 id="title">This is the title with h1 tag</h1>
+    <p id="description">Short explanation: This is a survey form from freeCodecamp design project</p>
+    <form action="" id="survey-form">
+
+        <label for="name" id="name-label">Name:</label>
+        <input type="text" id="name" placeholder="name" name="name" required>
+        <br>
+        <label for="email" id="email-label">Email:</label>
+        <input type="email" id="email" placeholder="email" name="email" required>
+        <br><br>
+        <label for="number" id="number-label">Number: between 1-5</label>
+        <input type="number" id="number" placeholder="number" min="1" max="5" name="number" required>
+        <br><br>
+        <label for="dropdown" id="dropdown-label">Favorite meat:</label>
+        <select name="dropdown" id="dropdown">
+            <option value="chicken">chicken</option>
+            <option value="chicken">fish</option>
+            <option value="chicken">pork</option>
+            <option value="chicken">beef</option>
+        </select>
+        <hr>
+        <p>Select gender</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <p>Select age-range</p>
+        <input type="radio" name="age" value="18-25">
+        <label for="age">18-25</label>
+        <input type="radio" name="age" value="26-35">
+        <label for="age">26-35</label>
+        <input type="radio" name="age" value="36++">
+        <label for="age">36++</label><br>
+        <p>Favorite colors</p>
+        <input type="checkbox" name="color" value="red">Red
+        <input type="checkbox" name="color" value="blue">Blue
+        <input type="checkbox" name="color" value="green">Green
+        <input type="checkbox" name="color" value="yellow">Yellow
+        <input type="checkbox" name="color" value="pink">Pink
+        <input type="checkbox" name="color" value="purple">Purple
+        <br><br>
+        <p>Please give comments:</p>
+        <textarea name="textarea" id="textarea" cols="100" rows="10"></textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
