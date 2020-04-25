@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical documentation</title>
+</head>
+<style>
+    .wrapper{
+        font-size: 20px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 200px 1fr;
+        grid-template-areas: 
+            "nav header"
+            "nav main"
+            "nav main"
+            "nav footer"
+    }
+
+    header{
+        background-color: greenyellow;
+        grid-area: header;
+    }
+
+    main{
+        background-color: pink;
+        grid-area: main;
+    }
+
+    nav{
+        background-color: cyan;
+        width: 200px;
+        height: 100%;
+        grid-area: nav;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        
+    }
+    footer{
+        background-color: orange;
+        grid-area: footer;
+    }
+    @media only screen and (max-width:600px){
+        .wrapper{
+            font-size: 15px;
+        }
+        #main-doc{
+            background-color: springgreen;
+        }
+    }
+
+</style>
+<body>
+    <div class="wrapper">
+        <header><h1>Top header</h1></header>
+        <main id="main-doc">
+            <h1>Page main content</h1>
+            <section class="main-section" id="section_1">
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quam quidem laudantium doloremque
+                    totam
+                    aliquid quasi eius dolorum facilis est blanditiis recusandae rem quibusdam dolor vel eaque doloribus
+                    at
+                    tempora ex, autem numquam assumenda! Iste consectetur fugit optio obcaecati earum recusandae
+                    adipisci
+                    debitis esse facilis eius veritatis odio quibusdam, sapiente non est exercitationem aut fugiat
+                    doloribus
+                    reprehenderit eum. Aliquam quos delectus, consequatur optio omnis ipsum in quaerat tempore eum
+                    minus,
+                    alias consectetur officia aperiam magni quibusdam nisi dolorum porro deserunt. Deserunt rerum
+                    voluptatem
+                    tempore, explicabo cumque, pariatur saepe voluptatum nisi, earum ducimus officia modi quo numquam in
+                    est
+                    repellendus tenetur!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <code>123455678</code>
+            </section>
+            <section class="main-section" id="section_2">
+                <h2>Section 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quam quidem laudantium doloremque
+                    totam
+                    aliquid quasi eius dolorum facilis est blanditiis recusandae rem quibusdam dolor vel eaque doloribus
+                    at
+                    tempora ex, autem numquam assumenda! Iste consectetur fugit optio obcaecati earum recusandae
+                    adipisci
+                    debitis esse facilis eius veritatis odio quibusdam, sapiente non est exercitationem aut fugiat
+                    doloribus
+                    reprehenderit eum. Aliquam quos delectus, consequatur optio omnis ipsum in quaerat tempore eum
+                    minus,
+                    alias consectetur officia aperiam magni quibusdam nisi dolorum porro deserunt. Deserunt rerum
+                    voluptatem
+                    tempore, explicabo cumque, pariatur saepe voluptatum nisi, earum ducimus officia modi quo numquam in
+                    est
+                    repellendus tenetur!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quam quidem laudantium doloremque
+                    totam
+                    aliquid quasi eius dolorum facilis est blanditiis recusandae rem quibusdam dolor vel eaque doloribus
+                    at
+                    tempora ex, autem numquam assumenda! Iste consectetur fugit optio obcaecati earum recusandae
+                    adipisci
+                    debitis esse facilis eius veritatis odio quibusdam, sapiente non est exercitationem aut fugiat
+                    doloribus
+                    reprehenderit eum. Aliquam quos delectus, consequatur optio omnis ipsum in quaerat tempore eum
+                    minus,
+                    alias consectetur officia aperiam magni quibusdam nisi dolorum porro deserunt. Deserunt rerum
+                    voluptatem
+                    tempore, explicabo cumque, pariatur saepe voluptatum nisi, earum ducimus officia modi quo numquam in
+                    est
+                    repellendus tenetur!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <code>123455678</code>
+            </section>
+            <section class="main-section" id="section_3">
+                <h2>Section 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quam quidem laudantium doloremque
+                    totam
+                    aliquid quasi eius dolorum facilis est blanditiis recusandae rem quibusdam dolor vel eaque doloribus
+                    at
+                    tempora ex, autem numquam assumenda! Iste consectetur fugit optio obcaecati earum recusandae
+                    adipisci
+                    debitis esse facilis eius veritatis odio quibusdam, sapiente non est exercitationem aut fugiat
+                    doloribus
+                    reprehenderit eum. Aliquam quos delectus, consequatur optio omnis ipsum in quaerat tempore eum
+                    minus,
+                    alias consectetur officia aperiam magni quibusdam nisi dolorum porro deserunt. Deserunt rerum
+                    voluptatem
+                    tempore, explicabo cumque, pariatur saepe voluptatum nisi, earum ducimus officia modi quo numquam in
+                    est
+                    repellendus tenetur!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <code>123455678</code>
+                <code>123455678</code>
+                <code>123455678</code>
+            </section>
+            <section class="main-section" id="section_4">
+                <h2>Section 4</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quam quidem laudantium doloremque
+                    totam
+                    aliquid quasi eius dolorum facilis est blanditiis recusandae rem quibusdam dolor vel eaque doloribus
+                    at
+                    tempora ex, autem numquam assumenda! Iste consectetur fugit optio obcaecati earum recusandae
+                    adipisci
+                    debitis esse facilis eius veritatis odio quibusdam, sapiente non est exercitationem aut fugiat
+                    doloribus
+                    reprehenderit eum. Aliquam quos delectus, consequatur optio omnis ipsum in quaerat tempore eum
+                    minus,
+                    alias consectetur officia aperiam magni quibusdam nisi dolorum porro deserunt. Deserunt rerum
+                    voluptatem
+                    tempore, explicabo cumque, pariatur saepe voluptatum nisi, earum ducimus officia modi quo numquam in
+                    est
+                    repellendus tenetur!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <code>123455678</code>
+                <code>123455678</code>
+            </section>
+            <section class="main-section" id="section_5">
+                <h2>Section 5</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quam quidem laudantium doloremque
+                    totam
+                    aliquid quasi eius dolorum facilis est blanditiis recusandae rem quibusdam dolor vel eaque doloribus
+                    at
+                    tempora ex, autem numquam assumenda! Iste consectetur fugit optio obcaecati earum recusandae
+                    adipisci
+                    debitis esse facilis eius veritatis odio quibusdam, sapiente non est exercitationem aut fugiat
+                    doloribus
+                    reprehenderit eum. Aliquam quos delectus, consequatur optio omnis ipsum in quaerat tempore eum
+                    minus,
+                    alias consectetur officia aperiam magni quibusdam nisi dolorum porro deserunt. Deserunt rerum
+                    voluptatem
+                    tempore, explicabo cumque, pariatur saepe voluptatum nisi, earum ducimus officia modi quo numquam in
+                    est
+                    repellendus tenetur!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <h3>Best dog food</h3>
+                <ul>
+                    <li>Royal Canin</li>
+                    <li>Pedigree</li>
+                    <li>Alpo</li>
+                    <li>Twiskies</li>
+                    <li>Smart-heart</li>
+                </ul>
+            </section>
+            <section class="main-section" id="section_6">
+                <h2>Section 6</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quam quidem laudantium doloremque
+                    totam
+                    aliquid quasi eius dolorum facilis est blanditiis recusandae rem quibusdam dolor vel eaque doloribus
+                    at
+                    tempora ex, autem numquam assumenda! Iste consectetur fugit optio obcaecati earum recusandae
+                    adipisci
+                    debitis esse facilis eius veritatis odio quibusdam, sapiente non est exercitationem aut fugiat
+                    doloribus
+                    reprehenderit eum. Aliquam quos delectus, consequatur optio omnis ipsum in quaerat tempore eum
+                    minus,
+                    alias consectetur officia aperiam magni quibusdam nisi dolorum porro deserunt. Deserunt rerum
+                    voluptatem
+                    tempore, explicabo cumque, pariatur saepe voluptatum nisi, earum ducimus officia modi quo numquam in
+                    est
+                    repellendus tenetur!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, minima?</p>
+                <h3>Best songs</h3>
+                <ul>
+                    <li>Best in me</li>
+                    <li>Inspiration</li>
+                    <li>Can you feel the love tonight</li>
+                </ul>
+            </section>
+        </main>
+        <nav id="navbar">
+            <h1>Select Sections</h1>
+            <a href="#section_1" class="nav-link">Section 1</a>
+            <a href="#section_2" class="nav-link">Section 2</a>
+            <a href="#section_3" class="nav-link">Section 3</a>
+            <a href="#section_4" class="nav-link">Section 4</a>
+            <a href="#section_5" class="nav-link">Section 5</a>
+            <a href="#section_6" class="nav-link">Section 6</a>
+        </nav>
+        <footer>This is the footer</footer>
+    </div>
+</body>
+
+</html>
