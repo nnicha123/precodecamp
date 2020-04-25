@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stars</title>
+    <style>
+        body{
+            height:1000px;
+            background-repeat: no-repeat;
+            background-image: linear-gradient(to bottom right, #000099, #66c2ff);
+        }
+        .star1{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            background-color: yellow;
+            animation-duration: 1s;
+            animation-name: glow;
+            animation-iteration-count: infinite;
+        }
+        .star1::before{
+            content: "";
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            transform: rotate(45deg);
+            background-color: yellow;
+        }
+
+        .star2{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 200px;
+            left: 400px;
+            background-color: yellow;
+            animation-duration: 1.1s;
+            animation-name: glow;
+            animation-iteration-count: infinite;
+        }
+        .star2::before{
+            content: "";
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            transform: rotate(45deg);
+            background-color: yellow;
+        }
+
+        .star3{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50px;
+            left: 600px;
+            background-color: yellow;
+            animation-duration: 0.8s;
+            animation-name: glow;
+            animation-iteration-count: infinite;
+        }
+        .star3::before{
+            content: "";
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            transform: rotate(45deg);
+            background-color: yellow;
+        }
+
+        .star4{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 150px;
+            left: 800px;
+            background-color: yellow;
+            animation-duration: 1.5s;
+            animation-name: glow;
+            animation-iteration-count: infinite;
+        }
+        .star4::before{
+            content: "";
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            transform: rotate(45deg);
+            background-color: yellow;
+        }
+
+        .star5{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 350px;
+            left: 600px;
+            background-color: yellow;
+            animation-duration: 1s;
+            animation-name: glow;
+            animation-iteration-count: infinite;
+        }
+        .star5::before{
+            content: "";
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            transform: rotate(45deg);
+            background-color: yellow;
+        }
+
+        @keyframes glow{
+            0%{
+                transform: scale(1) rotate(45deg);
+            }
+            50%{
+                transform: scale(0.5) rotate(45deg);
+            }
+            100%{
+                transform: scale(1) rotate(45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="star1"></div>
+    <div class="star2"></div>
+    <div class="star3"></div>
+    <div class="star4"></div>
+    <div class="star5"></div>
+</body>
+</html>
