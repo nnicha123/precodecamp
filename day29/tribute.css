@@ -1,0 +1,12 @@
+#img-div{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    padding-bottom: 50px;
+    align-self: center;
+}
