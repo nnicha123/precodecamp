@@ -119,7 +119,7 @@ var watchList = [
             directed:movie.Director,
             rating:movie.imdbRating
         }
-    }).filter(movie =>  movie.directed == "Christopher Nolan" );
+    }).filter(movie =>  (movie.directed == "Christopher Nolan")).reduce((sum, rating) => sum + rating);
   
   
     // Only change code above this line
