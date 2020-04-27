@@ -16,13 +16,9 @@ function mutation(arr) {
         if(!obj2[letter]){
             console.log(obj2);
             return false;
-        } else{
-            obj2[letter]--;
-        }
+        } 
     }
-    // console.log(obj2);
      return true;
-
   }
   
   console.log(mutation(["Mary", "Aarmy"]));
