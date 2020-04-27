@@ -1,6 +1,6 @@
 function frankenSplice(arr1, arr2, n) {
-    // console.log(arr2.splice(n));
-    let newArr = arr2;
+    // Add slice here to keep second array the same (slice doesn't change the original array)
+    let newArr = arr2.slice();
     for(let i=0;i<arr1.length;i++){
         newArr.splice(n,0,arr1[i]);
         n++;
