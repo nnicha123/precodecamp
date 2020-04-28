@@ -26,3 +26,7 @@
     /* Shift to the left */
     transform: translateX(-100%);
 }
+
+.Logo{
+    height: 11%;
+}
