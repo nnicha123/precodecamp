@@ -114,6 +114,74 @@
     animation-iteration-count: infinite;
 }
 
+.Vegetables{
+    height: 100px;
+    width:30px;
+    display: block;
+    background-image: linear-gradient(to right, rgb(11, 90, 11), rgb(38, 168, 38));
+    border-radius: 100px 100px 100px 10px;
+    position: absolute;
+    left: 50px;
+    top: 0;
+    transform: rotate(30deg);
+    z-index: 30;
+}
+
+.Vegetables::after{
+    height: 100px;
+    width:30px;
+    content:"";
+    display: block;
+    background-image: linear-gradient(to right, rgb(11, 90, 11), rgb(38, 168, 38));
+    border-radius: 100px 100px 100px 10px;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    transform: rotate(-100deg);
+    z-index: 30;
+}
+
+.Vegetablesone{
+    height: 100px;
+    width:30px;
+    display: block;
+    background-image: linear-gradient(to right, rgb(11, 90, 11), rgb(38, 168, 38));
+    border-radius: 100px 100px 100px 10px;
+    position: absolute;
+    left: 50px;
+    top: 250px;
+    transform: rotate(30deg);
+    z-index: 30;
+}
+
+.Vegetablesone::before{
+    height: 100px;
+    width:30px;
+    display: block;
+    content: "";
+    background-image: linear-gradient(to right, rgb(11, 90, 11), rgb(38, 168, 38));
+    border-radius: 100px 100px 100px 10px;
+    position: absolute;
+    left: 15px;
+    bottom: 250px;
+    transform: rotate(30deg);
+    z-index: 30;
+}
+
+.Vegetablesone::after{
+    height: 100px;
+    width:30px;
+    content:"";
+    display: block;
+    background-image: linear-gradient(to right, rgb(11, 90, 11), rgb(38, 168, 38));
+    border-radius: 100px 100px 100px 10px;
+    position: absolute;
+    left: 120px;
+    bottom: 100px;
+    transform: rotate(-100deg);
+    z-index: 30;
+}
+
 .heart::before{
     content: "";
     width: 100px;
