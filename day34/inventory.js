@@ -5,22 +5,28 @@ function updateInventory(arr1, arr2) {
     let key = [];
     let value = [];
     for(let i =0;i<arr1.length;i++){
-        key[i] = arr1[i][0];
-        value[i] = arr1[i][1];
+        key[i] = arr1[i][1];
+        value[i] = arr1[i][0];
         obj1[key[i]] = value[i];
     }
 
     for(let i=0;i<arr2.length;i++){
-        if(obj1[arr2[i][0]]){
-            obj1[arr2[i][0]] += arr2[i][1];
+        if(obj1[arr2[i][1]]){
+            obj1[arr2[i][1]] += arr2[i][0];
         } else{
-            obj1[arr2[i][0]] = arr2[i][1];
+            obj1[arr2[i][1]] = arr2[i][0];
         }
     }
     // Convert object to array
     let newArr = Object.entries(obj1);
+    let temp;
+    // Implement sorting
+    
+    // Implement swapping
     for(let i=0;i<newArr.length;i++){
-        newArr[i][0] = parseInt(newArr[i][0])
+        temp = newArr[i][0];
+        newArr[i][0] = newArr[i][1];
+        newArr[i][1] = temp;
     }
     return newArr;
 }
@@ -43,4 +49,3 @@ var newInv = [
 console.log(updateInventory(curInv, newInv));
 console.log(updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"], [7, "Toothpaste"]]));
 console.log(updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]], [])); //should return [[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]].
-console.log(updateInventory([], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"], [7, "Toothpaste"]]));
