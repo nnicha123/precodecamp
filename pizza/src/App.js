@@ -11,7 +11,11 @@ class App extends Component {
   };
 
   addPizza = () => {
-    this.setState({showPizza:true});
+    if(this.state.showPizza){
+      this.setState({showPizza:false})
+    }else{
+      this.setState({showPizza:true});
+    }
   }
 
   removeCheese = () => {
