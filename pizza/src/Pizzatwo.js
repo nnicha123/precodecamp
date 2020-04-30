@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './PizzaIngredient.css';
+import classes from './Pizzatwo.css';
 
 const pizzaIngredient = (props) => (
     <div className={classes.Pizza}>
