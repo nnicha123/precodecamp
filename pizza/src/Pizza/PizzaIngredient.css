@@ -169,3 +169,44 @@
     z-index: 30;
 }
 
+.Sausage{
+    height: 150px;
+    width:50px;
+    display: block;
+    background-image: linear-gradient(to right, rgb(238, 129, 79),rgb(153, 78, 8));
+    border-radius: 100px 100px 100px 100px;
+    position: absolute;
+    left: 150px;
+    top: 250px;
+    transform: rotate(30deg);
+    z-index: 25;
+}
+
+.Sausage::before{
+    height: 150px;
+    width:50px;
+    display: block;
+    content: "";
+    background-image: linear-gradient(to right, rgb(238, 129, 79),rgb(153, 78, 8));
+    border-radius: 100px 100px 100px 100px;
+    position: absolute;
+    left: 15px;
+    bottom: 250px;
+    transform: rotate(30deg);
+    z-index: 30;
+}
+
+.Sausage::after{
+    height: 150px;
+    width:50px;
+    content:"";
+    display: block;
+    background-image: linear-gradient(to right, rgb(238, 129, 79),rgb(153, 78, 8));
+    border-radius: 100px 100px 100px 100px;
+    position: absolute;
+    left: 10px;
+    bottom: 150px;
+    transform: rotate(-100deg);
+    z-index: 30;
+}
+
