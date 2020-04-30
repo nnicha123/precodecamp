@@ -15,9 +15,11 @@ function pairwise(arr, arg) {
         return 0;
     }
     while(i<j && i>=0 && j<=newArr.length-1){
-        
+        // console.log(arr.indexOf(newArr[i]),arr.indexOf(newArr[j]))
+        //     console.log(num)
         if((newArr[i] + newArr[j]) === arg){
-
+            // console.log(arr.indexOf(newArr[i]),arr.indexOf(newArr[j]))
+            // console.log(num)
             if(arr.indexOf(newArr[i]) === arr.indexOf(newArr[j]))
             {
                 temp = arr.indexOf(newArr[i]);
@@ -33,6 +35,7 @@ function pairwise(arr, arg) {
         } else{
             j--;
         }
+      
     }
     return num;
   }
