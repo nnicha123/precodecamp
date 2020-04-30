@@ -6,14 +6,13 @@
     border-radius:0 1000px 10000px 1000px;
     background-image: linear-gradient(to bottom, rgb(231, 158, 23),rgb(138, 92, 6));
     margin: 30px auto;
-    position: absolute;
+    position: relative;
     top: 150px;
     left: 250px;
 
 }
 
-.Cheese
-{
+.Cheese{
     display: block;
     position: absolute;
     top: 180px;
