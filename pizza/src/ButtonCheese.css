@@ -1,5 +1,4 @@
-
-.ButtonAdd,.ButtonDel,.Cheese{
+.Cheese{
     display: block;
     line-height: 0;
     padding: 20px 20px;
@@ -16,24 +15,7 @@
     font-weight: bolder;
     margin-right: 200px;
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 0;
     
-}
-
-.ButtonDel{
-    position: absolute;
-    top: 0;
-    left: 900px;
-}
-
-.Cheese{
-    position: absolute;
-    top: 100px;
-    left: 0px;
-}
-
-
-.Button:hover{
-    background-color: linear-gradient(to bottom, rgba(255, 177, 112), rgba(255, 133, 52));
 }
