@@ -5,9 +5,8 @@ const button = (props) => (
     <div className={classes.Button}>
        <button className={classes.ButtonAdd}
        onClick={props.clicked}>Add Pizza</button>
-       <button className={classes.ButtonDel}>Delete Pizza</button>
-       <button className={classes.Cheese}
-       onClick={props.cheese}>Cheese</button>
+       {/* <button className={classes.ButtonDel}>Delete Pizza</button>
+       <button className={classes.Cheese}>Cheese</button> */}
     </div>
 )
 
