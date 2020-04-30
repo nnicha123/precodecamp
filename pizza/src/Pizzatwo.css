@@ -66,7 +66,7 @@
     display: block;
     position: absolute;
     top: 230px;
-    left: 350px;
+    left:330px;
     width: 80px;
     height: 70px;
     transform: rotate(80deg);
@@ -110,7 +110,7 @@
     background-image: linear-gradient(to right, rgb(11, 90, 11), rgb(38, 168, 38));
     border-radius: 100px 100px 100px 10px;
     position: absolute;
-    left: 300px;
+    left: 350px;
     top: 170px;
     transform: rotate(30deg);
     z-index: 30;
@@ -137,7 +137,7 @@
     background-image: linear-gradient(to right, rgb(11, 90, 11), rgb(38, 168, 38));
     border-radius: 100px 100px 100px 10px;
     position: absolute;
-    left: 300px;
+    left: 350px;
     top: 420px;
     transform: rotate(30deg);
     z-index: 30;

@@ -7,6 +7,9 @@
     animation-duration: 1s;
     animation-name: beat;
     animation-iteration-count: infinite;
+    display: block;
+    position: relative;
+    z-index: 30;
 }
 
 .heart::before{
@@ -15,8 +18,8 @@
     height:100px;
     background-color: pink;
     position: absolute;
-    right:50px;
-    bottom: 0px;
+    right:20px;
+    top: 0px;
     border-radius: 50%;
 }
 .heart::after{
@@ -25,8 +28,8 @@
     height:100px;
     background-color: pink;
     position: absolute;
-    left:0px;
-    bottom: 50px;
+    right:-10px;
+    bottom: 30px;
     border-radius: 50%;
 }
 
