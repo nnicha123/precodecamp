@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './PizzaIngredient.css';
 
 const pizzaIngredient = (props) => (
-    <div className={classes.Pizza}>
+    <div>
         <div className={classes.PizzaCrust}></div>
         <div className={classes.Cheese}></div>
         <div className={classes.Pepperoni}></div>
