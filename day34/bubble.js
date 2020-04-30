@@ -1,6 +1,5 @@
 function bubbleSort(array) {
     // change code below this line
-    // Sliding window approach
     let temp = 0;
     for (let j = 0; j < array.length - 1; j++) {
         for (let i = 0; i < array.length - 1; i++) {
@@ -9,8 +8,8 @@ function bubbleSort(array) {
                 array[i] = array[i + 1];
                 array[i + 1] = temp;
             }
+        }
     }
-}
 
     return array;
     // change code above this line
