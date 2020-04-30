@@ -21,7 +21,11 @@ function updateInventory(arr1, arr2) {
     let newArr = Object.entries(obj1);
     let temp;
     // Implement sorting
-    
+    for(let i = 0;i<newArr.length;i++){
+        newArr.sort(function(a,b){
+            return a===b? 0:a>b? 1:-1;
+        })
+    }
     // Implement swapping
     for(let i=0;i<newArr.length;i++){
         temp = newArr[i][0];
