@@ -14,7 +14,7 @@ const pivotHelper = function(array,startIndex=0,endIndex=array.length-1){
     temp = array[currentIndex];
     array[currentIndex] = array[startIndex];
     array[startIndex] = temp;
-    return array;
+    return currentIndex;
 }
 
 console.log(pivotHelper([5,2,1,8,4,7,6,3]));
