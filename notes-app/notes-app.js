@@ -1,4 +1,4 @@
-let notes = [];
+const notes = getSavedNotes();
 
 const filters = {
     searchText: ''
@@ -18,13 +18,6 @@ const filters = {
 // const userJSON = localStorage.getItem('user'); //before storing it in local need to stringify
 // const user = JSON.parse(userJSON); //after read object
 // console.log(`${user.name} is ${user.age}`);
-
-//Check for existing notes
-const notesJSON = localStorage.getItem('notes');
-if(notesJSON !== null){
-    notes = JSON.parse(notesJSON);
-}
-
 
 const renderNotes = function (notes, filters) {
     const filteredNotes = notes.filter(function (note) {
