@@ -31,6 +31,7 @@ function mergeSort(array){
         let midPt = Math.floor(array.length/2);
         let left = mergeSort(array.slice(0,midPt));
         let right = mergeSort(array.slice(midPt));
+        console.log(array.length);
         return merge(left,right);
     }
     return array
