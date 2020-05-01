@@ -9,6 +9,7 @@ const todosJSON = localStorage.getItem('todos')
 if(todosJSON !== null){
     todos = JSON.parse(todosJSON);
 }
+console.log(todos)
 
 const renderTodos = function (todos, filters) {
     const filteredTodos = todos.filter(function (todo) {
@@ -57,8 +58,3 @@ document.querySelector('#hide-completed').addEventListener('change', function (e
     filters.hideCompleted = e.target.checked
     renderTodos(todos, filters)
 })
-
-// 1. Create a checkbox and setup event listener -> "Hide completed"
-// 2. Create new hideCompleted filter (default false)
-// 3. Update hideCompleted an rerender list on checkbox change
-// 4. Setup renderTodos to remove completed items
