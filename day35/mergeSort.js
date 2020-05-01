@@ -27,11 +27,13 @@ function merge(arr1,arr2){
 
 function mergeSort(array){
     // Split in halve;
-    while(array.length>=1){
-        mergeSort(array.slice(0,Math.floor(array.length/2)));
-        console.log(array);
+    while(array.length>1){
+        let midPt = Math.floor(array.length/2);
+        let left = mergeSort(array.slice(0,midPt));
+        let right = mergeSort(array.slice(midPt));
+        return merge(left,right);
     }
     return array
 }
 
-console.log(mergeSort([1,2,10,14,50,99,100]));
+console.log(mergeSort([1,100,13,12,50,9,100]));
