@@ -25,6 +25,7 @@ const removeTodo = function(id){
 // Toggle checkbox that is clicked
 const toggleTodo = function(id){
     const todo = todos.find(function(todo){
+        // console.log(todo.id)
         return todo.id === id
     })
     if(todo !== undefined){
