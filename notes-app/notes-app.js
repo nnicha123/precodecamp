@@ -7,6 +7,7 @@ renderNotes(notes, filters)
 document.querySelector('#create-note').addEventListener('click', function (e) {
     // e.target.textContent = 'The button was clicked'
     notes.push({
+        id: uuidv4(),
         title:'',
         body:''
     })
