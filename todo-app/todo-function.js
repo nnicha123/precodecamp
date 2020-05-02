@@ -16,10 +16,13 @@ const saveTodos = function(todos){
 const generateTodoDOM = function(todo){
     const textEl = document.createElement('span')
     textEl.textContent = todo.text
-    const button = document.createElement('button')
-    button.textContent = 'x'
+    // const button = document.createElement('button')
+    // button.textContent = 'x'
+    const checkBoxEl = document.createElement('input')
+    checkBoxEl.setAttribute('type','checkbox')
     const todoEl = document.createElement('div')
-        todoEl.appendChild(button)
+        // todoEl.appendChild(button)
+        todoEl.appendChild(checkBoxEl)
         todoEl.appendChild(textEl)
 
         return todoEl
