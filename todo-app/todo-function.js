@@ -2,7 +2,7 @@
 //Get saved todos from local storage
 const getSavedTodos = () => {
     const todosJSON = localStorage.getItem('todos')
-     return (todosJSON !== null) ? JSON.parse(todosJSON) : [];
+     return todosJSON ? JSON.parse(todosJSON) : [];
 }
 //Save todos to local storage
 const saveTodos = (todos) => {
@@ -19,7 +19,7 @@ const removeTodo = (id) => {
 // Toggle checkbox that is clicked
 const toggleTodo = (id) => {
     const todo = todos.find((todo) => todo.id === id)
-    if(todo !== undefined){
+    if(todo){
         todo.completed = !todo.completed
     }
 }
@@ -53,7 +53,6 @@ const generateTodoDOM = (todo) => {
     todoEl.appendChild(checkBoxEl)
     todoEl.appendChild(textEl)
     todoEl.appendChild(button)
-
     return todoEl
 }
 
