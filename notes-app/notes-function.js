@@ -1,7 +1,15 @@
+'use strict'
+
 //Read existing notes from local storage
 const getSavedNotes = () => {
     const notesJSON = localStorage.getItem('notes');
-    return notesJSON ? JSON.parse(notesJSON) : []
+    try{
+        return notesJSON ? JSON.parse(notesJSON) : []
+    } catch(e){
+        // if data invalid return empty array
+        return []
+    }
+ 
 }
 // Remove a note from the list
 const removeNote = (id) => {
