@@ -1,6 +1,7 @@
 const titleELement = document.querySelector('#note-title')
 const bodyElement = document.querySelector('#note-body')
 const removeElement = document.querySelector('#remove-note')
+const dateElement = document.querySelector('#last-edited')
 //Get id not including hash
 const noteId = location.hash.substring(1)
 let notes = getSavedNotes()
@@ -14,14 +15,18 @@ if(note === undefined){
 
 titleELement.value = note.title
 bodyElement.value = note.body
-
+dateElement.textContent = generateLastEdited(note.updatedAt)
 titleELement.addEventListener('input',function(e){
     note.title = e.target.value
+    note.updatedAt = moment().valueOf()
+    dateElement.textContent = generateLastEdited(note.updatedAt)
     saveNotes(notes)
 })
 
 bodyElement.addEventListener('input',function(e){
     note.body = e.target.value
+    note.updatedAt = moment().valueOf()
+    dateElement.textContent = generateLastEdited(note.updatedAt)
     saveNotes(notes)
 })
 
@@ -47,6 +52,7 @@ window.addEventListener('storage',function(e){
         
         titleELement.value = note.title
         bodyElement.value = note.body
+        dateElement.textContent = generateLastEdited(note.updatedAt)
     }
 })
 
