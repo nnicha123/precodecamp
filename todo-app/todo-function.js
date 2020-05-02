@@ -14,9 +14,15 @@ const saveTodos = function(todos){
 
 //Generate DOM elements for individual todo
 const generateTodoDOM = function(todo){
-    const p = document.createElement('p')
-        p.textContent = todo.text
-        return p
+    const textEl = document.createElement('span')
+    textEl.textContent = todo.text
+    const button = document.createElement('button')
+    button.textContent = 'x'
+    const todoEl = document.createElement('div')
+        todoEl.appendChild(button)
+        todoEl.appendChild(textEl)
+
+        return todoEl
 }
 
 //Render todos based on filters
@@ -45,5 +51,6 @@ const generateSummaryDOM = function(incompleteTodos){
     const summary = document.createElement('h2')
     summary.textContent = `You have ${incompleteTodos.length} todos left`
     document.querySelector('#todos').appendChild(summary)
+
     return summary
 }

@@ -17,6 +17,8 @@ const generateNoteDOM = function (note){
     //Setup the remove note button
     button.textContent = 'x'
     noteEl.appendChild(button)
+
+    //Setup note title text
         if(note.title.length >0 ){
             textEl.textContent = note.title
         }else{
