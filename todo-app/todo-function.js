@@ -3,29 +3,30 @@ const getSavedTodos = function () {
     const todosJSON = localStorage.getItem('todos')
     if (todosJSON !== null) {
         return JSON.parse(todosJSON);
-    }else{
+    } else {
         return [];
     }
 }
 //Save todos to local storage
-const saveTodos = function(todos){
-    localStorage.setItem('todos',JSON.stringify(todos))
+const saveTodos = function (todos) {
+    localStorage.setItem('todos', JSON.stringify(todos))
 }
 
 //Generate DOM elements for individual todo
-const generateTodoDOM = function(todo){
+const generateTodoDOM = function (todo) {
     const textEl = document.createElement('span')
     textEl.textContent = todo.text
-    // const button = document.createElement('button')
-    // button.textContent = 'x'
+    const button = document.createElement('button')
+    button.textContent = 'x'
     const checkBoxEl = document.createElement('input')
-    checkBoxEl.setAttribute('type','checkbox')
+    checkBoxEl.setAttribute('type', 'checkbox')
     const todoEl = document.createElement('div')
-        // todoEl.appendChild(button)
-        todoEl.appendChild(checkBoxEl)
-        todoEl.appendChild(textEl)
 
-        return todoEl
+    todoEl.appendChild(checkBoxEl)
+    todoEl.appendChild(textEl)
+    todoEl.appendChild(button)
+
+    return todoEl
 }
 
 //Render todos based on filters
@@ -50,7 +51,7 @@ const renderTodos = function (todos, filters) {
 }
 
 //Generate summary DOM
-const generateSummaryDOM = function(incompleteTodos){
+const generateSummaryDOM = function (incompleteTodos) {
     const summary = document.createElement('h2')
     summary.textContent = `You have ${incompleteTodos.length} todos left`
     document.querySelector('#todos').appendChild(summary)
