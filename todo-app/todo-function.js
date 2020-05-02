@@ -1,3 +1,4 @@
+
 //Get saved todos from local storage
 const getSavedTodos = function () {
     const todosJSON = localStorage.getItem('todos')
@@ -21,6 +22,12 @@ const removeTodo = function(id){
         todos.splice(todoIndex,1)
     }
 }
+// Check boxes for completed
+const checkComplete = function(){
+    todos.forEach(function(todo){
+        return todo.completed
+    })
+}
 
 //Generate DOM elements for individual todo
 const generateTodoDOM = function (todo) {
@@ -36,8 +43,10 @@ const generateTodoDOM = function (todo) {
         renderTodos(todos,filters)
     })
 
+    // Check boxes for the ones that todos are completed
     const checkBoxEl = document.createElement('input')
     checkBoxEl.setAttribute('type', 'checkbox')
+    checkBoxEl.checked = todo.completed
     const todoEl = document.createElement('div')
 
     todoEl.appendChild(checkBoxEl)
@@ -65,6 +74,7 @@ const renderTodos = function (todos, filters) {
 
     filteredTodos.forEach(function (todo) {
         document.querySelector('#todos').appendChild(generateTodoDOM(todo))
+
     })
 }
 
