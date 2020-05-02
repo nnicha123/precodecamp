@@ -25,8 +25,11 @@ document.querySelector('#filter-by').addEventListener('change', function (e) {
     console.log(e.target.value)
 })
 
-window.addEventListener('stoarge',function(e){
-    
+window.addEventListener('storage',function(e){
+    if(e.key === 'notes'){
+        notes = JSON.parse(e.newValue)
+        renderNotes(notes,filters)
+    }
 })
 
 //localStorage.setItem('location','Bangkok');

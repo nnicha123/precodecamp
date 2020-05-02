@@ -31,6 +31,9 @@ removeElement.addEventListener('click',function(e){
     location.assign('./index.html')
 })
 // add syncing to tabs
+// window.addEventListener('storage',function(e){
+//     debugger
+// })
 window.addEventListener('storage',function(e){
     if(e.key === "notes"){
         notes = JSON.parse(e.newValue)
