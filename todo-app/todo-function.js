@@ -22,11 +22,14 @@ const removeTodo = function(id){
         todos.splice(todoIndex,1)
     }
 }
-// Check boxes for completed
-const checkComplete = function(){
-    todos.forEach(function(todo){
-        return todo.completed
+// Toggle checkbox that is clicked
+const toggleTodo = function(id){
+    const todo = todos.find(function(todo){
+        return todo.id === id
     })
+    if(todo !== undefined){
+        todo.completed = !todo.completed
+    }
 }
 
 //Generate DOM elements for individual todo
@@ -47,8 +50,14 @@ const generateTodoDOM = function (todo) {
     const checkBoxEl = document.createElement('input')
     checkBoxEl.setAttribute('type', 'checkbox')
     checkBoxEl.checked = todo.completed
-    const todoEl = document.createElement('div')
 
+    checkBoxEl.addEventListener('change',function(){
+        toggleTodo(todo.id)
+        saveTodos(todos)
+        renderTodos(todos,filters)
+    })
+
+    const todoEl = document.createElement('div')
     todoEl.appendChild(checkBoxEl)
     todoEl.appendChild(textEl)
     todoEl.appendChild(button)
