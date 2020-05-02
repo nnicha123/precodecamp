@@ -25,6 +25,10 @@ document.querySelector('#filter-by').addEventListener('change', function (e) {
     console.log(e.target.value)
 })
 
+window.addEventListener('stoarge',function(e){
+    
+})
+
 //localStorage.setItem('location','Bangkok');
 // console.log(localStorage.getItem('location'));
 // localStorage.removeItem('location')
