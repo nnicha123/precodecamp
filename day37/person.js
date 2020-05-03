@@ -1,17 +1,24 @@
-const Person = function(firstName,lastName,age){
+const Person = function(firstName,lastName,age,likes = []){
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
+    this.likes = likes;
 }
 
 Person.prototype.getBio = function(){
-    return `${this.firstName} is ${this.age}.`
+    let bio =  `${this.firstName} is ${this.age}.`
+    this.likes.forEach((like) => {
+        bio += `${this.firstName} likes ${like}.`
+    })
+    return bio
 }
 
 Person.prototype.setName = function(fullName){
-    t
+    const names = fullName.split(' ')
+    this.firstName = names[0]
+    this.lastName = names[1]    
 }
 
-const me = new Person('Nicha','Ngamtweerat',24);
-me.setName('Opapa renu')
+const me = new Person('Nicha','Ngamtweerat',24,['Dogs','Coffee']);
+// me.setName('Opapa renu')
 console.log(me.getBio());
