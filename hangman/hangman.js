@@ -30,12 +30,3 @@ Hangman.prototype.getPuzzle = function () {
     return puzzle
 }
 
-const game1 = new Hangman('Cat', 2)
-
-
-window.addEventListener('keypress', function (e) {
-    const guess = String.fromCharCode(e.charCode)
-    game1.acceptChar(guess)
-    console.log(game1.getPuzzle())
-    console.log(game1.guessesLeft)
-})
