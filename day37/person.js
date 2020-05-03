@@ -22,3 +22,10 @@ Person.prototype.setName = function(fullName){
 const me = new Person('Nicha','Ngamtweerat',24,['Dogs','Coffee']);
 // me.setName('Opapa renu')
 console.log(me.getBio());
+const person2 = new Person('Clandey','Turner',51);
+Person.prototype.getBio = function(){
+    return 'Testing testing'
+}
+
+console.log(person2.getBio)
+console.log(me.getBio())
