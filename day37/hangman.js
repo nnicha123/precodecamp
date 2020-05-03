@@ -1,21 +1,22 @@
-const Hangman = function(word, numMissed,guessedLetters = []){
+const Hangman = function(word, numMissed){
     this.word = word.toLowerCase().split('');
     this.numMissed = numMissed;
-    this.guessedLetters = guessedLetters;
+    this.guessedLetters = ['u','a'];
 }
 
 Hangman.prototype.getPuzzle = function(){
-    let guesses = '';
-    this.guessedLetters.forEach((guess) => {
-        guesses +=  ` ${guess}`
+    let puzzle = '';
+    this.word.forEach((letter) => {
+        if(this.guessedLetters.includes(letter) || letter === ' '){
+            puzzle += letter
+        }else{
+            puzzle += "*"
+        }
     })
-    return `You guessed` + guesses
+    return puzzle
 }
 
 let hangman = new Hangman('Moment',4,['a','e','i'])
 console.log(hangman.getPuzzle())
 let hangmantwo = new Hangman('Usually',3)
-console.log(hangmantwo)
-
-let testWord = 'test';
-console.log(testWord.split(''))
+console.log(hangmantwo.getPuzzle())
