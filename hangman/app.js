@@ -17,15 +17,27 @@ window.addEventListener('keypress', function (e) {
     // guessesEl.textContent = game1.guessesLeft
     resultEl.textContent = game1.statusMessage
 
-    })
+})
 
-    getPuzzle((error,puzzle) => {
-        if(error){
-            console.log(`Error: ${error}`)
-        } else{
-            console.log(puzzle)
-        }
-    })
+getPuzzle('3',(error, puzzle) => {
+    if (error) {
+        console.log(`Error: ${error}`)
+    } else {
+        console.log(puzzle)
+    }
+})
+
+getCountry('TH',(error,country) => {
+    if(error){
+        console.log(`Error: ${error}`)
+    }else{
+        console.log(country.name)
+    }
+})
+
+    // const puzzle = getPuzzleSync()
+    // console.log(puzzle)
+    // console.log('Do something else')
 
 // const countryRequest = new XMLHttpRequest()
 // countryRequest.addEventListener('readystatechange',(e)=>{
