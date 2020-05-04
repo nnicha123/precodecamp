@@ -12,14 +12,23 @@ getDataCallback((err,data) => {
     }
 })
 // Promise
-const myPromise = new Promise((resolve,reject) => {
-    setTimeout(() => {
-        // resolve('This is the promise data')
-        reject('This is the reject')
-    }, 2000);
-})
+const getDataPromise = (data) =>{
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve(`This is my success data: ${data}`)
+        }, 2000);
+    })
+} 
 // Gets called when data came through
+const myPromise = getDataPromise(123)
 myPromise.then((data) => {
+    console.log(data)
+},(err) =>{
+    console.log(err)
+})
+
+const promise2 = getDataPromise(246)
+promise2.then((data) => {
     console.log(data)
 },(err) =>{
     console.log(err)

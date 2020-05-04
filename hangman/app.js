@@ -19,20 +19,16 @@ window.addEventListener('keypress', function (e) {
 
 })
 
-getPuzzle('3',(error, puzzle) => {
-    if (error) {
-        console.log(`Error: ${error}`)
-    } else {
-        console.log(puzzle)
-    }
+getPuzzle('3').then((puzzle) => {
+    console.log(puzzle)
+}, (err) => {
+    console.log(`Error: ${err}`)
 })
 
-getCountry('TH',(error,country) => {
-    if(error){
-        console.log(`Error: ${error}`)
-    }else{
-        console.log(country.name)
-    }
+getCountry('TH').then((country) => {
+    console.log(country.name)
+}, (err) =>{
+    console.log(`Error: ${error}`)
 })
 
     // const puzzle = getPuzzleSync()
