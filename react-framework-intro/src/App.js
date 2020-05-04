@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Info from './components/Info';
 import './App.css';
+import User from './components/User';
+import Account from './components/Account';
+import Blog from './components/Blog';
 
-function App() {
-  return (
-    <Router>
-      <Route path="/"/>
-    </Router>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div>
+        <Route exact path="/" component={User}/>
+        <Route path="/account" component={Account}/>
+        <Route path="/blog" component={Blog}/>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
