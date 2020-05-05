@@ -20,5 +20,6 @@
 <ul>
   <app-hobby 
     *ngFor="let hobby of hobbies"
-    [hobbyName]="hobby"></app-hobby>
+    [hobbyName]="hobby"
+    (hobbyRemoved)="deleteHobby($event)"></app-hobby>
 </ul>
