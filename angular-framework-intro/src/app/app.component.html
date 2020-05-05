@@ -18,7 +18,7 @@
 <p [ngStyle]="{backgroundColor:countColor(hobbyCount)}">Hobbies : {{hobbyCount}}</p>
 <p *ngIf="deletedHobby">Hobby Deleted!</p>
 <ul>
-  <li *ngFor="let hobby of hobbies" (click)=deleteHobby(hobby)>
-    {{hobby}}
-  </li>
+  <app-hobby 
+    *ngFor="let hobby of hobbies"
+    [hobbyName]="hobby"></app-hobby>
 </ul>
