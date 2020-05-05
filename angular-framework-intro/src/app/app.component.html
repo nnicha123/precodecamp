@@ -1,4 +1,9 @@
-<app-user></app-user>
+<div>
+  <a routerLink="/">Home</a> | 
+  <a routerLink="/blog">Blog</a> | 
+  <a routerLink="/account">Account</a> | 
+</div>
+<router-outlet></router-outlet>
 <app-username [username]="'Chris'" (userClicked)="onUserWasClicked($event)"></app-username>
 <app-username [username]="'Anna'" (userClicked)="onUserWasClicked($event)"></app-username>
 <p [ngClass]="{updated:name != 'Nicha'}">
