@@ -11,7 +11,13 @@
     <div id="app">
         <p v-if="show">You can see me!</p>
         <p v-else>Now you see me</p>
-        <p>Do you also see me?</p>
+        <!-- Use template to group (doesn't show in overall elements) -->
+        <template v-if="show">
+            <h1>Heading</h1>
+            <p>Inside a template</p>
+        </template>
+        <!-- v-show -> not detached, still there just set display:none (different for v-if) -->
+        <p v-show="show">Do you also see me?</p>
         <button @click="show = !show">Switch</button>
         <script src="app.js"></script>
     </div>
