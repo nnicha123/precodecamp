@@ -9,6 +9,8 @@ export class AppComponent {
   name = 'Nicha';
   elements: number[] = [];
   message ='';
+  hobbies = ['Walk my dog','Cooking','Play games'];
+  newHobby = '';
 
   onChangeName(){
     this.name = 'Anna'
@@ -23,5 +25,15 @@ export class AppComponent {
 
   onUserWasClicked(userName:string){
     alert(userName);
+  }
+  onAddHobby(){
+    this.hobbies.push(this.newHobby)
+  }
+  deleteHobby(hobby){
+    const oldHobbies = this.hobbies;
+    const toDelete = oldHobbies.indexOf(hobby);
+    this.hobbies = oldHobbies.filter((el,index)=>{
+      return index != toDelete
+    })
   }
 }

@@ -13,3 +13,10 @@
 </ul>
 <input type="text" [(ngModel)]="message">
 <p>{{ message }}</p>
+<input type="text" [(ngModel)]="newHobby">
+<button (click)=onAddHobby()>Add Hobby</button>
+<ul>
+  <li *ngFor="let hobby of hobbies" (click)=deleteHobby(hobby)>
+    {{hobby}}
+  </li>
+</ul>
