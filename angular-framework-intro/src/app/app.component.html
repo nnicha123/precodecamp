@@ -1,6 +1,6 @@
-<h1>
+<p [ngClass]="{updated:name != 'Nicha'}">
   {{name}}
-</h1>
+</p>
 <p *ngIf="name != 'Nicha'">Name updated!</p>
 <button (click)="onChangeName()">Change Name</button>
 <button (click)="onAddElement()">New Element</button>
