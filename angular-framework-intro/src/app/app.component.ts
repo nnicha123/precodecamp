@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name = 'Nicha';
   elements: number[] = [];
+  message ='';
 
   onChangeName(){
     this.name = 'Anna'
