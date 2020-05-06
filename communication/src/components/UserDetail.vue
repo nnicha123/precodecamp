@@ -28,7 +28,12 @@
             resetName(){
                 this.myName = 'Nicha';
                 this.$emit('nameWasReset',this.myName);
-            }
+            },
+        },
+        created(){
+            eventBus.$on('ageWasEdited',(age)=>{
+                this.userAge = age
+            })
         }
     }
 </script>
