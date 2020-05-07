@@ -1,5 +1,8 @@
 <template>
-    <div></div>
+        <div>
+        <h2>HI FROM RED</h2>
+        <p>I am red</p>
+    </div>
 </template>
 
 <script>

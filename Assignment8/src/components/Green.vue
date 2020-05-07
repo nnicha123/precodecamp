@@ -1,5 +1,8 @@
 <template>
-    <div></div>
+    <div>
+        <h2>HI FROM GREEN</h2>
+        <p>I am green</p>
+    </div>
 </template>
 
 <script>
