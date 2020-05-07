@@ -1,6 +1,13 @@
 <template>
     <div>
-        <slot></slot>
+        <div class="title">
+            <slot name="title"></slot>
+            <span style="color:green"><slot name="subtitle">The Subtitle</slot></span>
+        </div>
+        <hr>
+        <div>
+            <slot name="content"></slot>
+        </div>
     </div>
 </template>
 <script>
@@ -15,5 +22,9 @@ export default {
         padding: 30px;
         margin: 30px auto;
         text-align: center;
+    }
+    h2{
+        color: red;
+        font-weight: bold;
     }
 </style>
