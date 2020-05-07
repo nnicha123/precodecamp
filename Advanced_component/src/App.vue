@@ -5,15 +5,18 @@
         <button @click="selectedComponent='appQuote'">Quote</button>
         <button @click="selectedComponent='appAuthor'">Author</button>
         <button @click="selectedComponent='appNew'">New</button>
-        <hr/>
+        <hr />
         <p>{{selectedComponent}}</p>
-        <component :is="selectedComponent">
+        <keep-alive>
+          <component :is="selectedComponent">
             <p style="color:tomato">Default Content</p>
-        </component>
+          </component>
+        </keep-alive>
+
         <!-- <app-quote>
           <h2 slot="title">{{quoteTitle}}</h2>
           <p slot="content">A wonderful Quote!</p>
-        </app-quote> -->
+        </app-quote>-->
       </div>
     </div>
   </div>
@@ -27,7 +30,7 @@ export default {
   data: function() {
     return {
       quoteTitle: "The Quote from parent",
-      selectedComponent:'appQuote'
+      selectedComponent: "appQuote"
     };
   },
   components: {
