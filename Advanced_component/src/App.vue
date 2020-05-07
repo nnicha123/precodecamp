@@ -13,6 +13,8 @@
 
 <script>
 import Quote from './components/Quote.vue'
+import New from './components/New.vue'
+import Author from './components/Author.vue'
 export default {
     data:function(){
         return{
@@ -20,7 +22,9 @@ export default {
         }
     },
     components:{
-        appQuote:Quote
+        appQuote:Quote,
+        appAuthor:Author,
+        appNew:New
     }
 }
 </script>
