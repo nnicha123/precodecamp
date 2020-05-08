@@ -1,0 +1,48 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 500px;
+    width: 500px;
+    align-items: center;
+    position: relative;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    transform: translateX(0);
+    transition: all 0.5s;
+}
+.caption{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.container:hover .caption{
+    transform: translateX(0%);
+}
+.container:hover img{
+    transform: translateX(100%);
+}
+.caption p{
+    text-transform: capitalize;
+    font-size: 18px;
+}
