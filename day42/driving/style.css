@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    height: 100vh;
+    background: url(bg.jpg);
+    background-position: bottom left;
+    animation: driving 15s linear infinite;
+}
+
+.car{
+    position: absolute;
+    left: 200px;
+    bottom: -50px;
+    width: 200px;
+}
+
+.motobike{
+    position: absolute;
+    left: 500px;
+    bottom: 60px;
+    width: 100px;
+}
+
+@keyframes driving{
+    from{background-position: bottom left;}
+    to{background-position: bottom right;}
+}
