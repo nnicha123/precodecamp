@@ -53,6 +53,7 @@ class App extends Component {
           <div className={classes.Hearts2}>
             <Heart className={classes.Heart} />
           </div>
+          
         </div>
       </div>
     );
