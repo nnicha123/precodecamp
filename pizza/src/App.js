@@ -47,7 +47,12 @@ class App extends Component {
           <div className={classes.CakeHearts2}>
             <CakeHearts show={this.state.showPizza}/>
           </div>
-          <Heart className={classes.Heart} />
+          <div className={classes.Hearts}>
+            <Heart className={classes.Heart} />
+          </div>
+          <div className={classes.Hearts2}>
+            <Heart className={classes.Heart} />
+          </div>
         </div>
       </div>
     );

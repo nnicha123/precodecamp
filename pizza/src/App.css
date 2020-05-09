@@ -10,7 +10,6 @@
   transform-origin: center;
   transform: rotate(180deg);
   /* transform: scale(0.3); */
-
 }
 
 .PizzaTwo {
@@ -22,4 +21,10 @@
 }
 .CakeHearts2 {
   transform: rotate(90deg) translate(104%,295%);
+}
+.Hearts{
+  transform:translate(-1550%,50%)
+}
+.Hearts2{
+  transform:translate(-2000%,120%)
 }
