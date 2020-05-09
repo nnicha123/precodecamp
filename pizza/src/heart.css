@@ -1,38 +1,34 @@
 .heart{
-    background-color:pink;
-    width: 100px;
-    height:100px;
-    text-align: center;
-    transform: rotate(45deg);
-    animation-duration: 1s;
-    animation-name: beat;
-    animation-iteration-count: infinite;
-    display: block;
     position: relative;
-    z-index: 30;
+    width: 100px;
+    height: 100px;
+    background-color: #ff3838;
+    transform: rotate(45deg);
+    animation: beat 1.4s linear infinite;
 }
 
-.heart::before{
-    content: "";
-    width: 100px;
-    height:100px;
-    background-color: pink;
+.heart:before{
+    content: '';
     position: absolute;
-    right:20px;
-    top: 0px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3838;
+    transform: translateY(-50%);
     border-radius: 50%;
 }
-.heart::after{
-    content: "";
-    width: 100px;
-    height:100px;
-    background-color: pink;
+.heart:after{
+    content: '';
     position: absolute;
-    right:-10px;
-    bottom: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3838;
+    transform: translateX(-50%);
     border-radius: 50%;
 }
-
 @keyframes beat{
     0%{
         transform: scale(1) rotate(45deg);
