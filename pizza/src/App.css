@@ -1,6 +1,6 @@
 .App {
   display: flex;
-  transform: scale(0.3);
+  transform: scale(0.6);
 
 }
 .Pizza {
@@ -15,8 +15,4 @@
 
 .PizzaTwo {
   transform: translate(-450px,350px);
-}
-
-.Heart{
-  transform: rotate(45deg);
 }

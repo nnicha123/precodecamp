@@ -30,7 +30,6 @@ class App extends Component {
   render() {
     return (
       <div>
-
         <div className={classes.App}>
           <Button clicked={this.addPizza}/>
           <ButtonCheese clicked={this.removeCheese}/>
