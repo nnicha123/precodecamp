@@ -5,6 +5,7 @@ import classes from './App.css';
 import Heart from './heart';
 import Button from './Button';
 import ButtonCheese from './ButtonCheese';
+import CakeHearts from './CakeHearts';
 class App extends Component {
   state = {
       showPizza:false,
@@ -39,6 +40,12 @@ class App extends Component {
           <div className={classes.PizzaTwo}>
             <PizzaTwo show={this.state.showPizza}
             cheese={this.state.Cheese}/>
+          </div>
+          <div className={classes.CakeHearts1}>
+            <CakeHearts show={this.state.showPizza}/>
+          </div>
+          <div className={classes.CakeHearts2}>
+            <CakeHearts show={this.state.showPizza}/>
           </div>
           <Heart className={classes.Heart} />
         </div>

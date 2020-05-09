@@ -1,6 +1,4 @@
-.container{
-    list-style-type: none;
-}
+
 .CakeBase{
     display: block;
     width: 500px;
@@ -9,16 +7,13 @@
     background-image: linear-gradient(to bottom, rgb(70, 47, 4),rgb(138, 92, 6));
     margin: 30px auto;
     position: relative;
-    top: 150px;
-    left: 250px;
-    z-index: -1;
-
 }
 
 .CakeFill{
+    display: block;
     position: absolute;
-    top: 180px;
-    left: 400px;
+    top: 20px;
+    left: 0;
     width: 400px;
     height: 400px;
     border-radius:0 1000px 10000px 1000px;
@@ -27,9 +22,10 @@
 }
 
 .ChocChip{
+    display: block;
     position: absolute;
-    top: 250px;
-    left: 450px;
+    top: 100px;
+    left: 30px;
     width: 50px;
     height: 100px;
     background-image: linear-gradient(to right, rgb(80, 53, 4),rgb(32, 13, 4));
@@ -38,6 +34,7 @@
 }
 
 .ChocChip::before{
+    display: block;
     content: "";
     position: absolute;
     top: 150px;
@@ -60,7 +57,7 @@
     z-index: 20;
 }
 
-.heart{
+/* .heart{
     width: 20px;
     height: 20px;
     background-color: #ff3838;
@@ -279,5 +276,5 @@
     background-color: #ff3838;
     transform: translateX(-50%);
     border-radius: 50%;
-}
+} */
 
