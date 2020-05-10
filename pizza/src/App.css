@@ -37,4 +37,7 @@
 .Palette{
   transform: translateX(-1900px)  scale(1.5);
 }
- 
+
+.PizzaTopping{
+  transform: translateX(-1350px) translateY(850px) scale(1.5)
+}

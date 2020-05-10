@@ -9,6 +9,7 @@ import CakeHearts from './CakeHearts';
 import ButtonHeart from './ButtonHeart';
 import ButtonCake from './ButtonCake';
 import FillPalette from './FillPalette';
+import PizzaTopping from './PizzaTopping';
 class App extends Component {
   state = {
       showPizza:false,
@@ -43,9 +44,6 @@ class App extends Component {
       this.setState({showCake:true})
     }
   }
-  // addPinkTopping = () => {
-  //   this.setState({topping:"linear-gradient(to bottom, rgb(206, 96, 178),rgb(218, 129, 195))"})
-  // }
   removeCheese = () => {
     if(this.state.Cheese){
       this.setState({Cheese:false})
@@ -116,6 +114,9 @@ class App extends Component {
             clickYellow={this.fillYellow}
             clickGreen={this.fillGreen}
             clickBlue={this.fillBlue}/>
+          </div>
+          <div className={classes.PizzaTopping}>
+            <PizzaTopping/>
           </div>
         </div>
       </div>
