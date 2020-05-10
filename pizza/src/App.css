@@ -34,4 +34,7 @@
 .Hearts4{
   transform:translate(-1950%,40%)
 }
+.Palette{
+  transform: translateX(-1900px)  scale(1.5);
+}
  
