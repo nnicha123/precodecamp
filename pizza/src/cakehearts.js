@@ -2,7 +2,9 @@ import React from 'react';
 import classes from '../src/CakeHearts.css'
 
 const cake = (props) => (
-    <div>
+    <div style={{
+        opacity: props.show ? '1' : '0'
+    }}>
         <div className={classes.CakeBase}></div>
         <div className={classes.CakeFill}></div>
         <div className={classes.ChocChip}></div>

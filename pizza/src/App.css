@@ -13,18 +13,27 @@
 }
 
 .PizzaTwo {
-  transform: translate(-450px,350px);
+  transform: translate(-460px,350px);
 }
 
 .CakeHearts1 {
-  transform: rotate(270deg) translate(-4%,-117%);
+  transform: rotate(270deg) translate(-2%,-124%);
 }
 .CakeHearts2 {
-  transform: rotate(90deg) translate(104%,295%);
+  transform: rotate(90deg) translate(102%,306%);
 }
 .Hearts{
-  transform:translate(-1550%,50%)
+  transform:translate(-1480%,70%)
 }
 .Hearts2{
-  transform:translate(-2000%,120%)
+  transform:translate(-2100%,110%)
+}
+.Hearts3{
+  transform:translate(-2030%,140%)
+}
+.Hearts4{
+  transform:translate(-1950%,40%)
+}
+.ButtonHeart{
+  transform:translate(1800%);
 }

@@ -1,0 +1,20 @@
+.Heart{
+        display: block;
+        line-height: 0;
+        padding: 20px 20px;
+        text-align: center;
+        width: max-content;
+        height: 20px;
+        background-image: linear-gradient(to bottom, rgb(255, 138, 43),rgb(194, 79, 3));
+        transform: scale(2);
+        color: whitesmoke;
+        font-family: 'Courier New', Courier, monospace;
+        box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+        border: none;
+        border-radius: 10px;
+        font-weight: bolder;
+        margin-right: 200px;
+        position: absolute;
+        top: 0px;
+        left: 40%;
+}
