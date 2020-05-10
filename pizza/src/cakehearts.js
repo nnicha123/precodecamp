@@ -3,7 +3,7 @@ import classes from '../src/CakeHearts.css'
 
 const cake = (props) => (
     <div style={{
-        opacity: props.show ? '1' : '0'
+        opacity: props.showC ? '1' : '0'
     }}>
         <div className={classes.CakeBase}></div>
         <div className={classes.CakeFill}></div>

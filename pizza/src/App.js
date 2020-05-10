@@ -7,6 +7,7 @@ import Button from './Button';
 import ButtonCheese from './ButtonCheese';
 import CakeHearts from './CakeHearts';
 import ButtonHeart from './ButtonHeart';
+import ButtonCake from './ButtonCake';
 class App extends Component {
   state = {
       showPizza:false,
@@ -30,19 +31,18 @@ class App extends Component {
       this.setState({showPizza:true});
     }
   }
-
-  removeCheese = () => {
-    if(this.state.Cheese){
-      this.setState({Cheese:false})
-    }else{
-      this.setState({Cheese:true});
-    }
-  }
   addCake = () => {
     if(this.state.showCake){
       this.setState({showCake:false})
     }else{
       this.setState({showCake:true})
+    }
+  }
+  removeCheese = () => {
+    if(this.state.Cheese){
+      this.setState({Cheese:false})
+    }else{
+      this.setState({Cheese:true});
     }
   }
 
@@ -52,21 +52,21 @@ class App extends Component {
         <div className={classes.App}>
           <Button clicked={this.addPizza}/>
           <ButtonCheese clicked={this.removeCheese}/>
-          {/* <div className={classes.ButtonHeart}> */}
           <ButtonHeart clicked={this.addHeart}/>
-          {/* </div> */}
+          <ButtonCake clicked={this.addCake}/>
           <div className={classes.Pizza}>
-            <PizzaIngredient cheese={this.state.Cheese}/>
+            <PizzaIngredient show={this.state.showPizza}
+            cheese={this.state.Cheese}/>
           </div>
           <div className={classes.PizzaTwo}>
             <PizzaTwo show={this.state.showPizza}
             cheese={this.state.Cheese}/>
           </div>
           <div className={classes.CakeHearts1}>
-            <CakeHearts show={this.state.showPizza}/>
+            <CakeHearts showC={this.state.showCake}/>
           </div>
           <div className={classes.CakeHearts2}>
-            <CakeHearts show={this.state.showPizza}/>
+            <CakeHearts showC={this.state.showCake}/>
           </div>
           <div className={classes.Hearts}>
             <Heart show={this.state.Hearts}/>

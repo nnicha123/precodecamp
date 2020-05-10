@@ -2,9 +2,14 @@ import React from 'react';
 import classes from './PizzaIngredient.css';
 
 const pizzaIngredient = (props) => (
-    <div>
+    <div style={{
+        opacity: props.show ? '1' : '0'
+    }}>
         <div className={classes.PizzaCrust}></div>
-        <div className={classes.Cheese}></div>
+        <div className={classes.Cheese}
+        style={{
+            opacity:props.cheese ? '1':'0'
+        }}></div>
         <div className={classes.Pepperoni}></div>
         <div className={classes.Mushroom}></div>
         <div className={classes.Vegetables}></div>
