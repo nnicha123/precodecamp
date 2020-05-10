@@ -15,7 +15,7 @@ class App extends Component {
       Cheese:false,
       Hearts:false,
       showCake:false,
-      topping:"linear-gradient(to bottom, rgb(206, 96, 178),rgb(218, 129, 195))"
+      topping:'transparent'
   };
 
   addHeart = () => {
@@ -42,15 +42,33 @@ class App extends Component {
       this.setState({showCake:true})
     }
   }
-  addPinkTopping = () => {
-    this.setState({topping:"linear-gradient(to bottom, rgb(206, 96, 178),rgb(218, 129, 195))"})
-  }
+  // addPinkTopping = () => {
+  //   this.setState({topping:"linear-gradient(to bottom, rgb(206, 96, 178),rgb(218, 129, 195))"})
+  // }
   removeCheese = () => {
     if(this.state.Cheese){
       this.setState({Cheese:false})
     }else{
       this.setState({Cheese:true});
     }
+  }
+  fillPink = () => {
+    this.setState({topping:"linear-gradient(to bottom, rgb(206, 96, 178),rgb(218, 129, 195))"})
+  }
+  fillRed = () => {
+    this.setState({topping: "linear-gradient(to bottom, rgb(177, 8, 8),rgb(240, 47, 47))"})
+  }
+  fillOrange = () => {
+    this.setState({topping: "linear-gradient(to bottom, rgb(173, 55, 0),rgb(252, 107, 10))"})
+  }
+  fillYellow = () => {
+    this.setState({topping: "linear-gradient(to bottom, rgb(228, 192, 33),rgb(238, 255, 1))"})
+  }
+  fillGreen = () => {
+    this.setState({topping: "linear-gradient(to bottom, rgb(58, 160, 11),rgb(81, 255, 1))"})
+  }
+  fillBlue = () => {
+    this.setState({topping: "linear-gradient(to bottom, rgb(11, 125, 160),rgb(1, 217, 255))"})
   }
 
   render() {
@@ -90,7 +108,13 @@ class App extends Component {
             <Heart show={this.state.Hearts}/>
           </div>
           <div className={classes.Palette}>
-            <FillPalette/>
+            <FillPalette 
+            clickPink={this.fillPink}
+            clickRed={this.fillRed}
+            clickOrange={this.fillOrange}
+            clickYellow={this.fillYellow}
+            clickGreen={this.fillGreen}
+            clickBlue={this.fillBlue}/>
           </div>
         </div>
       </div>
