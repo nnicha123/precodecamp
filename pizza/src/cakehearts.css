@@ -17,7 +17,7 @@
     width: 400px;
     height: 400px;
     border-radius:0 1000px 10000px 1000px;
-    background-image: linear-gradient(to bottom, rgb(206, 96, 178),rgb(218, 129, 195));
+    background-image: none;
     z-index: 10;
 }
 

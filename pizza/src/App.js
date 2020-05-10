@@ -13,7 +13,8 @@ class App extends Component {
       showPizza:false,
       Cheese:false,
       Hearts:false,
-      showCake:false
+      showCake:false,
+      topping:"linear-gradient(to bottom, rgb(206, 96, 178),rgb(218, 129, 195))"
   };
 
   addHeart = () => {
@@ -27,6 +28,7 @@ class App extends Component {
   addPizza = () => {
     if(this.state.showPizza){
       this.setState({showPizza:false})
+      this.setState({Cheese:false})
     }else{
       this.setState({showPizza:true});
     }
@@ -34,9 +36,13 @@ class App extends Component {
   addCake = () => {
     if(this.state.showCake){
       this.setState({showCake:false})
+      this.setState({Hearts:false})
     }else{
       this.setState({showCake:true})
     }
+  }
+  addPinkTopping = () => {
+    this.setState({topping:"linear-gradient(to bottom, rgb(206, 96, 178),rgb(218, 129, 195))"})
   }
   removeCheese = () => {
     if(this.state.Cheese){
@@ -63,7 +69,8 @@ class App extends Component {
             cheese={this.state.Cheese}/>
           </div>
           <div className={classes.CakeHearts1}>
-            <CakeHearts showC={this.state.showCake}/>
+            <CakeHearts showC={this.state.showCake}
+            topping={this.state.topping}/>
           </div>
           <div className={classes.CakeHearts2}>
             <CakeHearts showC={this.state.showCake}/>
