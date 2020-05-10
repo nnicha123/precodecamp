@@ -15,7 +15,7 @@ class App extends Component {
       Cheese:false,
       Hearts:false,
       showCake:false,
-      topping:'transparent'
+      topping:'none'
   };
 
   addHeart = () => {
