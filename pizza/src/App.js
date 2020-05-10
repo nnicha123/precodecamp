@@ -73,7 +73,8 @@ class App extends Component {
             topping={this.state.topping}/>
           </div>
           <div className={classes.CakeHearts2}>
-            <CakeHearts showC={this.state.showCake}/>
+            <CakeHearts showC={this.state.showCake}
+            topping={this.state.topping}/>
           </div>
           <div className={classes.Hearts}>
             <Heart show={this.state.Hearts}/>

@@ -1,0 +1,11 @@
+.CakeFill{
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    border-radius:0 1000px 10000px 1000px;
+    background-image: none;
+    z-index: 10;
+}
