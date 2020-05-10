@@ -8,6 +8,7 @@ import ButtonCheese from './ButtonCheese';
 import CakeHearts from './CakeHearts';
 import ButtonHeart from './ButtonHeart';
 import ButtonCake from './ButtonCake';
+import FillPalette from './FillPalette';
 class App extends Component {
   state = {
       showPizza:false,
@@ -88,7 +89,9 @@ class App extends Component {
           <div className={classes.Hearts4}>
             <Heart show={this.state.Hearts}/>
           </div>
-          
+          <div className={classes.Palette}>
+            <FillPalette/>
+          </div>
         </div>
       </div>
     );

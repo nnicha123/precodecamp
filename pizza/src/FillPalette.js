@@ -2,10 +2,13 @@ import React from 'react';
 import classes from '../src/FillPalette.css'
 
 const fillCake = (props) => (
-    <div style={{
-        opacity: props.showC ? '1' : '0'
-    }}>
-        <div className={classes.CakeFill} style={{backgroundImage: props.fill}}></div>
+    <div>
+        <div className={classes.pink}></div>
+        <div className={classes.red}></div>
+        <div className={classes.orange}></div>
+        <div className={classes.yellow}></div>
+        <div className={classes.green}></div>
+        <div className={classes.blue}></div>
     </div>
 )
 
