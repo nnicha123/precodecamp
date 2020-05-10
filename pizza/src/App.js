@@ -38,6 +38,7 @@ class App extends Component {
     if(this.state.showCake){
       this.setState({showCake:false})
       this.setState({Hearts:false})
+      this.setState({topping:'none'})
     }else{
       this.setState({showCake:true})
     }
