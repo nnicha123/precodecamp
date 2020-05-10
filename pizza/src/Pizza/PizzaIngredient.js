@@ -10,11 +10,11 @@ const pizzaIngredient = (props) => (
         style={{
             opacity:props.cheese ? '1':'0'
         }}></div>
-        <div className={classes.Pepperoni}></div>
-        <div className={classes.Mushroom}></div>
-        <div className={classes.Vegetables}></div>
-        <div className={classes.Vegetablesone}></div>
-        <div className={classes.Sausage}></div>
+        <div style={{opacity:props.pepperoni ? '1' : '0'}} className={classes.Pepperoni}></div>
+        <div style={{opacity:props.mushroom ? '1' : '0'}} className={classes.Mushroom}></div>
+        <div style={{opacity:props.vegetables ? '1' : '0'}} className={classes.Vegetables}></div>
+        <div style={{opacity:props.vegetables ? '1' : '0'}} className={classes.Vegetablesone}></div>
+        <div style={{opacity:props.sausage ? '1' : '0'}} className={classes.Sausage}></div>
         <div className={classes.heart}></div>
     </div>
 )

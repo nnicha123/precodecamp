@@ -16,7 +16,11 @@ class App extends Component {
       Cheese:false,
       Hearts:false,
       showCake:false,
-      topping:'none'
+      topping:'none',
+      pepperoni:false,
+      mushroom:false,
+      vegetables:false,
+      sausage:false
   };
 
   addHeart = () => {
@@ -69,6 +73,34 @@ class App extends Component {
   fillBlue = () => {
     this.setState({topping: "linear-gradient(to bottom, rgb(11, 125, 160),rgb(1, 217, 255))"})
   }
+  addPepperoni =() => {
+    if(this.state.pepperoni){
+      this.setState({pepperoni:false})
+    }else{
+      this.setState({pepperoni:true})
+    }    
+  }
+  addMushroom =() => {
+    if(this.state.mushroom){
+      this.setState({mushroom:false})
+    }else{
+      this.setState({mushroom:true})
+    }    
+  }
+  addVeg =() => {
+    if(this.state.vegetables){
+      this.setState({vegetables:false})
+    }else{
+      this.setState({vegetables:true})
+    }    
+  }
+  addSausage =() => {
+    if(this.state.sausage){
+      this.setState({sausage:false})
+    }else{
+      this.setState({sausage:true})
+    }    
+  }
 
   render() {
     return (
@@ -80,6 +112,10 @@ class App extends Component {
           <ButtonCake clicked={this.addCake}/>
           <div className={classes.Pizza}>
             <PizzaIngredient show={this.state.showPizza}
+            pepperoni={this.state.pepperoni}
+            mushroom={this.state.mushroom}
+            vegetables={this.state.vegetables}
+            sausage={this.state.sausage}
             cheese={this.state.Cheese}/>
           </div>
           <div className={classes.PizzaTwo}>
@@ -116,7 +152,11 @@ class App extends Component {
             clickBlue={this.fillBlue}/>
           </div>
           <div className={classes.PizzaTopping}>
-            <PizzaTopping/>
+            <PizzaTopping 
+            addPepperoni={this.addPepperoni}
+            addSausage={this.addSausage}
+            addVeg={this.addVeg}
+            addMushroom={this.addMushroom}/>
           </div>
         </div>
       </div>
