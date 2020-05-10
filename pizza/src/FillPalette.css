@@ -29,7 +29,7 @@ button:hover{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-image: linear-gradient(to bottom, rgb(206, 96, 178),rgb(218, 129, 195));
+    background-image: linear-gradient(to bottom, rgb(161, 33, 129),rgb(218, 129, 195));
 }
 .red{
     position: absolute;

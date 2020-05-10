@@ -53,7 +53,7 @@ class App extends Component {
     }
   }
   fillPink = () => {
-    this.setState({topping:"linear-gradient(to bottom, rgb(206, 96, 178),rgb(218, 129, 195))"})
+    this.setState({topping:"linear-gradient(to bottom, rgb(161, 33, 129),rgb(218, 129, 195))"})
   }
   fillRed = () => {
     this.setState({topping: "linear-gradient(to bottom, rgb(177, 8, 8),rgb(240, 47, 47))"})
