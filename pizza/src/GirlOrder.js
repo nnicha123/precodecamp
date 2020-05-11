@@ -10,6 +10,7 @@ const girl = (props) => (
         <div className={classes.Mouth}></div>
         <div style={{transform:'scale(1.5)'}} className={classes.Shirt}></div>
         <div className={classes.Skirt}></div>
+        <div className={classes.Arm} ></div>
     </div>
 )
 
