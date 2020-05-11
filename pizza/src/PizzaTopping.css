@@ -5,7 +5,6 @@
 }
 
 .Pepperoni{
-    display: block;
     position: absolute;
     top: 100px;
     left: 50px;
@@ -16,7 +15,6 @@
     z-index: 20;
 }
 .Mushroom{
-    display: block;
     position: absolute;
     top: 100px;
     left: 150px;
@@ -30,7 +28,6 @@
 .Vegetables{
     height: 100px;
     width:30px;
-    display: block;
     background-image: linear-gradient(to right, rgb(11, 90, 11), rgb(38, 168, 38));
     border-radius: 100px 100px 100px 10px;
     position: absolute;
@@ -42,7 +39,6 @@
 .Sausage{
     height: 150px;
     width:50px;
-    display: block;
     background-image: linear-gradient(to right, rgb(238, 129, 79),rgb(153, 78, 8));
     border-radius: 100px 100px 100px 100px;
     position: absolute;

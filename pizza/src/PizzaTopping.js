@@ -7,7 +7,6 @@ const topping = (props) => (
         <button className={classes.Pepperoni} onClick={props.addPepperoni}></button>
         <button className={classes.Mushroom} onClick={props.addMushroom}></button>
         <button className={classes.Vegetables} onClick={props.addVeg}></button>
-        <button className={classes.Vegetablesone} onClick={props.addVeg}></button>
         <button className={classes.Sausage} onClick={props.addSausage}></button>
     </div>
 )
