@@ -161,6 +161,7 @@ class App extends Component {
           </div>
           <div className={classes.Girl}>
             <GirlOrder/>
+            {/* <BoyOrder/> */}
           </div>
         </div>
       </div>
