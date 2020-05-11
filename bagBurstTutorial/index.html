@@ -14,6 +14,8 @@
         <!--bag image-->
         <div id="bag" v-bind:class="{burst:ended}"></div>
         <!--bag health-->
+        <h3 v-if="!ended">Health level : {{health}}</h3>
+        <h3 v-else>Game Over</h3>
         <div id="bag-health">
             <div v-bind:style="{width:health + '%'}"></div>
         </div>
