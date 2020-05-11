@@ -11,6 +11,7 @@ import ButtonCake from './ButtonCake';
 import FillPalette from './FillPalette';
 import PizzaTopping from './PizzaTopping';
 import GirlOrder from './GirlOrder';
+import BoyOrder from './BoyOrder';
 class App extends Component {
   state = {
       showPizza:false,
@@ -161,7 +162,9 @@ class App extends Component {
           </div>
           <div className={classes.Girl}>
             <GirlOrder/>
-            {/* <BoyOrder/> */}
+            <div className={classes.Boy}>
+            <BoyOrder/>
+            </div>
           </div>
         </div>
       </div>
