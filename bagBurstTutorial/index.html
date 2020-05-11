@@ -5,10 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://npmcdn.com/vue/dist/vue.js"></script>
-    <title>Document</title>
+    <title>Bag Burst</title>
+    <link rel="stylesheet" href="app.css">
 </head>
+
 <body>
-    
+    <div id="vue-app">
+        <!--bag image-->
+        <div id="bag" v-bind:class="{burst:ended}"></div>
+        <!--bag health-->
+        <div id="bag-health">
+            <div v-bind:style="{width:health + '%'}"></div>
+        </div>
+        <!--game controls-->
+        <div id="controls">
+            <button v-on:click="punch" v-show="!ended">Punch</button>
+            <button v-on:click="restart">Restart</button>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
+
 </html>
