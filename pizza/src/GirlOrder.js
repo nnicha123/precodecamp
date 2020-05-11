@@ -7,6 +7,7 @@ const girl = (props) => (
         <div className={classes.Hair}></div>
         <div className={classes.Eyes}></div>
         <div className={classes.Mouth}></div>
+        <div style={{transform:'scale(1.5)'}} className={classes.Skirt}></div>
     </div>
 )
 

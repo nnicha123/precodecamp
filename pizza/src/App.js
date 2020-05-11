@@ -10,6 +10,7 @@ import ButtonHeart from './ButtonHeart';
 import ButtonCake from './ButtonCake';
 import FillPalette from './FillPalette';
 import PizzaTopping from './PizzaTopping';
+import GirlOrder from './GirlOrder';
 class App extends Component {
   state = {
       showPizza:false,
@@ -157,6 +158,9 @@ class App extends Component {
             addSausage={this.addSausage}
             addVeg={this.addVeg}
             addMushroom={this.addMushroom}/>
+          </div>
+          <div className={classes.Girl}>
+            <GirlOrder/>
           </div>
         </div>
       </div>

@@ -43,3 +43,6 @@ button:focus {outline:0;}
 .PizzaTopping{
   transform: translateX(-1350px) translateY(850px) scale(1.5)
 }
+.Girl{
+  transform: translateX(-3050px) translateY(950px) scale(1.5)
+}
