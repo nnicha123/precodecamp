@@ -19,6 +19,8 @@
         <div id="bag-health">
             <div v-bind:style="{width:health + '%'}"></div>
         </div>
+        <!-- Try adding input in there -->
+        <input type="text" v-model="health">50
         <!--game controls-->
         <div id="controls">
             <button v-on:click="punch" v-show="!ended">Punch</button>
