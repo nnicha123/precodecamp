@@ -9,7 +9,7 @@ const boy = (props) => (
         <div className={classes.Pupil}></div>
         <div className={classes.Mouth}></div>
         <div style={{transform:'scale(1.5)'}} className={classes.Shirt}></div>
-        <div className={classes.Skirt}></div>
+        <div className={classes.Pant}></div>
         <div className={classes.Arm} ></div>
     </div>
 )
