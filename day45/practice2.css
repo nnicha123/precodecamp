@@ -1,0 +1,16 @@
+.col-sm-1{
+    background-color: coral;
+    border: 1px solid black;
+}
+.col-sm-4{
+    background-color: greenyellow;
+    border: 1px solid black;
+}
+.col-sm-6{
+    background-color: rgb(47, 224, 255);
+    border: 1px solid black;
+}
+.col-sm-12{
+    background-color: lightskyblue;
+    border: 1px solid black;
+}
