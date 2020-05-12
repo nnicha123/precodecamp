@@ -3,7 +3,8 @@ new Vue({
     data:{
         text:'',
         arr:[],
-        random:''
+        random:'',
+        input:''
     },
     methods:{
         splittext:function(){
@@ -16,6 +17,9 @@ new Vue({
         },
         randomText:function(length){
             this.text = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, length).toUpperCase();
+        },
+        testInput:function(){
+            console.log(this.input)
         }
     },
     computed: {
