@@ -13,13 +13,13 @@
         <button v-on:click="randomText();countDownTimer()">Start</button>
         <button v-on:click="resetTimer">Reset Timer</button>
         <p class="won" v-if="youWin">CONGRATULATIONS! YOU WON!!</p>
-        <p v-else-if="gameOver">GAME OVER!</p>
+        <p class="lost" v-else-if="gameOver">GAME OVER!</p>
         <!-- <ul> 
             <li v-for="[index,el] in arr" v-on:click="removeText(index)">{{index,el}}</li>
         </ul>
         <input type="text" v-model="text" v-on:input="splittext"> -->
         <br><br>
-        <div class="time-bar">
+        <div class="time-bar" v-if="!gameOver && !youWin">
             <div v-bind:style="{width:countDown*5 + '%'}"></div>
         </div>
         <!-- <button v-if="!gameOver" v-on:click="randomText(6)">Generate Random Text</button>
@@ -27,7 +27,7 @@
         <ul>
             <li v-if="!gameOver && !youWin" v-for="[element,index] in text">{{element}}</li>
         </ul>
-        <h3>Type all the letters before time runs out</h3>
+        <h3 v-if="!gameOver && !youWin">Type all the letters before time runs out</h3>
         <input v-if="!gameOver && !youWin" id="inputText" type="text" v-model="input" v-on:input="testInput" v-on:keyup.enter="tempRefresh">
         <br><br>
         <button v-if="!gameOver && !youWin" v-on:keydown.enter="tempRefresh">Refresh</button>
