@@ -4,7 +4,8 @@ new Vue({
         text:'',
         arr:[],
         random:'',
-        input:''
+        input:'',
+        countDown:10
     },
     methods:{
         splittext:function(){
@@ -29,6 +30,18 @@ new Vue({
         },
         tempRefresh:function(){
             this.input = ''
+        },
+        countDownTimer:function(){
+            console.log('In the function')
+            if(this.countDown > 0){
+                setTimeout(() => {
+                    this.countDown -=1
+                    this.countDownTimer()
+                },1000)
+            }
+        },
+        resetTimer:function(){
+            this.countDown = 10;
         }
     },
     computed: {
