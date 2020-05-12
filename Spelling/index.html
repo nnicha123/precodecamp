@@ -11,13 +11,28 @@
     <div id="vue-app">
         <!-- {{text}} -->
         <button v-on:click="randomText();countDownTimer()">Start</button>
-        <div class="ball">
+        <div class="ball" v-if="youWin">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
             <div></div>
             <div></div>
+        </div>
+        <div class="brickPlay">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </div>
         <button v-on:click="resetTimer">Reset Timer</button>
         <p class="won" v-if="youWin">CONGRATULATIONS! YOU WON!!</p>
