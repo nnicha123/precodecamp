@@ -12,7 +12,7 @@
         <!-- {{text}} -->
         <button v-on:click="randomText();countDownTimer()">Start</button>
         <button v-on:click="resetTimer">Reset Timer</button>
-        <p v-if="youWin">CONGRATULATIONS! YOU WON!!</p>
+        <p class="won" v-if="youWin">CONGRATULATIONS! YOU WON!!</p>
         <p v-else-if="gameOver">GAME OVER!</p>
         <!-- <ul> 
             <li v-for="[index,el] in arr" v-on:click="removeText(index)">{{index,el}}</li>
