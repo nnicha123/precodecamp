@@ -10,7 +10,7 @@
 <body>
     <div id="vue-app">
         <!-- {{text}} -->
-        <button v-on:click="countDownTimer">Start</button>
+        <button v-on:click="countDownTimer();randomText()">Start</button>
         <button v-on:click="resetTimer">Reset Timer</button>
         <p v-if="gameOver">GAME OVER!</p>
         <!-- <ul> 
@@ -21,8 +21,8 @@
         <div class="time-bar">
             <div v-bind:style="{width:countDown*10 + '%'}"></div>
         </div>
-        <button v-if="!gameOver" v-on:click="randomText(6)">Generate Random Text</button>
-        <p>{{random}}</p>
+        <!-- <button v-if="!gameOver" v-on:click="randomText(6)">Generate Random Text</button>
+        <p>{{random}}</p> -->
         <ul>
             <li v-if="!gameOver" v-for="[element,index] in text">{{element}}</li>
         </ul>
