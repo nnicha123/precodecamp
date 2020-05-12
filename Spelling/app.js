@@ -7,10 +7,11 @@ new Vue({
     methods:{
         splittext:function(){
             this.arr = this.text.split('')
-            console.log(this.arr)
+
         },
-        removeText:function(index){
-            this.arr.splice(index,1)
+        removeText:function(el){
+            findIndex = this.arr.indexOf(el)
+            this.arr.splice(findIndex,1)
         }
     },
     computed: {

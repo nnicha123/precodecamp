@@ -14,7 +14,7 @@
         <ul>
             <li v-for="[index,el] in arr" v-on:click="removeText(index)">{{index,el}}</li>
         </ul>
-        <input type="text" v-model="text">
+        <input type="text" v-model="text" v-on:input="splittext">
     </div>
 <script src="app.js"></script>
 </body>
