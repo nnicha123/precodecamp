@@ -21,9 +21,9 @@
         <ul>
             <li v-for="[element,index] in text">{{element}}</li>
         </ul>
-        <input id="inputText" type="text" v-model="input" v-on:input="testInput">Guess Correctly for text to disappear
+        <input id="inputText" type="text" v-model="input" v-on:input="testInput" v-on:keyup.enter="tempRefresh">Guess Correctly for text to disappear
         <br><br>
-        <button v-on:click="tempRefresh">Refresh</button>
+        <button v-on:keydown.enter="tempRefresh">Refresh</button>
     </div>
 <script src="app.js"></script>
 </body>
