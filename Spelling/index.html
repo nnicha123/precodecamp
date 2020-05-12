@@ -9,10 +9,10 @@
 </head>
 <body>
     <div id="vue-app">
-        {{text}}
-        <button v-on:click="splittext">Click to display Array</button>
+        <!-- {{text}} -->
+        <button v-on:click="splittext">Start</button>
         <ul>
-            <li v-for="el in arr">{{el}}</li>
+            <li v-for="el in arr" v-on:click="removeText">{{el}}</li>
         </ul>
     </div>
 <script src="app.js"></script>

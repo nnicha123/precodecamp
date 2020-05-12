@@ -1,6 +1,17 @@
-#vue-app{
-    height: 100vh;
+ul {
+    list-style-type: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+ul li{
+    padding: 10px 10px;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    background-color: coral;
+    line-height: 30px;
+    text-align: center;
+    border: 5px solid brown;
+    font-family:'Lucida Sans';
+    font-weight: bold;
 }
