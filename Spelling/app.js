@@ -1,7 +1,7 @@
 new Vue({
     el:'#vue-app',
     data:{
-        text:'POPSICLES',
+        text:'',
         arr:[]
     },
     methods:{
