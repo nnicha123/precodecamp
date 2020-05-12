@@ -12,7 +12,7 @@ new Vue({
     methods:{
         splittext:function(){
             this.arr = this.text.split('')
-            console.log()
+
         },
         removeText:function(el){
             findIndex = this.arr.indexOf(el)
@@ -26,8 +26,7 @@ new Vue({
             this.youWin = false;
         },
         testInput:function(){
-            letterIndex = this.text.indexOf(this.input)
-            console.log(letterIndex)
+            letterIndex = this.text.indexOf(this.input.toUpperCase())
             if(letterIndex > -1){
                 this.arr.splice(letterIndex,1)
                 this.text = this.arr.join('')
