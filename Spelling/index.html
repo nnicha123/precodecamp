@@ -12,7 +12,7 @@
         <!-- {{text}} -->
         <button v-on:click="splittext">Start</button>
         <ul>
-            <li v-for="el in arr" v-on:click="removeText">{{el}}</li>
+            <li v-for="[index,el] in arr" v-on:click="removeText(index)">{{index,el}}</li>
         </ul>
     </div>
 <script src="app.js"></script>
