@@ -12,23 +12,24 @@
         <!-- {{text}} -->
         <button v-on:click="countDownTimer">Start</button>
         <button v-on:click="resetTimer">Reset Timer</button>
-        <p>{{countDown}}</p>
-        <ul>
+        <p v-if="gameOver">GAME OVER!</p>
+        <!-- <ul> 
             <li v-for="[index,el] in arr" v-on:click="removeText(index)">{{index,el}}</li>
         </ul>
-        <input type="text" v-model="text" v-on:input="splittext">
+        <input type="text" v-model="text" v-on:input="splittext"> -->
         <br><br>
         <div class="time-bar">
             <div v-bind:style="{width:countDown*10 + '%'}"></div>
         </div>
-        <button v-on:click="randomText(6)">Generate Random Text</button>
+        <button v-if="!gameOver" v-on:click="randomText(6)">Generate Random Text</button>
         <p>{{random}}</p>
         <ul>
-            <li v-for="[element,index] in text">{{element}}</li>
+            <li v-if="!gameOver" v-for="[element,index] in text">{{element}}</li>
         </ul>
-        <input id="inputText" type="text" v-model="input" v-on:input="testInput" v-on:keyup.enter="tempRefresh">Guess Correctly for text to disappear
+        <h3>Type all the letters before time runs out</h3>
+        <input v-if="!gameOver" id="inputText" type="text" v-model="input" v-on:input="testInput" v-on:keyup.enter="tempRefresh">
         <br><br>
-        <button v-on:keydown.enter="tempRefresh">Refresh</button>
+        <button v-if="!gameOver" v-on:keydown.enter="tempRefresh">Refresh</button>
     </div>
 <script src="app.js"></script>
 </body>

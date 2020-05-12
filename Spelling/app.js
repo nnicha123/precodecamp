@@ -5,7 +5,8 @@ new Vue({
         arr:[],
         random:'',
         input:'',
-        countDown:10
+        countDown:10,
+        gameOver:false,
     },
     methods:{
         splittext:function(){
@@ -32,15 +33,17 @@ new Vue({
             this.input = ''
         },
         countDownTimer:function(){
-            console.log('In the function')
             if(this.countDown > 0){
                 setTimeout(() => {
                     this.countDown -=1
                     this.countDownTimer()
                 },1000)
+            }else{
+                this.gameOver = true;
             }
         },
         resetTimer:function(){
+            this.gameOver = false;
             this.countDown = 10;
         }
     },
