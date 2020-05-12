@@ -16,6 +16,9 @@
         </ul>
         <input type="text" v-model="text" v-on:input="splittext">
         <br><br>
+        <div class="time-bar">
+            <div></div>
+        </div>
         <button v-on:click="randomText(6)">Generate Random Text</button>
         <p>{{random}}</p>
         <ul>
