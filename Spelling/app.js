@@ -17,9 +17,18 @@ new Vue({
         },
         randomText:function(length){
             this.text = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, length).toUpperCase();
+            this.arr = this.text.split('')
         },
         testInput:function(){
-            console.log(this.input)
+            letterIndex = this.text.indexOf(this.input)
+            console.log(letterIndex)
+            if(letterIndex > -1){
+                this.arr.splice(letterIndex,1)
+                this.text = this.arr.join('')
+            }
+        },
+        tempRefresh:function(){
+            this.input = ''
         }
     },
     computed: {
