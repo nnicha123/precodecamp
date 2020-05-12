@@ -7,6 +7,53 @@
     font-size: 20px;
     font-family: sans-serif;
     text-transform: uppercase;
+    background-image: linear-gradient(to bottom, rgb(44, 40, 40),rgb(151, 149, 149));
+}
+.ball div{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right,pink,rgb(233, 12, 49));
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    animation: bounce 1.5s linear infinite;
+}
+.ball div:nth-child(1){
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    
+}
+.ball div:nth-child(2){
+    animation-delay: 0.2s;
+    background-image: linear-gradient(to right,rgb(180, 255, 209),rgb(36, 104, 53));
+}
+.ball div:nth-child(3){
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    background-image: linear-gradient(to right,rgb(180, 237, 255),rgb(12, 71, 233));
+    animation-delay: 0.4s;
+}
+.ball div:nth-child(4){
+    position: absolute;
+    top: 100px;
+    left:1200px;
+    background-image: linear-gradient(to right,rgb(180, 255, 209),rgb(36, 104, 53));
+}
+.ball div:nth-child(5){
+    position: absolute;
+    top: 200px;
+    left:1300px;
+    background-image: linear-gradient(to right,rgb(180, 237, 255),rgb(12, 71, 233));
+    animation-delay: 0.2s;
+}
+.ball div:nth-child(6){
+    position: absolute;
+    top: 100px;
+    left:1400px;
+    animation-delay:0.4s;
 }
 .lost{
     width: 500px;
@@ -31,11 +78,11 @@
 }
 
 button{
-    background-image: linear-gradient(to right, rgb(202, 29, 57),rgb(201, 101, 118));
+    background-image: linear-gradient(to right, rgb(29, 124, 202),rgb(101, 189, 201));
     width:170px;
     padding: 20px 20px;
     border: none;
-    border-radius: 7px;
+    border-radius: 20px;
     margin-bottom: 10px;
     /* border: 5px solid rgb(114, 28, 45); */
     position: relative;
@@ -99,4 +146,15 @@ ul li{
     height: 20px;
     background-image: linear-gradient(to right, rgb(202, 18, 18),rgb(12, 136, 59));
     background-color: rgb(202, 18, 18);
+}
+@keyframes bounce {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(500px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
