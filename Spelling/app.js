@@ -15,7 +15,7 @@ new Vue({
             this.arr.splice(findIndex,1)
         },
         randomText:function(length){
-            this.random = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, length).toUpperCase();
+            this.text = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, length).toUpperCase();
         }
     },
     computed: {

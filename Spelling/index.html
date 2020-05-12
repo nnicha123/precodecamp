@@ -18,6 +18,9 @@
         <br><br>
         <button v-on:click="randomText(6)">Generate Random Text</button>
         <p>{{random}}</p>
+        <ul>
+            <li v-for="[element,index] in text">{{element}}</li>
+        </ul>
     </div>
 <script src="app.js"></script>
 </body>
