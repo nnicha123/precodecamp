@@ -63,6 +63,14 @@ export default new Vuex.Store({
       }else{
         alert('You need more Bytes')
       }
+    },
+    bytesPerSecond:state => {
+      state.bps = 0;
+      state.upgrades.forEach(upgrade => {
+        state.bps += (upgrade.bps * upgrade.quantity);
+        state.bytes += (upgrade.bps * upgrade.quantity)/60;
+        state.totalBytes += (upgrade.bps * upgrade.quantity)/60;
+      })
     }
   },
   getters: {
