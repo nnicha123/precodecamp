@@ -37,11 +37,16 @@ export default {
     .upgrades{
         background-color: #222;
         padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         .upgrade{
             display: flex;
             justify-content: center;
             margin: 0px -15px 15px;
+            align-items: center;
 
             .button,
             .cost,
