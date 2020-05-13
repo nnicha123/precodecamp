@@ -7,7 +7,7 @@ new Vue({
         input:'',
         countDown:20,
         gameOver:false,
-        youWin:false
+        youWin:false,
     },
     methods:{
         splittext:function(){
