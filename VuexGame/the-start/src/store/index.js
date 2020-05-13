@@ -17,38 +17,39 @@ export default new Vuex.Store({
       increase:3
     },
     power_ups:[],
-    updates:[
-
-    {
-      name:"Intern",
-      cost:50,
-      increase:1.15,
-      bps:0.1,
-      quantity:0,
-      unlocksAt:0
-    },
-    {
-      name:"Junior Developer",
-      cost:100,
-      increase:1.2,
-      bps:0.5,
-      quantity:0,
-      unlocksAt:1
-    },
-    {
-      name:"Web Developer",
-      cost:300,
-      increase:1.4,
-      bps:1,
-      quantity:0,
-      unlocksAt:2
-    }
+    upgrades:[
+      {
+        name:"Intern",
+        cost:50,
+        increase:1.15,
+        bps:0.1,
+        quantity:0,
+        unlocksAt:0
+      },
+      {
+        name:"Junior Developer",
+        cost:100,
+        increase:1.2,
+        bps:0.5,
+        quantity:0,
+        unlocksAt:1
+      },
+      {
+        name:"Web Developer",
+        cost:300,
+        increase:1.4,
+        bps:1,
+        quantity:0,
+        unlocksAt:2
+      }
     
     ]
   },
   mutations: {
   },
   getters: {
-
+    bytesUntilLevelUp: state => {
+      return Math.round(state.player.nextLevel - state.totalBytes);
+    }
   }
 })
