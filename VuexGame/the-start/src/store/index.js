@@ -46,6 +46,14 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
+    incrementBytes:(state,increment) => {
+      state.bytes += increment;
+      state.totalBytes += increment;
+    },
+    levelUp:state=>{
+      state.player.level++;
+      state.player.nextLevel *= state.player.increase;
+    }
   },
   getters: {
     bytesUntilLevelUp: state => {

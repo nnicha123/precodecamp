@@ -14,10 +14,17 @@ export default {
   methods: {
     coding(){
       // Sort out bytes -> increment bytes after called
+      this.$store.commit('incrementBytes',this.$store.state.bpk);
     },
     loop(){
       // requestAnimationFrame calls loop 60 frames per second
+      this.levelManager();
       requestAnimationFrame(this.loop)
+    },
+    levelManager(){
+      if(this.$store.getters.bytesUntilLevelUp <= 0){
+        this.$store.commit('levelUp')
+      }
     }
   },
   created() {
@@ -37,6 +44,6 @@ export default {
     box-sizing: border-box;
   }
   body{
-    font-family: sans-serif;
+    font-family: Verdana;
   }
 </style>
