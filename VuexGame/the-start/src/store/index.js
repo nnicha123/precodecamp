@@ -62,7 +62,7 @@ export default new Vuex.Store({
     availableUpgrades: state => {
       return state.upgrades.filter(upgrade => {
         if(upgrade.unlocksAt <= state.player.level){
-          upgrade.disabled - false;
+          upgrade.disabled = false;
           return upgrade;
         }else if(upgrade.unlocksAt -1 == state.player.level){
           upgrade.disabled = true;
