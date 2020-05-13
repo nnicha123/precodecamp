@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/browse/vue@2.6.11/"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/4.0.0-beta.2/vuex.cjs.js"></script>
+    <title>Vuex tutorial</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{welcome}}</h1>
+        <h2>{{message}}</h2>
+    </div>
+    <script>
+        import Vue from 'vue';
+        import Vuex from 'vuex';
+
+        const store = new Vuex.Store({
+            state: {
+                message: 'Hello from Vuex',
+                count: 0
+            },
+            mutations: {
+
+            },
+            actions: {
+
+            },
+            getters: {
+
+            }
+        });
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    welcome: 'Hello world'
+                }
+            },
+            computed: {
+                message() {
+                    return store.state.message
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
