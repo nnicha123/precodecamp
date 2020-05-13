@@ -53,6 +53,16 @@ export default new Vuex.Store({
     levelUp:state=>{
       state.player.level++;
       state.player.nextLevel *= state.player.increase;
+    },
+    buyUpgrade:(state,{index,amount}) => {
+      if(state.bytes >= state.upgrades[index].cost){
+        state.bytes -= state.upgrades[index].cost;
+        state.upgrades[index].quantity += amount;
+        state.upgrades[index].cost = Math.round(state.upgrades[index].cost * state.upgrades[index].cost)
+
+      }else{
+        alert('You need more Bytes')
+      }
     }
   },
   getters: {

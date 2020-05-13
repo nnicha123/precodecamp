@@ -3,9 +3,13 @@
         <div v-for="(upgrade,index) in upgrades"
         :key="index"
         class="upgrade">
-           <button :class="`button ${upgrade.disabled ? 'disabled' :''}`">
+           <button :class="`button ${upgrade.disabled ? 'disabled' :''}`" @click="() => buyUpgrade(index)">
                {{upgrade.name}} {{upgrade.disabled ? `(lvl: ${upgrade.unlocksAt})` : ''}}
            </button>
+           <div class="details">
+               <div class="cost">Cost: {{upgrade.cost}}</div>
+               <div class="quantity">Quantity: {{upgrade.quantity}}</div>
+           </div>
         </div>
     </div>
 </template>
@@ -16,6 +20,14 @@ export default {
     computed:{
         upgrades(){
             return this.$store.getters.availableUpgrades;
+        }
+    },
+    methods:{
+        buyUpgrade(index){
+            this.$store.commit('buyUpgrade', {
+                index,
+                amount:1
+            })
         }
     }
 }
@@ -36,6 +48,9 @@ export default {
             .quantity{
                 color: #fff;
                 margin: 0 15px;
+            }
+            .details{
+                flex: 1 1 100%;
             }
 
             .button{
