@@ -1,5 +1,5 @@
 {
-  "name": "pre-react-redux-immutable-update",
+  "name": "immutable-react-redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
