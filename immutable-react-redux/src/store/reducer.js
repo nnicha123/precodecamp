@@ -12,7 +12,7 @@ const reducer = (state = initialState, action) => {
       return{
         ...state,
         age:state.age + action.value,
-        history:state.history.concat({age:state.age + action.value})
+        history:state.history.concat({id:Math.random(),age:state.age + action.value})
       }
       break;
 
@@ -21,9 +21,15 @@ const reducer = (state = initialState, action) => {
       return{
         ...state,
         age:state.age - action.value,
-        history:state.history.concat({age:state.age - action.value})
+        history:state.history.concat({id:Math.random(),age:state.age - action.value})
       }
       break;
+
+    case "REMOVE_AGE":
+      return {
+        ...state,
+        history:state.history.filter((el) => el.id !== action.key)
+      }
   }
   return newState;
 };

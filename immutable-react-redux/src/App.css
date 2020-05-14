@@ -21,6 +21,13 @@
 .App-intro {
   font-size: large;
 }
+.historyItem{
+  list-style-type: none;
+  height: 20px;
+  background-color: rgb(216, 216, 130);
+  padding: 10px;
+  margin-bottom: 5px;
+}
 
 @keyframes App-logo-spin {
   from {
