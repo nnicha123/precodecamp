@@ -7,12 +7,15 @@ const reducer = (state=initialState, action) => {
 
     switch(action.type){
         case 'AGE_UP': 
+            newState.loading = false;
             newState.age += action.value;
             break;
         
         case 'AGE_DOWN': 
             newState.age -= action.value;
             break;
+        case 'LOADING':
+            newState.loading = true;
     }
     return newState;
 };
