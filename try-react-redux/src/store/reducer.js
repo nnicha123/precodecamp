@@ -2,23 +2,22 @@ const initialState = {
     name:'Nicha',
     age:'24',
     hobbies:'Programming'
-}
+};
 
 const reducer = (state = initialState, action) => {
     const newState = {...state};
 
-    switch(action.type){
-        case "AGE_UP":
-            newState.age += action.value;
-            break;
-
-        case "AGE_DOWN":
-            newState.age -= action.value;
-            break;
+        if(action.type ==='AGE_UP'){
+            newState.age ++;
+        }
         
-        case "CHANGE_NAME":
+        if(action.type ==="AGE_DOWN"){
+            newState.age --;
+        }
+
+        if(action.type === 'CHANGE_NAME'){
             newState.name = 'Sarah';
-            break;
-    }
+        }
+    return newState;
 }
 export default reducer;

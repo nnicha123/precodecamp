@@ -7,7 +7,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>Name : {this.props.name}</div>
+        <div>Name : {this.props.name} <span>Age : {this.props.age}</span></div>
+        <button onClick={this.props.onAgeUp}>Age Up</button>
+        <button onClick={this.props.onAgeDown}>Age Down</button>
+        <button onClick={this.props.onChangeName}>Change Name</button>
     </div>
     )
   }
@@ -20,9 +23,9 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAgeUp: () => dispatch({type:AGE_UP}),
-    onAgeDown: () => dispatch({type:AGE_DOWN}),
-    onChangeName: () => dispatch({type:CHANGE_NAME})
+    onAgeUp: () => dispatch({type:'AGE_UP'}),
+    onAgeDown: () => dispatch({type:'AGE_DOWN'}),
+    onChangeName: () => dispatch({type:'CHANGE_NAME'})
   }
 }
 
