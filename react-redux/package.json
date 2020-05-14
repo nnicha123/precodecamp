@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "react": "^16.13.1",
     "redux": "^4.0.5"
   }
 }
