@@ -161,6 +161,28 @@
                         <textarea id="message" class="materialize-textarea" cols="30" rows="10"></textarea>
                         <label for="message">Your message</label>
                     </div>
+                    <div class="input-field">
+                        <input type="text" id="date" class="datepicker">
+                        <label for="date">Choose the date you need me for...</label>
+                    </div>
+                    <div class="input-field">
+                       <p>Services required...</p> 
+                       <p>
+                           <label>
+                               <input type="checkbox">
+                               <span>Photography</span>
+                           </label>
+                       </p>
+                       <p>
+                           <label>
+                               <input type="checkbox">
+                               <span>Editing</span>
+                           </label>
+                       </p>
+                    </div>
+                    <div class="input-field center">
+                        <button class="btn">Submit</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -176,6 +198,9 @@
             $('.materialboxed').materialbox();
             $('.parallax').parallax();
             $('.tabs').tabs();
+            $('.datepicker').datepicker({
+                disableWeekends:true
+            });
         });
     </script>
 </body>
