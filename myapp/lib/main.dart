@@ -13,35 +13,11 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.pinkAccent,
       ),
-      body: Center(
-//        child: Image.asset('assets/space-2.jpg'),
-//          child: Icon(
-//            Icons.airport_shuttle,
-//            color:Colors.lightBlue,
-//            size: 50.0,
-//          ),
-//          child:FlatButton(
-//            onPressed: (){
-//              print('you clicked me');
-//            },
-//            child:Text('click me'),
-//            color: Colors.redAccent,
-//        ),
-//            child: RaisedButton.icon(
-//                onPressed: (){},
-//                icon: Icon(
-//                  Icons.mail
-//                ),
-//                label: Text('mail me'),
-//                color: Colors.amber,
-//            ),
-          child: IconButton(
-            onPressed: (){
-              print('CLICKED ME');
-            },
-            icon: Icon(Icons.alternate_email),
-            color:Colors.amber
-          ),
+      body: Container(
+        padding: EdgeInsets.fromLTRB(10.0,20.0,30.0,40.0),
+        margin: EdgeInsets.all(20.0),
+        color: Colors.grey[400],
+        child: Text('hello'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
