@@ -19,6 +19,11 @@ class Home extends StatelessWidget {
         children: <Widget>[
           Row(
             children: <Widget>[
+              Container(
+                color: Colors.redAccent,
+                child: Text('row1'),
+                padding: EdgeInsets.all(20.0),
+              ),
               Text('hello'),
               Text(' World'),
             ],
@@ -29,13 +34,13 @@ class Home extends StatelessWidget {
             child: Text('one'),
           ),
           Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.cyanAccent,
+            padding: EdgeInsets.all(40.0),
+            color: Colors.amber,
             child: Text('three'),
           ),
           Container(
-            padding: EdgeInsets.all(40.0),
-            color: Colors.amber,
+            padding: EdgeInsets.all(30.0),
+            color: Colors.cyanAccent,
             child: Text('three'),
           ),
         ],
